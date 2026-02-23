@@ -1,5 +1,0 @@
-192.168.86.29 - - [05/Jun/2023:17:06:39 +0100] "GET / HTTP/1.1" 200 712 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
-192.168.86.29 - - [05/Jun/2023:17:06:39 +0100] "GET /config HTTP/1.1" 200 712 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
-192.168.86.29 - - [05/Jun/2023:17:06:41 +0100] "GET /websocket HTTP/1.1" 502 157 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
-192.168.86.29 - - [05/Jun/2023:17:06:42 +0100] "GET /server/files/config/.theme/default.json?time=1685983182850 HTTP/1.1" 404 304 "http://affogato.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"
-192.168.86.29 - - [05/Jun/2023:17:06:42 +0100] "POST /server/database/item HTTP/1.1" 200 99 "http://affogato.local/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15"

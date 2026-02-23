@@ -1,1 +1,0 @@
-2023/06/05 17:06:41 [error] 665#665: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.86.29, server: _, request: "GET /websocket HTTP/1.1", upstream: "http://127.0.0.1:7125/websocket", host: "affogato.local"
