@@ -3584,3 +3584,14 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBxV5U1rkHklr0Y
 2026-02-23 22:22:20,618 [websockets.py:open()] - Websocket Opened: ID: 4081234056, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
 2026-02-23 22:22:20,623 [websockets.py:_handle_identify()] - Websocket 4081234056 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
 2026-02-23 22:22:29,416 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2026-02-23 22:31:28,494 [websockets.py:on_close()] - Websocket Closed: ID: 4081234056 Close Code: None, Close Reason: None, Pong Time Elapsed: 7.74
+2026-02-23 22:59:15,299 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.97ms
+2026-02-23 22:59:15,300 [websockets.py:open()] - Websocket Opened: ID: 4090482280, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 22:59:15,308 [websockets.py:_handle_identify()] - Websocket 4090482280 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 22:59:45,421 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090482280
+2026-02-23 22:59:50,310 [websockets.py:on_close()] - Websocket Closed: ID: 4090482280 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.96
+2026-02-23 23:00:07,203 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.64ms
+2026-02-23 23:00:07,204 [websockets.py:open()] - Websocket Opened: ID: 4090479952, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 23:00:07,209 [websockets.py:_handle_identify()] - Websocket 4090479952 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 23:01:07,418 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090479952
+2026-02-23 23:01:12,219 [websockets.py:on_close()] - Websocket Closed: ID: 4090479952 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
