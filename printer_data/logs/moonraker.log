@@ -2643,3 +2643,12 @@ Properties:
 2026-02-23 09:32:11,064 [klippy_connection.py:_check_ready()] - Klippy ready
 2026-02-23 09:32:11,801 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'extruder']
 2026-02-23 09:32:32,764 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2026-02-23 09:33:57,982 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBxV5U1rkHklr0YRN
+2026-02-23 09:34:00,254 [application.py:post()] - Processing Uploaded File: 90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode
+2026-02-23 09:34:00,571 [shell_command.py:pipe_data_received()] - INFO:metadata:File '90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode' currently supports cancellation, processing aborted
+
+2026-02-23 09:34:00,667 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -c /tmp/metacfg-8frbfu1r.json) successfully finished
+2026-02-23 09:34:00,673 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 2692.02ms
+2026-02-23 09:34:04,738 [klippy_apis.py:start_print()] - Requesting Job Start, filename = 3D Printing Tools/90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode
+2026-02-23 09:34:04,849 [job_state.py:_send_job_event()] - Job Started: 3D Printing Tools/90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode
