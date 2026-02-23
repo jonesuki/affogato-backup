@@ -2652,3 +2652,831 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBxV5U1rkHklr0Y
 2026-02-23 09:34:00,673 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 2692.02ms
 2026-02-23 09:34:04,738 [klippy_apis.py:start_print()] - Requesting Job Start, filename = 3D Printing Tools/90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode
 2026-02-23 09:34:04,849 [job_state.py:_send_job_event()] - Job Started: 3D Printing Tools/90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode
+2026-02-23 09:35:12,308 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2026-02-23 09:36:12,310 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2026-02-23 09:37:12,312 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.00 seconds
+2026-02-23 09:38:12,315 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.01 seconds
+2026-02-23 09:39:12,317 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2026-02-23 09:40:12,319 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.01 seconds
+2026-02-23 09:41:12,321 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.01 seconds
+2026-02-23 09:42:12,323 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 480.02 seconds
+2026-02-23 09:43:12,326 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 540.02 seconds
+2026-02-23 09:43:44,755 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000001.jpg) successfully finished
+2026-02-23 09:45:42,022 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081220936
+2026-02-23 09:45:47,002 [websockets.py:on_close()] - Websocket Closed: ID: 4081220936 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.89
+2026-02-23 09:52:27,988 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000002.jpg) successfully finished
+2026-02-23 09:56:20,535 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000003.jpg) successfully finished
+2026-02-23 10:00:20,193 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000004.jpg) successfully finished
+2026-02-23 10:04:20,490 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000005.jpg) successfully finished
+2026-02-23 10:08:20,842 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000006.jpg) successfully finished
+2026-02-23 10:09:57,852 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000007.jpg) successfully finished
+2026-02-23 10:11:34,180 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000008.jpg) successfully finished
+2026-02-23 10:13:10,505 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000009.jpg) successfully finished
+2026-02-23 10:14:48,161 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000010.jpg) successfully finished
+2026-02-23 10:15:43,069 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.59ms
+2026-02-23 10:15:43,070 [websockets.py:open()] - Websocket Opened: ID: 4081220240, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 10:15:43,077 [websockets.py:_handle_identify()] - Websocket 4081220240 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 10:16:23,123 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081220240
+2026-02-23 10:16:26,908 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000011.jpg) successfully finished
+2026-02-23 10:16:28,080 [websockets.py:on_close()] - Websocket Closed: ID: 4081220240 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 10:18:04,890 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000012.jpg) successfully finished
+2026-02-23 10:19:43,631 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000013.jpg) successfully finished
+2026-02-23 10:21:13,063 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.208
+2026-02-23 10:21:13,066 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 5.21ms
+2026-02-23 10:21:13,067 [websockets.py:open()] - Websocket Opened: ID: 4081219328, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 10:21:13,078 [websockets.py:_handle_identify()] - Websocket 4081219328 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 10:21:23,143 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000014.jpg) successfully finished
+2026-02-23 10:23:06,127 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000015.jpg) successfully finished
+2026-02-23 10:24:47,489 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000016.jpg) successfully finished
+2026-02-23 10:26:28,531 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000017.jpg) successfully finished
+2026-02-23 10:28:09,100 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000018.jpg) successfully finished
+2026-02-23 10:29:49,366 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000019.jpg) successfully finished
+2026-02-23 10:31:29,683 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000020.jpg) successfully finished
+2026-02-23 10:32:13,358 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081219328
+2026-02-23 10:32:18,189 [websockets.py:on_close()] - Websocket Closed: ID: 4081219328 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.91
+2026-02-23 10:33:07,250 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.54ms
+2026-02-23 10:33:07,251 [websockets.py:open()] - Websocket Opened: ID: 4081220072, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 10:33:07,267 [websockets.py:_handle_identify()] - Websocket 4081220072 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 10:33:09,878 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000021.jpg) successfully finished
+2026-02-23 10:33:37,386 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081220072
+2026-02-23 10:33:42,262 [websockets.py:on_close()] - Websocket Closed: ID: 4081220072 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 10:34:50,029 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000022.jpg) successfully finished
+2026-02-23 10:36:30,034 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000023.jpg) successfully finished
+2026-02-23 10:38:09,991 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000024.jpg) successfully finished
+2026-02-23 10:39:50,475 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000025.jpg) successfully finished
+2026-02-23 10:41:38,674 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000026.jpg) successfully finished
+2026-02-23 10:43:30,611 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000027.jpg) successfully finished
+2026-02-23 10:45:23,336 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000028.jpg) successfully finished
+2026-02-23 10:47:09,543 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000029.jpg) successfully finished
+2026-02-23 10:48:59,286 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000030.jpg) successfully finished
+2026-02-23 10:49:03,950 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.50ms
+2026-02-23 10:49:03,952 [websockets.py:open()] - Websocket Opened: ID: 4081776744, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 10:49:03,957 [websockets.py:_handle_identify()] - Websocket 4081776744 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 10:49:54,207 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081776744
+2026-02-23 10:49:58,965 [websockets.py:on_close()] - Websocket Closed: ID: 4081776744 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 10:51:11,646 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000031.jpg) successfully finished
+2026-02-23 10:52:44,281 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000032.jpg) successfully finished
+2026-02-23 10:54:17,848 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000033.jpg) successfully finished
+2026-02-23 10:55:41,959 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000034.jpg) successfully finished
+2026-02-23 10:57:05,958 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000035.jpg) successfully finished
+2026-02-23 10:58:30,291 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000036.jpg) successfully finished
+2026-02-23 10:59:54,882 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000037.jpg) successfully finished
+2026-02-23 11:01:19,836 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000038.jpg) successfully finished
+2026-02-23 11:02:11,475 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.93ms
+2026-02-23 11:02:11,475 [websockets.py:open()] - Websocket Opened: ID: 4081776888, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 11:02:11,478 [websockets.py:_handle_identify()] - Websocket 4081776888 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 11:02:44,486 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000039.jpg) successfully finished
+2026-02-23 11:03:11,603 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081776888
+2026-02-23 11:03:16,491 [websockets.py:on_close()] - Websocket Closed: ID: 4081776888 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 11:04:08,569 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000040.jpg) successfully finished
+2026-02-23 11:05:35,945 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000041.jpg) successfully finished
+2026-02-23 11:07:05,635 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000042.jpg) successfully finished
+2026-02-23 11:08:36,217 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000043.jpg) successfully finished
+2026-02-23 11:10:07,358 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000044.jpg) successfully finished
+2026-02-23 11:11:38,440 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000045.jpg) successfully finished
+2026-02-23 11:13:18,207 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000046.jpg) successfully finished
+2026-02-23 11:14:59,805 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000047.jpg) successfully finished
+2026-02-23 11:16:41,219 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000048.jpg) successfully finished
+2026-02-23 11:18:21,471 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000049.jpg) successfully finished
+2026-02-23 11:19:52,580 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000050.jpg) successfully finished
+2026-02-23 11:21:21,643 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000051.jpg) successfully finished
+2026-02-23 11:22:50,469 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000052.jpg) successfully finished
+2026-02-23 11:24:19,764 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000053.jpg) successfully finished
+2026-02-23 11:25:49,458 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000054.jpg) successfully finished
+2026-02-23 11:27:19,206 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000055.jpg) successfully finished
+2026-02-23 11:28:49,134 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000056.jpg) successfully finished
+2026-02-23 11:29:22,463 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 7.84ms
+2026-02-23 11:29:22,466 [websockets.py:open()] - Websocket Opened: ID: 4081777536, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 11:29:22,470 [websockets.py:_handle_identify()] - Websocket 4081777536 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 11:30:17,765 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000057.jpg) successfully finished
+2026-02-23 11:30:22,551 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777536
+2026-02-23 11:30:27,484 [websockets.py:on_close()] - Websocket Closed: ID: 4081777536 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.98
+2026-02-23 11:31:45,322 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000058.jpg) successfully finished
+2026-02-23 11:33:12,101 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000059.jpg) successfully finished
+2026-02-23 11:34:38,896 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000060.jpg) successfully finished
+2026-02-23 11:36:06,174 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000061.jpg) successfully finished
+2026-02-23 11:37:30,709 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000062.jpg) successfully finished
+2026-02-23 11:38:54,810 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000063.jpg) successfully finished
+2026-02-23 11:40:16,227 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.22ms
+2026-02-23 11:40:16,227 [websockets.py:open()] - Websocket Opened: ID: 4081777152, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 11:40:16,232 [websockets.py:_handle_identify()] - Websocket 4081777152 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 11:40:18,562 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000064.jpg) successfully finished
+2026-02-23 11:40:56,256 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777152
+2026-02-23 11:41:01,239 [websockets.py:on_close()] - Websocket Closed: ID: 4081777152 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.98
+2026-02-23 11:41:44,024 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000065.jpg) successfully finished
+2026-02-23 11:43:09,786 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000066.jpg) successfully finished
+2026-02-23 11:44:35,719 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000067.jpg) successfully finished
+2026-02-23 11:45:12,678 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 7.14ms
+2026-02-23 11:45:12,680 [websockets.py:open()] - Websocket Opened: ID: 4081777632, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 11:45:12,684 [websockets.py:_handle_identify()] - Websocket 4081777632 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 11:46:01,293 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000068.jpg) successfully finished
+2026-02-23 11:46:03,981 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.34ms
+2026-02-23 11:46:03,982 [websockets.py:open()] - Websocket Opened: ID: 4081777416, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 11:46:03,988 [websockets.py:_handle_identify()] - Websocket 4081777416 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 11:46:54,050 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777416
+2026-02-23 11:46:58,993 [websockets.py:on_close()] - Websocket Closed: ID: 4081777416 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.95
+2026-02-23 11:47:27,350 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000069.jpg) successfully finished
+2026-02-23 11:48:56,189 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000070.jpg) successfully finished
+2026-02-23 11:49:42,801 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777632
+2026-02-23 11:49:47,738 [websockets.py:on_close()] - Websocket Closed: ID: 4081777632 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 11:50:29,429 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000071.jpg) successfully finished
+2026-02-23 11:51:55,047 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000072.jpg) successfully finished
+2026-02-23 11:53:20,463 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000073.jpg) successfully finished
+2026-02-23 11:54:45,939 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000074.jpg) successfully finished
+2026-02-23 11:56:10,170 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000075.jpg) successfully finished
+2026-02-23 11:57:31,661 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 5.87ms
+2026-02-23 11:57:31,662 [websockets.py:open()] - Websocket Opened: ID: 4081777464, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 11:57:31,665 [websockets.py:_handle_identify()] - Websocket 4081777464 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 11:57:34,168 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000076.jpg) successfully finished
+2026-02-23 11:58:31,749 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777464
+2026-02-23 11:58:36,678 [websockets.py:on_close()] - Websocket Closed: ID: 4081777464 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 11:59:00,206 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000077.jpg) successfully finished
+2026-02-23 12:00:30,473 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000078.jpg) successfully finished
+2026-02-23 12:02:00,493 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000079.jpg) successfully finished
+2026-02-23 12:03:30,697 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000080.jpg) successfully finished
+2026-02-23 12:05:00,221 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000081.jpg) successfully finished
+2026-02-23 12:06:29,285 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000082.jpg) successfully finished
+2026-02-23 12:07:58,071 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000083.jpg) successfully finished
+2026-02-23 12:09:26,719 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000084.jpg) successfully finished
+2026-02-23 12:10:55,225 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000085.jpg) successfully finished
+2026-02-23 12:12:23,938 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000086.jpg) successfully finished
+2026-02-23 12:13:52,269 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000087.jpg) successfully finished
+2026-02-23 12:15:21,554 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000088.jpg) successfully finished
+2026-02-23 12:16:51,481 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000089.jpg) successfully finished
+2026-02-23 12:18:19,764 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000090.jpg) successfully finished
+2026-02-23 12:19:47,890 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000091.jpg) successfully finished
+2026-02-23 12:21:15,246 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000092.jpg) successfully finished
+2026-02-23 12:22:42,547 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000093.jpg) successfully finished
+2026-02-23 12:24:10,434 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000094.jpg) successfully finished
+2026-02-23 12:25:38,279 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000095.jpg) successfully finished
+2026-02-23 12:27:05,784 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000096.jpg) successfully finished
+2026-02-23 12:28:34,002 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000097.jpg) successfully finished
+2026-02-23 12:30:01,040 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000098.jpg) successfully finished
+2026-02-23 12:31:30,750 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000099.jpg) successfully finished
+2026-02-23 12:32:32,534 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.57ms
+2026-02-23 12:32:32,535 [websockets.py:open()] - Websocket Opened: ID: 4081776936, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 12:32:32,540 [websockets.py:_handle_identify()] - Websocket 4081776936 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 12:33:01,779 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000100.jpg) successfully finished
+2026-02-23 12:33:11,018 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.88ms
+2026-02-23 12:33:11,019 [websockets.py:open()] - Websocket Opened: ID: 4081777992, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 12:33:11,045 [websockets.py:_handle_identify()] - Websocket 4081777992 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 12:34:01,123 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777992
+2026-02-23 12:34:06,031 [websockets.py:on_close()] - Websocket Closed: ID: 4081777992 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 12:34:34,754 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000101.jpg) successfully finished
+2026-02-23 12:36:07,221 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000102.jpg) successfully finished
+2026-02-23 12:37:39,824 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000103.jpg) successfully finished
+2026-02-23 12:39:18,662 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000104.jpg) successfully finished
+2026-02-23 12:40:59,214 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000105.jpg) successfully finished
+2026-02-23 12:41:42,679 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081776936
+2026-02-23 12:41:47,649 [websockets.py:on_close()] - Websocket Closed: ID: 4081776936 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 12:42:41,741 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000106.jpg) successfully finished
+2026-02-23 12:44:15,272 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000107.jpg) successfully finished
+2026-02-23 12:45:49,027 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000108.jpg) successfully finished
+2026-02-23 12:47:22,738 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000109.jpg) successfully finished
+2026-02-23 12:48:56,914 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000110.jpg) successfully finished
+2026-02-23 12:50:29,845 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000111.jpg) successfully finished
+2026-02-23 12:52:02,161 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000112.jpg) successfully finished
+2026-02-23 12:53:33,884 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000113.jpg) successfully finished
+2026-02-23 12:55:05,360 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000114.jpg) successfully finished
+2026-02-23 12:56:36,845 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000115.jpg) successfully finished
+2026-02-23 12:58:07,785 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000116.jpg) successfully finished
+2026-02-23 12:59:37,410 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000117.jpg) successfully finished
+2026-02-23 13:01:07,379 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000118.jpg) successfully finished
+2026-02-23 13:02:37,862 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000119.jpg) successfully finished
+2026-02-23 13:04:07,256 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000120.jpg) successfully finished
+2026-02-23 13:05:36,996 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000121.jpg) successfully finished
+2026-02-23 13:07:06,832 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000122.jpg) successfully finished
+2026-02-23 13:08:36,236 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000123.jpg) successfully finished
+2026-02-23 13:08:58,114 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 5.22ms
+2026-02-23 13:08:58,114 [websockets.py:open()] - Websocket Opened: ID: 4081777536, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 13:08:58,120 [websockets.py:_handle_identify()] - Websocket 4081777536 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 13:09:58,324 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777536
+2026-02-23 13:10:03,130 [websockets.py:on_close()] - Websocket Closed: ID: 4081777536 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 13:10:05,391 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000124.jpg) successfully finished
+2026-02-23 13:10:47,354 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.155
+2026-02-23 13:10:47,356 [application.py:log_request()] - 101 GET /websocket (192.168.11.155) [_TRUSTED_USER_] 3.38ms
+2026-02-23 13:10:47,357 [websockets.py:open()] - Websocket Opened: ID: 4081777200, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 13:10:47,361 [websockets.py:_handle_identify()] - Websocket 4081777200 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 13:11:22,807 [websockets.py:on_close()] - Websocket Closed: ID: 4081777200 Close Code: None, Close Reason: None, Pong Time Elapsed: 5.44
+2026-02-23 13:11:34,128 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000125.jpg) successfully finished
+2026-02-23 13:12:48,829 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.42ms
+2026-02-23 13:12:48,830 [websockets.py:open()] - Websocket Opened: ID: 4081777200, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 13:12:48,838 [websockets.py:_handle_identify()] - Websocket 4081777200 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 13:13:01,305 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.23ms
+2026-02-23 13:13:01,306 [websockets.py:open()] - Websocket Opened: ID: 4081778256, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 13:13:01,316 [websockets.py:_handle_identify()] - Websocket 4081778256 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 13:13:02,223 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000126.jpg) successfully finished
+2026-02-23 13:13:51,519 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081778256
+2026-02-23 13:13:56,316 [websockets.py:on_close()] - Websocket Closed: ID: 4081778256 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.94
+2026-02-23 13:14:30,610 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000127.jpg) successfully finished
+2026-02-23 13:15:09,009 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081777200
+2026-02-23 13:15:13,865 [websockets.py:on_close()] - Websocket Closed: ID: 4081777200 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 13:15:56,883 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000128.jpg) successfully finished
+2026-02-23 13:17:24,543 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000129.jpg) successfully finished
+2026-02-23 13:18:51,217 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000130.jpg) successfully finished
+2026-02-23 13:20:18,817 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000131.jpg) successfully finished
+2026-02-23 13:21:46,521 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000132.jpg) successfully finished
+2026-02-23 13:23:13,009 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000133.jpg) successfully finished
+2026-02-23 13:24:39,877 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000134.jpg) successfully finished
+2026-02-23 13:26:05,905 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000135.jpg) successfully finished
+2026-02-23 13:28:01,306 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000136.jpg) successfully finished
+2026-02-23 13:29:53,440 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 3.97ms
+2026-02-23 13:29:53,441 [websockets.py:open()] - Websocket Opened: ID: 4081776936, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 13:29:53,450 [websockets.py:_handle_identify()] - Websocket 4081776936 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 13:30:09,983 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000137.jpg) successfully finished
+2026-02-23 13:30:53,460 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081776936
+2026-02-23 13:30:58,455 [websockets.py:on_close()] - Websocket Closed: ID: 4081776936 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 13:32:13,904 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000138.jpg) successfully finished
+2026-02-23 13:34:16,331 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000139.jpg) successfully finished
+2026-02-23 13:36:17,220 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000140.jpg) successfully finished
+2026-02-23 13:39:12,355 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000141.jpg) successfully finished
+2026-02-23 13:40:10,731 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000142.jpg) successfully finished
+2026-02-23 13:41:08,704 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000143.jpg) successfully finished
+2026-02-23 13:42:04,744 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000144.jpg) successfully finished
+2026-02-23 13:43:00,471 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000145.jpg) successfully finished
+2026-02-23 13:43:55,892 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000146.jpg) successfully finished
+2026-02-23 13:44:53,229 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000147.jpg) successfully finished
+2026-02-23 13:45:51,946 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000148.jpg) successfully finished
+2026-02-23 13:46:50,862 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000149.jpg) successfully finished
+2026-02-23 13:47:50,380 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000150.jpg) successfully finished
+2026-02-23 13:48:49,899 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000151.jpg) successfully finished
+2026-02-23 13:49:54,277 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000152.jpg) successfully finished
+2026-02-23 13:50:58,362 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000153.jpg) successfully finished
+2026-02-23 13:52:02,061 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000154.jpg) successfully finished
+2026-02-23 13:53:05,519 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000155.jpg) successfully finished
+2026-02-23 13:54:08,699 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000156.jpg) successfully finished
+2026-02-23 13:55:11,847 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000157.jpg) successfully finished
+2026-02-23 13:56:14,612 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000158.jpg) successfully finished
+2026-02-23 13:57:16,468 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000159.jpg) successfully finished
+2026-02-23 13:58:18,673 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000160.jpg) successfully finished
+2026-02-23 13:59:19,212 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000161.jpg) successfully finished
+2026-02-23 14:00:08,402 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 3.66ms
+2026-02-23 14:00:08,402 [websockets.py:open()] - Websocket Opened: ID: 4081775280, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 14:00:08,406 [websockets.py:_handle_identify()] - Websocket 4081775280 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 14:00:19,472 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000162.jpg) successfully finished
+2026-02-23 14:01:08,471 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081775280
+2026-02-23 14:01:13,414 [websockets.py:on_close()] - Websocket Closed: ID: 4081775280 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 14:01:18,690 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000163.jpg) successfully finished
+2026-02-23 14:02:17,615 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000164.jpg) successfully finished
+2026-02-23 14:03:14,957 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000165.jpg) successfully finished
+2026-02-23 14:04:11,851 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000166.jpg) successfully finished
+2026-02-23 14:05:06,294 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000167.jpg) successfully finished
+2026-02-23 14:05:59,752 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000168.jpg) successfully finished
+2026-02-23 14:06:52,930 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000169.jpg) successfully finished
+2026-02-23 14:07:45,704 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000170.jpg) successfully finished
+2026-02-23 14:08:38,139 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000171.jpg) successfully finished
+2026-02-23 14:09:30,105 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000172.jpg) successfully finished
+2026-02-23 14:10:05,966 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.05ms
+2026-02-23 14:10:05,967 [websockets.py:open()] - Websocket Opened: ID: 4081778616, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 14:10:05,973 [websockets.py:_handle_identify()] - Websocket 4081778616 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 14:10:21,846 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000173.jpg) successfully finished
+2026-02-23 14:11:12,880 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000174.jpg) successfully finished
+2026-02-23 14:12:03,862 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000175.jpg) successfully finished
+2026-02-23 14:12:16,679 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.155
+2026-02-23 14:12:54,273 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000176.jpg) successfully finished
+2026-02-23 14:13:44,263 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000177.jpg) successfully finished
+2026-02-23 14:14:33,614 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000178.jpg) successfully finished
+2026-02-23 14:15:22,467 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000179.jpg) successfully finished
+2026-02-23 14:15:59,014 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.81ms
+2026-02-23 14:15:59,015 [websockets.py:open()] - Websocket Opened: ID: 4081245584, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 14:15:59,020 [websockets.py:_handle_identify()] - Websocket 4081245584 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 14:16:10,133 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000180.jpg) successfully finished
+2026-02-23 14:16:57,480 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000181.jpg) successfully finished
+2026-02-23 14:16:59,264 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081245584
+2026-02-23 14:17:04,030 [websockets.py:on_close()] - Websocket Closed: ID: 4081245584 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 14:17:43,206 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000182.jpg) successfully finished
+2026-02-23 14:18:28,883 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000183.jpg) successfully finished
+2026-02-23 14:19:10,568 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000184.jpg) successfully finished
+2026-02-23 14:19:52,429 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000185.jpg) successfully finished
+2026-02-23 14:20:34,062 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000186.jpg) successfully finished
+2026-02-23 14:21:15,422 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000187.jpg) successfully finished
+2026-02-23 14:21:56,582 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000188.jpg) successfully finished
+2026-02-23 14:22:37,518 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000189.jpg) successfully finished
+2026-02-23 14:23:18,222 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000190.jpg) successfully finished
+2026-02-23 14:23:58,752 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000191.jpg) successfully finished
+2026-02-23 14:24:39,081 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000192.jpg) successfully finished
+2026-02-23 14:25:20,440 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000193.jpg) successfully finished
+2026-02-23 14:26:02,400 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000194.jpg) successfully finished
+2026-02-23 14:26:44,340 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000195.jpg) successfully finished
+2026-02-23 14:27:26,431 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000196.jpg) successfully finished
+2026-02-23 14:28:08,982 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000197.jpg) successfully finished
+2026-02-23 14:28:55,732 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000198.jpg) successfully finished
+2026-02-23 14:29:41,457 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000199.jpg) successfully finished
+2026-02-23 14:30:25,837 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000200.jpg) successfully finished
+2026-02-23 14:31:09,644 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000201.jpg) successfully finished
+2026-02-23 14:31:52,324 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000202.jpg) successfully finished
+2026-02-23 14:32:34,056 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000203.jpg) successfully finished
+2026-02-23 14:33:14,206 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000204.jpg) successfully finished
+2026-02-23 14:33:53,383 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000205.jpg) successfully finished
+2026-02-23 14:34:30,492 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000206.jpg) successfully finished
+2026-02-23 14:35:07,295 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000207.jpg) successfully finished
+2026-02-23 14:35:43,759 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000208.jpg) successfully finished
+2026-02-23 14:36:19,960 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000209.jpg) successfully finished
+2026-02-23 14:36:55,858 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000210.jpg) successfully finished
+2026-02-23 14:37:31,137 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000211.jpg) successfully finished
+2026-02-23 14:38:06,105 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000212.jpg) successfully finished
+2026-02-23 14:38:40,812 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000213.jpg) successfully finished
+2026-02-23 14:39:13,469 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000214.jpg) successfully finished
+2026-02-23 14:39:45,754 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000215.jpg) successfully finished
+2026-02-23 14:40:18,146 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000216.jpg) successfully finished
+2026-02-23 14:40:49,709 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000217.jpg) successfully finished
+2026-02-23 14:41:21,397 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000218.jpg) successfully finished
+2026-02-23 14:41:49,994 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.27ms
+2026-02-23 14:41:49,994 [websockets.py:open()] - Websocket Opened: ID: 4081244672, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 14:41:49,999 [websockets.py:_handle_identify()] - Websocket 4081244672 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 14:41:53,010 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000219.jpg) successfully finished
+2026-02-23 14:42:24,547 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000220.jpg) successfully finished
+2026-02-23 14:42:50,111 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081244672
+2026-02-23 14:42:55,011 [websockets.py:on_close()] - Websocket Closed: ID: 4081244672 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 14:42:55,934 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000221.jpg) successfully finished
+2026-02-23 14:43:27,072 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000222.jpg) successfully finished
+2026-02-23 14:43:58,147 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000223.jpg) successfully finished
+2026-02-23 14:44:29,676 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000224.jpg) successfully finished
+2026-02-23 14:45:01,813 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000225.jpg) successfully finished
+2026-02-23 14:45:33,843 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000226.jpg) successfully finished
+2026-02-23 14:46:06,301 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000227.jpg) successfully finished
+2026-02-23 14:46:39,553 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000228.jpg) successfully finished
+2026-02-23 14:47:14,819 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000229.jpg) successfully finished
+2026-02-23 14:47:52,463 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000230.jpg) successfully finished
+2026-02-23 14:48:29,240 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000231.jpg) successfully finished
+2026-02-23 14:49:05,408 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000232.jpg) successfully finished
+2026-02-23 14:49:40,374 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000233.jpg) successfully finished
+2026-02-23 14:50:14,370 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000234.jpg) successfully finished
+2026-02-23 14:50:48,008 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000235.jpg) successfully finished
+2026-02-23 14:51:17,883 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000236.jpg) successfully finished
+2026-02-23 14:51:47,639 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000237.jpg) successfully finished
+2026-02-23 14:52:17,204 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000238.jpg) successfully finished
+2026-02-23 14:52:46,596 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000239.jpg) successfully finished
+2026-02-23 14:53:16,410 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000240.jpg) successfully finished
+2026-02-23 14:53:46,125 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000241.jpg) successfully finished
+2026-02-23 14:54:15,562 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000242.jpg) successfully finished
+2026-02-23 14:54:45,120 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000243.jpg) successfully finished
+2026-02-23 14:55:14,718 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000244.jpg) successfully finished
+2026-02-23 14:55:44,168 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000245.jpg) successfully finished
+2026-02-23 14:56:13,567 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000246.jpg) successfully finished
+2026-02-23 14:56:42,851 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000247.jpg) successfully finished
+2026-02-23 14:57:12,243 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000248.jpg) successfully finished
+2026-02-23 14:57:42,622 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000249.jpg) successfully finished
+2026-02-23 14:58:12,375 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000250.jpg) successfully finished
+2026-02-23 14:58:41,395 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000251.jpg) successfully finished
+2026-02-23 14:59:10,044 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000252.jpg) successfully finished
+2026-02-23 14:59:38,357 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000253.jpg) successfully finished
+2026-02-23 15:00:06,296 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000254.jpg) successfully finished
+2026-02-23 15:00:34,084 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000255.jpg) successfully finished
+2026-02-23 15:01:01,674 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000256.jpg) successfully finished
+2026-02-23 15:01:29,116 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000257.jpg) successfully finished
+2026-02-23 15:01:56,321 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000258.jpg) successfully finished
+2026-02-23 15:02:23,538 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000259.jpg) successfully finished
+2026-02-23 15:02:50,627 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000260.jpg) successfully finished
+2026-02-23 15:03:17,610 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000261.jpg) successfully finished
+2026-02-23 15:03:44,437 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000262.jpg) successfully finished
+2026-02-23 15:04:11,189 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000263.jpg) successfully finished
+2026-02-23 15:04:37,861 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000264.jpg) successfully finished
+2026-02-23 15:05:04,463 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000265.jpg) successfully finished
+2026-02-23 15:05:31,006 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000266.jpg) successfully finished
+2026-02-23 15:05:57,523 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000267.jpg) successfully finished
+2026-02-23 15:06:23,967 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000268.jpg) successfully finished
+2026-02-23 15:06:50,331 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000269.jpg) successfully finished
+2026-02-23 15:07:16,650 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000270.jpg) successfully finished
+2026-02-23 15:07:42,935 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000271.jpg) successfully finished
+2026-02-23 15:08:09,146 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000272.jpg) successfully finished
+2026-02-23 15:08:35,314 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000273.jpg) successfully finished
+2026-02-23 15:09:01,419 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000274.jpg) successfully finished
+2026-02-23 15:09:27,472 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000275.jpg) successfully finished
+2026-02-23 15:09:53,566 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000276.jpg) successfully finished
+2026-02-23 15:09:56,735 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081778616
+2026-02-23 15:10:01,658 [websockets.py:on_close()] - Websocket Closed: ID: 4081778616 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.85
+2026-02-23 15:10:19,602 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000277.jpg) successfully finished
+2026-02-23 15:10:45,605 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000278.jpg) successfully finished
+2026-02-23 15:11:11,606 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000279.jpg) successfully finished
+2026-02-23 15:11:19,122 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.14ms
+2026-02-23 15:11:19,123 [websockets.py:open()] - Websocket Opened: ID: 4081245776, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:11:19,132 [websockets.py:_handle_identify()] - Websocket 4081245776 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:11:37,634 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000280.jpg) successfully finished
+2026-02-23 15:11:59,346 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081245776
+2026-02-23 15:12:04,011 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000281.jpg) successfully finished
+2026-02-23 15:12:04,131 [websockets.py:on_close()] - Websocket Closed: ID: 4081245776 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 15:12:30,566 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000282.jpg) successfully finished
+2026-02-23 15:12:40,615 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 5.63ms
+2026-02-23 15:12:40,616 [websockets.py:open()] - Websocket Opened: ID: 4081245584, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:12:40,625 [websockets.py:_handle_identify()] - Websocket 4081245584 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:12:57,204 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000283.jpg) successfully finished
+2026-02-23 15:13:23,888 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000284.jpg) successfully finished
+2026-02-23 15:13:53,800 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000285.jpg) successfully finished
+2026-02-23 15:14:25,487 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000286.jpg) successfully finished
+2026-02-23 15:14:57,476 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000287.jpg) successfully finished
+2026-02-23 15:15:00,648 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081245584
+2026-02-23 15:15:05,647 [websockets.py:on_close()] - Websocket Closed: ID: 4081245584 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 15:15:09,934 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.57ms
+2026-02-23 15:15:09,934 [websockets.py:open()] - Websocket Opened: ID: 4081242344, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:15:09,942 [websockets.py:_handle_identify()] - Websocket 4081242344 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:15:29,625 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000288.jpg) successfully finished
+2026-02-23 15:15:43,487 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.59ms
+2026-02-23 15:15:43,488 [websockets.py:open()] - Websocket Opened: ID: 4081245224, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:15:43,494 [websockets.py:_handle_identify()] - Websocket 4081245224 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:16:02,634 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000289.jpg) successfully finished
+2026-02-23 15:16:13,597 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081245224
+2026-02-23 15:16:18,498 [websockets.py:on_close()] - Websocket Closed: ID: 4081245224 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 15:16:40,661 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000290.jpg) successfully finished
+2026-02-23 15:17:13,880 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000291.jpg) successfully finished
+2026-02-23 15:17:30,084 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081242344
+2026-02-23 15:17:34,964 [websockets.py:on_close()] - Websocket Closed: ID: 4081242344 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 15:17:44,027 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000292.jpg) successfully finished
+2026-02-23 15:18:13,681 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000293.jpg) successfully finished
+2026-02-23 15:18:42,906 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000294.jpg) successfully finished
+2026-02-23 15:18:45,686 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.97ms
+2026-02-23 15:18:45,687 [websockets.py:open()] - Websocket Opened: ID: 4081242296, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:18:45,691 [websockets.py:_handle_identify()] - Websocket 4081242296 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:18:58,912 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.63ms
+2026-02-23 15:18:58,912 [websockets.py:open()] - Websocket Opened: ID: 4081244168, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:18:58,932 [websockets.py:_handle_identify()] - Websocket 4081244168 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:19:11,971 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000295.jpg) successfully finished
+2026-02-23 15:19:40,593 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000296.jpg) successfully finished
+2026-02-23 15:20:08,342 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000297.jpg) successfully finished
+2026-02-23 15:20:19,125 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081244168
+2026-02-23 15:20:23,932 [websockets.py:on_close()] - Websocket Closed: ID: 4081244168 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.94
+2026-02-23 15:20:35,701 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000298.jpg) successfully finished
+2026-02-23 15:21:02,763 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000299.jpg) successfully finished
+2026-02-23 15:21:05,770 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081242296
+2026-02-23 15:21:10,719 [websockets.py:on_close()] - Websocket Closed: ID: 4081242296 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.95
+2026-02-23 15:21:29,245 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000300.jpg) successfully finished
+2026-02-23 15:21:55,510 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000301.jpg) successfully finished
+2026-02-23 15:22:21,592 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000302.jpg) successfully finished
+2026-02-23 15:22:47,596 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000303.jpg) successfully finished
+2026-02-23 15:23:13,594 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000304.jpg) successfully finished
+2026-02-23 15:23:39,470 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000305.jpg) successfully finished
+2026-02-23 15:24:05,476 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000306.jpg) successfully finished
+2026-02-23 15:24:31,417 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000307.jpg) successfully finished
+2026-02-23 15:24:56,873 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000308.jpg) successfully finished
+2026-02-23 15:25:21,912 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000309.jpg) successfully finished
+2026-02-23 15:25:45,701 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000310.jpg) successfully finished
+2026-02-23 15:26:09,421 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000311.jpg) successfully finished
+2026-02-23 15:26:33,028 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000312.jpg) successfully finished
+2026-02-23 15:26:56,722 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000313.jpg) successfully finished
+2026-02-23 15:27:20,531 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000314.jpg) successfully finished
+2026-02-23 15:27:44,312 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000315.jpg) successfully finished
+2026-02-23 15:28:07,964 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000316.jpg) successfully finished
+2026-02-23 15:28:31,737 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000317.jpg) successfully finished
+2026-02-23 15:28:55,737 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000318.jpg) successfully finished
+2026-02-23 15:29:19,621 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000319.jpg) successfully finished
+2026-02-23 15:29:43,655 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000320.jpg) successfully finished
+2026-02-23 15:30:07,648 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000321.jpg) successfully finished
+2026-02-23 15:30:31,019 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000322.jpg) successfully finished
+2026-02-23 15:30:54,198 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000323.jpg) successfully finished
+2026-02-23 15:31:17,567 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000324.jpg) successfully finished
+2026-02-23 15:31:41,110 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000325.jpg) successfully finished
+2026-02-23 15:32:04,793 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000326.jpg) successfully finished
+2026-02-23 15:32:28,467 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000327.jpg) successfully finished
+2026-02-23 15:32:52,213 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000328.jpg) successfully finished
+2026-02-23 15:33:16,150 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000329.jpg) successfully finished
+2026-02-23 15:33:40,349 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000330.jpg) successfully finished
+2026-02-23 15:34:04,972 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000331.jpg) successfully finished
+2026-02-23 15:34:29,575 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000332.jpg) successfully finished
+2026-02-23 15:34:54,872 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000333.jpg) successfully finished
+2026-02-23 15:35:19,968 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000334.jpg) successfully finished
+2026-02-23 15:35:44,520 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000335.jpg) successfully finished
+2026-02-23 15:36:09,141 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000336.jpg) successfully finished
+2026-02-23 15:36:30,609 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000337.jpg) successfully finished
+2026-02-23 15:36:51,919 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000338.jpg) successfully finished
+2026-02-23 15:37:13,151 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000339.jpg) successfully finished
+2026-02-23 15:37:34,370 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000340.jpg) successfully finished
+2026-02-23 15:37:55,416 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000341.jpg) successfully finished
+2026-02-23 15:38:16,204 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000342.jpg) successfully finished
+2026-02-23 15:38:36,714 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000343.jpg) successfully finished
+2026-02-23 15:38:59,376 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000344.jpg) successfully finished
+2026-02-23 15:39:22,310 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000345.jpg) successfully finished
+2026-02-23 15:39:44,444 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000346.jpg) successfully finished
+2026-02-23 15:40:06,568 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000347.jpg) successfully finished
+2026-02-23 15:40:27,919 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000348.jpg) successfully finished
+2026-02-23 15:40:48,936 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000349.jpg) successfully finished
+2026-02-23 15:41:08,852 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000350.jpg) successfully finished
+2026-02-23 15:41:29,680 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000351.jpg) successfully finished
+2026-02-23 15:41:46,999 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000352.jpg) successfully finished
+2026-02-23 15:42:04,388 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000353.jpg) successfully finished
+2026-02-23 15:42:21,779 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000354.jpg) successfully finished
+2026-02-23 15:42:39,197 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000355.jpg) successfully finished
+2026-02-23 15:42:51,769 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 3.86ms
+2026-02-23 15:42:51,769 [websockets.py:open()] - Websocket Opened: ID: 4081243160, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:42:51,773 [websockets.py:_handle_identify()] - Websocket 4081243160 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:42:56,576 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000356.jpg) successfully finished
+2026-02-23 15:43:14,021 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000357.jpg) successfully finished
+2026-02-23 15:43:31,448 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000358.jpg) successfully finished
+2026-02-23 15:43:48,871 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000359.jpg) successfully finished
+2026-02-23 15:43:51,849 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081243160
+2026-02-23 15:43:56,785 [websockets.py:on_close()] - Websocket Closed: ID: 4081243160 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 15:44:06,334 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000360.jpg) successfully finished
+2026-02-23 15:44:23,791 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000361.jpg) successfully finished
+2026-02-23 15:44:41,272 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000362.jpg) successfully finished
+2026-02-23 15:44:59,559 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000363.jpg) successfully finished
+2026-02-23 15:45:17,745 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000364.jpg) successfully finished
+2026-02-23 15:45:35,937 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000365.jpg) successfully finished
+2026-02-23 15:45:36,820 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 2.17ms
+2026-02-23 15:45:36,820 [websockets.py:open()] - Websocket Opened: ID: 4081246160, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 15:45:36,826 [websockets.py:_handle_identify()] - Websocket 4081246160 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 15:45:54,240 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000366.jpg) successfully finished
+2026-02-23 15:46:13,174 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000367.jpg) successfully finished
+2026-02-23 15:46:31,771 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000368.jpg) successfully finished
+2026-02-23 15:46:36,841 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081246160
+2026-02-23 15:46:41,835 [websockets.py:on_close()] - Websocket Closed: ID: 4081246160 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.95
+2026-02-23 15:46:50,392 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000369.jpg) successfully finished
+2026-02-23 15:47:08,767 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000370.jpg) successfully finished
+2026-02-23 15:47:27,484 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000371.jpg) successfully finished
+2026-02-23 15:47:46,317 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000372.jpg) successfully finished
+2026-02-23 15:48:05,494 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000373.jpg) successfully finished
+2026-02-23 15:48:24,211 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000374.jpg) successfully finished
+2026-02-23 15:48:43,242 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000375.jpg) successfully finished
+2026-02-23 15:49:02,285 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000376.jpg) successfully finished
+2026-02-23 15:49:21,523 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000377.jpg) successfully finished
+2026-02-23 15:49:40,844 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000378.jpg) successfully finished
+2026-02-23 15:50:00,232 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000379.jpg) successfully finished
+2026-02-23 15:50:19,650 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000380.jpg) successfully finished
+2026-02-23 15:50:39,114 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000381.jpg) successfully finished
+2026-02-23 15:50:58,587 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000382.jpg) successfully finished
+2026-02-23 15:51:17,659 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000383.jpg) successfully finished
+2026-02-23 15:51:37,054 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000384.jpg) successfully finished
+2026-02-23 15:51:56,407 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000385.jpg) successfully finished
+2026-02-23 15:52:15,761 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000386.jpg) successfully finished
+2026-02-23 15:52:35,155 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000387.jpg) successfully finished
+2026-02-23 15:52:54,691 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000388.jpg) successfully finished
+2026-02-23 15:53:14,258 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000389.jpg) successfully finished
+2026-02-23 15:53:33,841 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000390.jpg) successfully finished
+2026-02-23 15:53:53,515 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000391.jpg) successfully finished
+2026-02-23 15:54:13,216 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000392.jpg) successfully finished
+2026-02-23 15:54:32,962 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000393.jpg) successfully finished
+2026-02-23 15:54:52,754 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000394.jpg) successfully finished
+2026-02-23 15:55:12,754 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000395.jpg) successfully finished
+2026-02-23 15:55:32,584 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000396.jpg) successfully finished
+2026-02-23 15:55:52,493 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000397.jpg) successfully finished
+2026-02-23 15:56:12,294 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000398.jpg) successfully finished
+2026-02-23 15:56:32,152 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000399.jpg) successfully finished
+2026-02-23 15:56:52,091 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000400.jpg) successfully finished
+2026-02-23 15:57:12,088 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000401.jpg) successfully finished
+2026-02-23 15:57:32,113 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000402.jpg) successfully finished
+2026-02-23 15:57:52,178 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000403.jpg) successfully finished
+2026-02-23 15:58:12,273 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000404.jpg) successfully finished
+2026-02-23 15:58:32,408 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000405.jpg) successfully finished
+2026-02-23 15:58:52,562 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000406.jpg) successfully finished
+2026-02-23 15:59:12,740 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000407.jpg) successfully finished
+2026-02-23 15:59:32,862 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000408.jpg) successfully finished
+2026-02-23 15:59:53,197 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000409.jpg) successfully finished
+2026-02-23 16:00:13,535 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000410.jpg) successfully finished
+2026-02-23 16:00:33,689 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000411.jpg) successfully finished
+2026-02-23 16:00:54,465 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000412.jpg) successfully finished
+2026-02-23 16:01:14,861 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000413.jpg) successfully finished
+2026-02-23 16:01:35,339 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000414.jpg) successfully finished
+2026-02-23 16:01:55,885 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000415.jpg) successfully finished
+2026-02-23 16:02:16,523 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000416.jpg) successfully finished
+2026-02-23 16:02:37,230 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000417.jpg) successfully finished
+2026-02-23 16:02:58,069 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000418.jpg) successfully finished
+2026-02-23 16:03:18,998 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000419.jpg) successfully finished
+2026-02-23 16:03:39,976 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000420.jpg) successfully finished
+2026-02-23 16:04:01,092 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000421.jpg) successfully finished
+2026-02-23 16:04:22,275 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000422.jpg) successfully finished
+2026-02-23 16:04:43,615 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000423.jpg) successfully finished
+2026-02-23 16:05:05,028 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000424.jpg) successfully finished
+2026-02-23 16:05:26,530 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000425.jpg) successfully finished
+2026-02-23 16:05:48,132 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000426.jpg) successfully finished
+2026-02-23 16:06:09,803 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000427.jpg) successfully finished
+2026-02-23 16:06:31,377 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000428.jpg) successfully finished
+2026-02-23 16:06:53,221 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000429.jpg) successfully finished
+2026-02-23 16:07:15,271 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000430.jpg) successfully finished
+2026-02-23 16:07:37,350 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000431.jpg) successfully finished
+2026-02-23 16:07:59,550 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000432.jpg) successfully finished
+2026-02-23 16:08:21,801 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000433.jpg) successfully finished
+2026-02-23 16:08:44,111 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000434.jpg) successfully finished
+2026-02-23 16:09:06,493 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000435.jpg) successfully finished
+2026-02-23 16:09:28,926 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000436.jpg) successfully finished
+2026-02-23 16:09:51,472 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000437.jpg) successfully finished
+2026-02-23 16:10:17,309 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000438.jpg) successfully finished
+2026-02-23 16:10:44,510 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000439.jpg) successfully finished
+2026-02-23 16:11:12,022 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000440.jpg) successfully finished
+2026-02-23 16:11:39,544 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000441.jpg) successfully finished
+2026-02-23 16:12:07,285 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000442.jpg) successfully finished
+2026-02-23 16:12:43,944 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000443.jpg) successfully finished
+2026-02-23 16:13:13,407 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000444.jpg) successfully finished
+2026-02-23 16:13:42,796 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000445.jpg) successfully finished
+2026-02-23 16:14:12,061 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000446.jpg) successfully finished
+2026-02-23 16:14:40,705 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000447.jpg) successfully finished
+2026-02-23 16:15:09,399 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000448.jpg) successfully finished
+2026-02-23 16:15:38,368 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000449.jpg) successfully finished
+2026-02-23 16:16:07,122 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000450.jpg) successfully finished
+2026-02-23 16:16:36,010 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000451.jpg) successfully finished
+2026-02-23 16:17:08,621 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000452.jpg) successfully finished
+2026-02-23 16:17:42,722 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000453.jpg) successfully finished
+2026-02-23 16:18:16,607 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000454.jpg) successfully finished
+2026-02-23 16:18:50,143 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000455.jpg) successfully finished
+2026-02-23 16:19:24,461 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000456.jpg) successfully finished
+2026-02-23 16:19:41,185 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 2.21ms
+2026-02-23 16:19:41,185 [websockets.py:open()] - Websocket Opened: ID: 4081244552, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 16:19:41,191 [websockets.py:_handle_identify()] - Websocket 4081244552 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 16:20:03,907 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000457.jpg) successfully finished
+2026-02-23 16:20:31,375 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081244552
+2026-02-23 16:20:36,197 [websockets.py:on_close()] - Websocket Closed: ID: 4081244552 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 16:20:41,141 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000458.jpg) successfully finished
+2026-02-23 16:21:14,826 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000459.jpg) successfully finished
+2026-02-23 16:21:47,402 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000460.jpg) successfully finished
+2026-02-23 16:22:19,850 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000461.jpg) successfully finished
+2026-02-23 16:22:51,941 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000462.jpg) successfully finished
+2026-02-23 16:23:23,125 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000463.jpg) successfully finished
+2026-02-23 16:23:54,124 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000464.jpg) successfully finished
+2026-02-23 16:24:25,003 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000465.jpg) successfully finished
+2026-02-23 16:24:55,781 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000466.jpg) successfully finished
+2026-02-23 16:25:28,034 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000467.jpg) successfully finished
+2026-02-23 16:26:00,933 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000468.jpg) successfully finished
+2026-02-23 16:26:33,905 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000469.jpg) successfully finished
+2026-02-23 16:27:06,536 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000470.jpg) successfully finished
+2026-02-23 16:27:38,971 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000471.jpg) successfully finished
+2026-02-23 16:28:11,327 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000472.jpg) successfully finished
+2026-02-23 16:28:44,887 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000473.jpg) successfully finished
+2026-02-23 16:29:18,461 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000474.jpg) successfully finished
+2026-02-23 16:29:52,218 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000475.jpg) successfully finished
+2026-02-23 16:30:26,985 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000476.jpg) successfully finished
+2026-02-23 16:31:02,181 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000477.jpg) successfully finished
+2026-02-23 16:31:37,633 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000478.jpg) successfully finished
+2026-02-23 16:32:12,925 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000479.jpg) successfully finished
+2026-02-23 16:32:48,284 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000480.jpg) successfully finished
+2026-02-23 16:33:23,827 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000481.jpg) successfully finished
+2026-02-23 16:34:00,841 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000482.jpg) successfully finished
+2026-02-23 16:34:37,213 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000483.jpg) successfully finished
+2026-02-23 16:35:13,126 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000484.jpg) successfully finished
+2026-02-23 16:35:48,272 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000485.jpg) successfully finished
+2026-02-23 16:36:24,987 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000486.jpg) successfully finished
+2026-02-23 16:37:02,460 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000487.jpg) successfully finished
+2026-02-23 16:37:16,710 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2026-02-23 16:37:38,986 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000488.jpg) successfully finished
+2026-02-23 16:38:15,739 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000489.jpg) successfully finished
+2026-02-23 16:38:52,914 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000490.jpg) successfully finished
+2026-02-23 16:39:37,130 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000491.jpg) successfully finished
+2026-02-23 16:40:13,294 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000492.jpg) successfully finished
+2026-02-23 16:40:48,804 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000493.jpg) successfully finished
+2026-02-23 16:41:23,653 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000494.jpg) successfully finished
+2026-02-23 16:41:58,803 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000495.jpg) successfully finished
+2026-02-23 16:42:34,118 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000496.jpg) successfully finished
+2026-02-23 16:43:08,918 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000497.jpg) successfully finished
+2026-02-23 16:43:44,286 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000498.jpg) successfully finished
+2026-02-23 16:43:53,648 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.71ms
+2026-02-23 16:43:53,649 [websockets.py:open()] - Websocket Opened: ID: 4081237896, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 16:43:53,651 [websockets.py:_handle_identify()] - Websocket 4081237896 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 16:44:18,707 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000499.jpg) successfully finished
+2026-02-23 16:44:53,764 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081237896
+2026-02-23 16:44:53,892 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000500.jpg) successfully finished
+2026-02-23 16:44:58,666 [websockets.py:on_close()] - Websocket Closed: ID: 4081237896 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 16:45:29,577 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000501.jpg) successfully finished
+2026-02-23 16:46:05,442 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000502.jpg) successfully finished
+2026-02-23 16:46:40,933 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000503.jpg) successfully finished
+2026-02-23 16:47:13,093 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000504.jpg) successfully finished
+2026-02-23 16:47:45,082 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000505.jpg) successfully finished
+2026-02-23 16:48:20,625 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000506.jpg) successfully finished
+2026-02-23 16:48:51,371 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000507.jpg) successfully finished
+2026-02-23 16:49:20,951 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000508.jpg) successfully finished
+2026-02-23 16:49:49,042 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000509.jpg) successfully finished
+2026-02-23 16:50:16,220 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000510.jpg) successfully finished
+2026-02-23 16:50:42,970 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000511.jpg) successfully finished
+2026-02-23 16:51:12,187 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000512.jpg) successfully finished
+2026-02-23 16:51:37,912 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000513.jpg) successfully finished
+2026-02-23 16:52:03,566 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000514.jpg) successfully finished
+2026-02-23 16:52:29,148 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000515.jpg) successfully finished
+2026-02-23 16:52:54,646 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000516.jpg) successfully finished
+2026-02-23 16:53:20,067 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000517.jpg) successfully finished
+2026-02-23 16:53:45,449 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000518.jpg) successfully finished
+2026-02-23 16:54:10,852 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000519.jpg) successfully finished
+2026-02-23 16:54:36,803 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000520.jpg) successfully finished
+2026-02-23 16:55:02,754 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000521.jpg) successfully finished
+2026-02-23 16:55:29,162 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000522.jpg) successfully finished
+2026-02-23 16:55:55,897 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000523.jpg) successfully finished
+2026-02-23 16:56:20,888 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000524.jpg) successfully finished
+2026-02-23 16:56:45,890 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000525.jpg) successfully finished
+2026-02-23 16:57:09,930 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000526.jpg) successfully finished
+2026-02-23 16:57:33,777 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000527.jpg) successfully finished
+2026-02-23 16:57:57,283 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000528.jpg) successfully finished
+2026-02-23 16:58:20,728 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000529.jpg) successfully finished
+2026-02-23 16:58:43,763 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000530.jpg) successfully finished
+2026-02-23 16:59:05,813 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000531.jpg) successfully finished
+2026-02-23 16:59:27,646 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000532.jpg) successfully finished
+2026-02-23 16:59:49,201 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000533.jpg) successfully finished
+2026-02-23 17:00:10,242 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000534.jpg) successfully finished
+2026-02-23 17:00:31,154 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000535.jpg) successfully finished
+2026-02-23 17:00:52,014 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000536.jpg) successfully finished
+2026-02-23 17:01:12,861 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000537.jpg) successfully finished
+2026-02-23 17:01:33,672 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000538.jpg) successfully finished
+2026-02-23 17:01:54,437 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000539.jpg) successfully finished
+2026-02-23 17:02:15,175 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000540.jpg) successfully finished
+2026-02-23 17:02:35,892 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000541.jpg) successfully finished
+2026-02-23 17:02:56,563 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000542.jpg) successfully finished
+2026-02-23 17:03:17,198 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000543.jpg) successfully finished
+2026-02-23 17:03:37,805 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000544.jpg) successfully finished
+2026-02-23 17:03:58,384 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000545.jpg) successfully finished
+2026-02-23 17:04:18,949 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000546.jpg) successfully finished
+2026-02-23 17:04:39,471 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000547.jpg) successfully finished
+2026-02-23 17:04:59,966 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000548.jpg) successfully finished
+2026-02-23 17:05:20,419 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000549.jpg) successfully finished
+2026-02-23 17:05:43,035 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000550.jpg) cancelled
+2026-02-23 17:05:43,036 [timelapse.py:newframe()] - getting newframe failed: wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000550.jpg
+2026-02-23 17:06:01,242 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000550.jpg) successfully finished
+2026-02-23 17:06:21,608 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000551.jpg) successfully finished
+2026-02-23 17:06:41,953 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000552.jpg) successfully finished
+2026-02-23 17:07:02,248 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000553.jpg) successfully finished
+2026-02-23 17:07:22,528 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000554.jpg) successfully finished
+2026-02-23 17:07:42,774 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000555.jpg) successfully finished
+2026-02-23 17:08:02,979 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000556.jpg) successfully finished
+2026-02-23 17:08:23,159 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000557.jpg) successfully finished
+2026-02-23 17:08:43,294 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000558.jpg) successfully finished
+2026-02-23 17:09:03,407 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000559.jpg) successfully finished
+2026-02-23 17:09:23,476 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000560.jpg) successfully finished
+2026-02-23 17:09:43,540 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000561.jpg) successfully finished
+2026-02-23 17:10:03,496 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000562.jpg) successfully finished
+2026-02-23 17:10:23,405 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000563.jpg) successfully finished
+2026-02-23 17:10:43,337 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000564.jpg) successfully finished
+2026-02-23 17:11:03,329 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000565.jpg) successfully finished
+2026-02-23 17:11:23,245 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000566.jpg) successfully finished
+2026-02-23 17:11:43,504 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000567.jpg) successfully finished
+2026-02-23 17:12:03,284 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000568.jpg) successfully finished
+2026-02-23 17:12:23,360 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000569.jpg) successfully finished
+2026-02-23 17:12:43,726 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000570.jpg) successfully finished
+2026-02-23 17:13:04,025 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000571.jpg) successfully finished
+2026-02-23 17:13:24,587 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000572.jpg) successfully finished
+2026-02-23 17:13:45,197 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000573.jpg) successfully finished
+2026-02-23 17:14:05,804 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000574.jpg) successfully finished
+2026-02-23 17:14:26,594 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000575.jpg) successfully finished
+2026-02-23 17:14:47,327 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000576.jpg) successfully finished
+2026-02-23 17:15:07,903 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000577.jpg) successfully finished
+2026-02-23 17:15:28,424 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000578.jpg) successfully finished
+2026-02-23 17:15:48,907 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000579.jpg) successfully finished
+2026-02-23 17:16:09,339 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000580.jpg) successfully finished
+2026-02-23 17:16:29,755 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000581.jpg) successfully finished
+2026-02-23 17:16:50,154 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000582.jpg) successfully finished
+2026-02-23 17:16:51,400 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.37ms
+2026-02-23 17:16:51,400 [websockets.py:open()] - Websocket Opened: ID: 4081236360, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 17:16:51,405 [websockets.py:_handle_identify()] - Websocket 4081236360 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 17:17:10,491 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000583.jpg) successfully finished
+2026-02-23 17:17:30,926 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000584.jpg) successfully finished
+2026-02-23 17:17:51,424 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000585.jpg) successfully finished
+2026-02-23 17:17:51,425 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081236360
+2026-02-23 17:17:56,415 [websockets.py:on_close()] - Websocket Closed: ID: 4081236360 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 17:18:12,410 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000586.jpg) successfully finished
+2026-02-23 17:18:32,532 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000587.jpg) successfully finished
+2026-02-23 17:18:33,443 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 3.97ms
+2026-02-23 17:18:33,444 [websockets.py:open()] - Websocket Opened: ID: 4081242368, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 17:18:33,449 [websockets.py:_handle_identify()] - Websocket 4081242368 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 17:18:52,989 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000588.jpg) successfully finished
+2026-02-23 17:19:13,080 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000589.jpg) successfully finished
+2026-02-23 17:19:33,266 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000590.jpg) successfully finished
+2026-02-23 17:19:33,495 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081242368
+2026-02-23 17:19:38,461 [websockets.py:on_close()] - Websocket Closed: ID: 4081242368 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 17:19:53,265 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000591.jpg) successfully finished
+2026-02-23 17:20:13,196 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000592.jpg) successfully finished
+2026-02-23 17:20:29,920 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.23ms
+2026-02-23 17:20:29,921 [websockets.py:open()] - Websocket Opened: ID: 4081244000, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 17:20:29,928 [websockets.py:_handle_identify()] - Websocket 4081244000 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 17:20:33,915 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000593.jpg) successfully finished
+2026-02-23 17:20:54,174 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000594.jpg) successfully finished
+2026-02-23 17:21:14,323 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000595.jpg) successfully finished
+2026-02-23 17:21:34,895 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000596.jpg) successfully finished
+2026-02-23 17:21:54,726 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000597.jpg) successfully finished
+2026-02-23 17:22:14,497 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000598.jpg) successfully finished
+2026-02-23 17:22:33,920 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000599.jpg) successfully finished
+2026-02-23 17:22:52,027 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000600.jpg) successfully finished
+2026-02-23 17:23:10,393 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000601.jpg) successfully finished
+2026-02-23 17:23:28,748 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000602.jpg) successfully finished
+2026-02-23 17:23:47,081 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000603.jpg) successfully finished
+2026-02-23 17:24:05,556 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000604.jpg) successfully finished
+2026-02-23 17:24:23,847 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000605.jpg) successfully finished
+2026-02-23 17:24:42,161 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000606.jpg) successfully finished
+2026-02-23 17:25:00,371 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000607.jpg) successfully finished
+2026-02-23 17:25:18,521 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000608.jpg) successfully finished
+2026-02-23 17:25:36,657 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000609.jpg) successfully finished
+2026-02-23 17:25:54,758 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000610.jpg) successfully finished
+2026-02-23 17:26:12,894 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000611.jpg) successfully finished
+2026-02-23 17:26:30,990 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000612.jpg) successfully finished
+2026-02-23 17:26:49,072 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000613.jpg) successfully finished
+2026-02-23 17:27:07,130 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000614.jpg) successfully finished
+2026-02-23 17:27:25,256 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000615.jpg) successfully finished
+2026-02-23 17:27:43,298 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000616.jpg) successfully finished
+2026-02-23 17:28:01,315 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000617.jpg) successfully finished
+2026-02-23 17:28:19,332 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000618.jpg) successfully finished
+2026-02-23 17:28:28,820 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.58ms
+2026-02-23 17:28:28,821 [websockets.py:open()] - Websocket Opened: ID: 4081242992, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 17:28:28,829 [websockets.py:_handle_identify()] - Websocket 4081242992 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 17:28:37,335 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000619.jpg) successfully finished
+2026-02-23 17:28:55,328 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000620.jpg) successfully finished
+2026-02-23 17:29:13,289 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000621.jpg) successfully finished
+2026-02-23 17:29:31,241 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000622.jpg) successfully finished
+2026-02-23 17:29:49,183 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000623.jpg) successfully finished
+2026-02-23 17:30:07,110 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000624.jpg) successfully finished
+2026-02-23 17:30:24,858 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000625.jpg) successfully finished
+2026-02-23 17:30:42,767 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000626.jpg) successfully finished
+2026-02-23 17:31:00,631 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000627.jpg) successfully finished
+2026-02-23 17:31:18,620 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000628.jpg) successfully finished
+2026-02-23 17:31:36,299 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000629.jpg) successfully finished
+2026-02-23 17:31:54,185 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000630.jpg) successfully finished
+2026-02-23 17:32:11,982 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000631.jpg) successfully finished
+2026-02-23 17:32:17,327 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2026-02-23 17:32:29,444 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000632.jpg) successfully finished
+2026-02-23 17:32:47,368 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000633.jpg) successfully finished
+2026-02-23 17:33:04,993 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000634.jpg) successfully finished
+2026-02-23 17:33:24,103 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000635.jpg) successfully finished
+2026-02-23 17:33:41,507 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000636.jpg) successfully finished
+2026-02-23 17:33:59,082 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000637.jpg) successfully finished
+2026-02-23 17:34:15,799 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000638.jpg) successfully finished
+2026-02-23 17:34:32,070 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000639.jpg) successfully finished
+2026-02-23 17:34:47,511 [timelapse.py:render()] - start FFMPEG: /usr/bin/ffmpeg -r 30 -i '/tmp/timelapse/frame%6d.jpg' -threads 2 -g 5 -crf 23 -vcodec libx264 -pix_fmt yuv420p -an  '/tmp/timelapse/timelapse_90 kyz-pasta-lite-receiver-body-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (PLA - PolyMaker PolyTerra).gcode_20260223_1734.mp4' -y
