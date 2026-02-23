@@ -3485,3 +3485,13 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBxV5U1rkHklr0Y
 2026-02-23 17:40:53,967 [websockets.py:on_close()] - Websocket Closed: ID: 4081242992 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
 2026-02-23 17:51:10,337 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081244000
 2026-02-23 17:51:15,266 [websockets.py:on_close()] - Websocket Closed: ID: 4081244000 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.71
+2026-02-23 18:10:38,604 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.09ms
+2026-02-23 18:10:38,605 [websockets.py:open()] - Websocket Opened: ID: 4081244672, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 18:10:38,616 [websockets.py:_handle_identify()] - Websocket 4081244672 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 18:11:38,801 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081244672
+2026-02-23 18:11:43,619 [websockets.py:on_close()] - Websocket Closed: ID: 4081244672 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 18:21:20,501 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.29ms
+2026-02-23 18:21:20,502 [websockets.py:open()] - Websocket Opened: ID: 4081242872, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 18:21:20,507 [websockets.py:_handle_identify()] - Websocket 4081242872 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 18:21:50,605 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081242872
+2026-02-23 18:21:55,512 [websockets.py:on_close()] - Websocket Closed: ID: 4081242872 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
