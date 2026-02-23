@@ -2642,3 +2642,4 @@ Properties:
 2026-02-23 09:32:10,547 [job_state.py:_handle_started()] - Job state initialized: standby
 2026-02-23 09:32:11,064 [klippy_connection.py:_check_ready()] - Klippy ready
 2026-02-23 09:32:11,801 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'extruder']
+2026-02-23 09:32:32,764 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
