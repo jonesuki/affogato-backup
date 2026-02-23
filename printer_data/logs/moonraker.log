@@ -2087,3 +2087,6 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary6tKrshwjOc1p18
 2026-02-23 08:51:55,599 [websockets.py:_handle_identify()] - Websocket 4080085264 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
 2026-02-23 08:56:35,737 [websockets.py:write_to_socket()] - Websocket closed while writing: 4080085264
 2026-02-23 08:56:40,636 [websockets.py:on_close()] - Websocket Closed: ID: 4080085264 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 09:12:49,624 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 1.64ms
+2026-02-23 09:12:49,624 [websockets.py:open()] - Websocket Opened: ID: 4080086224, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 09:12:49,629 [websockets.py:_handle_identify()] - Websocket 4080086224 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
