@@ -3508,3 +3508,15 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBxV5U1rkHklr0Y
 2026-02-23 18:56:09,900 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 2.41ms
 2026-02-23 18:56:09,900 [websockets.py:open()] - Websocket Opened: ID: 4081242704, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
 2026-02-23 18:56:09,904 [websockets.py:_handle_identify()] - Websocket 4081242704 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 19:08:00,279 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081242704
+2026-02-23 19:08:05,044 [websockets.py:on_close()] - Websocket Closed: ID: 4081242704 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.93
+2026-02-23 19:11:28,675 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.60ms
+2026-02-23 19:11:28,676 [websockets.py:open()] - Websocket Opened: ID: 4081242584, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 19:11:28,692 [websockets.py:_handle_identify()] - Websocket 4081242584 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 19:12:28,855 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081242584
+2026-02-23 19:12:33,692 [websockets.py:on_close()] - Websocket Closed: ID: 4081242584 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-23 19:16:52,250 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 5.16ms
+2026-02-23 19:16:52,250 [websockets.py:open()] - Websocket Opened: ID: 4081245752, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 19:16:52,281 [websockets.py:_handle_identify()] - Websocket 4081245752 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 19:17:52,302 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081245752
+2026-02-23 19:17:57,264 [websockets.py:on_close()] - Websocket Closed: ID: 4081245752 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
