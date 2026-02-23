@@ -2082,3 +2082,6 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary6tKrshwjOc1p18
 2026-02-23 08:49:28,182 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 2.69ms
 2026-02-23 08:49:28,183 [websockets.py:open()] - Websocket Opened: ID: 4080083776, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
 2026-02-23 08:49:28,186 [websockets.py:_handle_identify()] - Websocket 4080083776 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-23 08:51:55,590 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 1.59ms
+2026-02-23 08:51:55,591 [websockets.py:open()] - Websocket Opened: ID: 4080085264, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
+2026-02-23 08:51:55,599 [websockets.py:_handle_identify()] - Websocket 4080085264 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
