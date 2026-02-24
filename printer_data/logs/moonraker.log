@@ -393,3 +393,9 @@ Klipper Version: v0.13.0-541-g187481e2
 2026-02-24 21:55:17,942 [websockets.py:_handle_identify()] - Websocket 4090482592 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
 2026-02-24 21:56:17,956 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090482592
 2026-02-24 21:56:22,938 [websockets.py:on_close()] - Websocket Closed: ID: 4090482592 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-24 22:09:55,359 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 6.13ms
+2026-02-24 22:09:55,360 [websockets.py:open()] - Websocket Opened: ID: 4090482328, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 22:09:55,368 [websockets.py:_handle_identify()] - Websocket 4090482328 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 22:10:55,434 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090482328
+2026-02-24 22:11:00,377 [websockets.py:on_close()] - Websocket Closed: ID: 4090482328 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-24 22:17:17,119 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.155
