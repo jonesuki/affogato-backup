@@ -308,3 +308,4 @@ Klipper Version: v0.13.0-541-g187481e2
 2026-02-24 09:00:51,049 [websockets.py:_handle_identify()] - Websocket 4090479736 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
 2026-02-24 09:05:31,451 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090479736
 2026-02-24 09:05:36,239 [websockets.py:on_close()] - Websocket Closed: ID: 4090479736 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.01
+2026-02-24 10:02:16,956 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.192
