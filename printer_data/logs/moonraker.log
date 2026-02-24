@@ -351,3 +351,13 @@ Klipper Version: v0.13.0-541-g187481e2
 2026-02-24 16:17:46,414 [websockets.py:_handle_identify()] - Websocket 4090481560 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
 2026-02-24 16:18:25,336 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090481560
 2026-02-24 16:18:30,317 [websockets.py:on_close()] - Websocket Closed: ID: 4090481560 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.97
+2026-02-24 16:35:25,588 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.48ms
+2026-02-24 16:35:25,589 [websockets.py:open()] - Websocket Opened: ID: 4090481584, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 16:35:25,742 [websockets.py:_handle_identify()] - Websocket 4090481584 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 16:36:15,629 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090481584
+2026-02-24 16:36:20,604 [websockets.py:on_close()] - Websocket Closed: ID: 4090481584 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-02-24 16:50:11,850 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.88ms
+2026-02-24 16:50:11,851 [websockets.py:open()] - Websocket Opened: ID: 4090478752, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 16:50:11,859 [websockets.py:_handle_identify()] - Websocket 4090478752 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 16:51:01,946 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090478752
+2026-02-24 16:51:06,867 [websockets.py:on_close()] - Websocket Closed: ID: 4090478752 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
