@@ -251,3 +251,5 @@ Klipper Version: v0.13.0-541-g187481e2
 2026-02-24 02:32:03,149 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.30ms
 2026-02-24 02:32:03,150 [websockets.py:open()] - Websocket Opened: ID: 4090478800, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
 2026-02-24 02:32:03,157 [websockets.py:_handle_identify()] - Websocket 4090478800 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 02:32:33,369 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090478800
+2026-02-24 02:32:38,159 [websockets.py:on_close()] - Websocket Closed: ID: 4090478800 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.92
