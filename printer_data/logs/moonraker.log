@@ -320,3 +320,29 @@ Klipper Version: v0.13.0-541-g187481e2
 2026-02-24 11:07:13,139 [websockets.py:_handle_identify()] - Websocket 4090480696 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
 2026-02-24 11:07:53,177 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090480696
 2026-02-24 11:07:58,145 [websockets.py:on_close()] - Websocket Closed: ID: 4090480696 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.93
+2026-02-24 12:07:16,984 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.192
+2026-02-24 12:08:13,826 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
+2026-02-24 12:08:13,830 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 7.01ms
+2026-02-24 12:08:13,831 [websockets.py:open()] - Websocket Opened: ID: 4090479472, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 12:08:13,837 [websockets.py:_handle_identify()] - Websocket 4090479472 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 12:08:33,849 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090479472
+2026-02-24 12:08:38,839 [websockets.py:on_close()] - Websocket Closed: ID: 4090479472 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.01
+2026-02-24 13:07:16,999 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2026-02-24 13:08:28,718 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 6.12ms
+2026-02-24 13:08:28,719 [websockets.py:open()] - Websocket Opened: ID: 4081191688, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 13:08:28,727 [websockets.py:_handle_identify()] - Websocket 4081191688 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 13:09:28,792 [websockets.py:write_to_socket()] - Websocket closed while writing: 4081191688
+2026-02-24 13:09:33,773 [websockets.py:on_close()] - Websocket Closed: ID: 4081191688 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.95
+2026-02-24 14:09:25,984 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.21ms
+2026-02-24 14:09:25,984 [websockets.py:open()] - Websocket Opened: ID: 4090482040, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 14:09:26,019 [websockets.py:_handle_identify()] - Websocket 4090482040 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 15:09:27,428 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090482040
+2026-02-24 15:09:32,245 [websockets.py:on_close()] - Websocket Closed: ID: 4090482040 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.99
+2026-02-24 15:12:17,027 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.192
+2026-02-24 15:41:31,584 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
+2026-02-24 15:41:31,587 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 6.30ms
+2026-02-24 15:41:31,588 [websockets.py:open()] - Websocket Opened: ID: 4090481776, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-02-24 15:41:31,622 [websockets.py:_handle_identify()] - Websocket 4090481776 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-02-24 15:42:21,797 [websockets.py:write_to_socket()] - Websocket closed while writing: 4090481776
+2026-02-24 15:42:26,600 [websockets.py:on_close()] - Websocket Closed: ID: 4090481776 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.97
+2026-02-24 16:02:17,339 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
