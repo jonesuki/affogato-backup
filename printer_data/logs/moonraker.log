@@ -1693,3 +1693,44 @@ Pinned Commit: None
 2026-02-25 16:53:52,707 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
 2026-02-25 16:54:06,071 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper fetch origin --prune --progress) successfully finished
 2026-02-25 16:54:06,089 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
+2026-02-25 16:54:07,531 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper pull --progress) successfully finished
+2026-02-25 16:54:07,584 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper status --porcelain -b) successfully finished
+2026-02-25 16:54:07,598 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper branch --list --no-color) successfully finished
+2026-02-25 16:54:07,624 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper remote get-url origin) successfully finished
+2026-02-25 16:54:07,639 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
+2026-02-25 16:54:07,653 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse HEAD) successfully finished
+2026-02-25 16:54:07,784 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper describe --always --tags --long --dirty --abbrev=8) successfully finished
+2026-02-25 16:54:07,797 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse origin/master) successfully finished
+2026-02-25 16:54:07,912 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper describe origin/master --always --tags --long --abbrev=8) successfully finished
+2026-02-25 16:54:07,927 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-list HEAD..54c7b65d5d5685c4f6e9649a3d3be9356a6125dc --count) successfully finished
+2026-02-25 16:54:07,928 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+Owner: Klipper3d
+Repository Name: klipper
+Path: /home/pi/klipper
+Remote: origin
+Branch: master
+Remote URL: https://github.com/Klipper3d/klipper.git
+Recovery URL: https://github.com/Klipper3d/klipper.git
+Current Commit SHA: 54c7b65d5d5685c4f6e9649a3d3be9356a6125dc
+Upstream Commit SHA: 54c7b65d5d5685c4f6e9649a3d3be9356a6125dc
+Current Version: v0.13.0-557-g54c7b65d
+Upstream Version: v0.13.0-557-g54c7b65d
+Rollback Commit: 187481e2514f30fbaa19241869f4485ab4289cea
+Rollback Branch: master
+Rollback Version: v0.13.0-541-g187481e2
+Is Dirty: False
+Is Detached: False
+Is Shallow: False
+Commits Behind Count: 0
+Diverged: False
+Pinned Commit: None
+2026-02-25 16:54:07,928 [base_deploy.py:log_info()] - Git Repo klipper: Channel: dev
+2026-02-25 16:54:07,928 [base_deploy.py:log_info()] - Git Repo klipper: Validity check for git repo passed
+2026-02-25 16:54:07,951 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-02-25 16:54:08,706 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-02-25 16:54:11,648 [server.py:add_log_rollover_item()] - Klipper Version: v0.13.0-557-g54c7b65d
+2026-02-25 16:54:13,885 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-02-25 16:54:13,886 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-02-25 16:54:14,136 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-02-25 16:54:14,418 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-02-25 16:54:14,901 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'extruder']
