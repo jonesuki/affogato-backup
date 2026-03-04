@@ -1,4 +1,4 @@
--------------------- Log Start | Tue Mar  3 00:00:42 2026 --------------------
+-------------------- Log Start | Wed Mar  4 00:08:16 2026 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/pi/printer_data
 is_default_data_path: False
@@ -204,8 +204,8 @@ unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['network-online.target', 'sysinit.target', 'system.slice']
-**After=['basic.target', 'sysinit.target', 'systemd-journald.socket', 'klipper.service', 'system.slice', 'network-online.target']
+**Requires=['network-online.target', 'system.slice', 'sysinit.target']
+**After=['system.slice', 'systemd-journald.socket', 'network-online.target', 'basic.target', 'klipper.service', 'sysinit.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
 **ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -219,8 +219,8 @@ unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', '-.mount']
-**After=['basic.target', 'sysinit.target', 'systemd-journald.socket', 'system.slice', '-.mount', 'network-online.target']
+**Requires=['system.slice', '-.mount', 'sysinit.target']
+**After=['system.slice', 'systemd-journald.socket', 'network-online.target', '-.mount', 'basic.target', 'sysinit.target']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -239,613 +239,12 @@ Git Repo Klipper-Adaptive-Meshing-Purging: No warnings detected
 Git Repo Klippain-ShakeTune: No warnings detected
 Git Repo klipper-backup: No warnings detected
 Git Repo Katapult: No warnings detected
-Klipper Version: v0.13.0-557-g54c7b65d
-2026-03-03 00:00:42,285 [websockets.py:write_to_socket()] - Websocket closed while writing: 4057277320
-2026-03-03 00:00:47,114 [websockets.py:on_close()] - Websocket Closed: ID: 4057277320 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.98
-2026-03-03 00:02:12,758 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
-2026-03-03 00:02:12,761 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 6.80ms
-2026-03-03 00:02:12,762 [websockets.py:open()] - Websocket Opened: ID: 4057279960, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 00:02:12,767 [websockets.py:on_close()] - Websocket Closed: ID: 4057279960 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 0.01
-2026-03-03 00:02:13,153 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.28ms
-2026-03-03 00:02:13,153 [websockets.py:open()] - Websocket Opened: ID: 4057278376, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 00:02:13,159 [websockets.py:_handle_identify()] - Websocket 4057278376 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 00:10:57,352 [websockets.py:on_close()] - Websocket Closed: ID: 4057278376 Close Code: None, Close Reason: None, Pong Time Elapsed: 13.93
-2026-03-03 00:11:06,193 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.75ms
-2026-03-03 00:11:06,194 [websockets.py:open()] - Websocket Opened: ID: 4078630560, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 00:11:06,201 [websockets.py:_handle_identify()] - Websocket 4078630560 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 00:30:28,734 [application.py:prepare()] - Upload Request Received from 192.168.11.192
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryL9FHiPwDXzLoCof1
-2026-03-03 00:30:29,628 [application.py:post()] - Processing Uploaded File: 95 Cartographer shield & silicon decontaminator-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (ASA - Fillamentum Extrafill).gcode
-2026-03-03 00:30:29,909 [shell_command.py:pipe_data_received()] - INFO:metadata:File '95 Cartographer shield & silicon decontaminator-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (ASA - Fillamentum Extrafill).gcode' currently supports cancellation, processing aborted
-
-2026-03-03 00:30:30,005 [shell_command.py:_check_proc_success()] - Command (/home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/components/file_manager/metadata.py -c /tmp/metacfg-_1n8228v.json) successfully finished
-2026-03-03 00:30:30,011 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 1277.37ms
-2026-03-03 00:30:32,499 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 2.04ms
-2026-03-03 00:30:32,499 [websockets.py:open()] - Websocket Opened: ID: 4119994176, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 00:30:32,516 [websockets.py:_handle_identify()] - Websocket 4119994176 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 00:31:05,596 [klippy_apis.py:start_print()] - Requesting Job Start, filename = Mods/95 Cartographer shield & silicon decontaminator-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (ASA - Fillamentum Extrafill).gcode
-2026-03-03 00:31:05,824 [job_state.py:_send_job_event()] - Job Started: Mods/95 Cartographer shield & silicon decontaminator-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (ASA - Fillamentum Extrafill).gcode
-2026-03-03 00:31:32,630 [websockets.py:write_to_socket()] - Websocket closed while writing: 4119994176
-2026-03-03 00:31:37,514 [websockets.py:on_close()] - Websocket Closed: ID: 4119994176 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.88
-2026-03-03 00:36:37,973 [klippy_apis.py:pause_print()] - Requesting job pause...
-2026-03-03 00:38:22,664 [klippy_apis.py:resume_print()] - Requesting job resume...
-2026-03-03 00:39:13,831 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000001.jpg) successfully finished
-2026-03-03 00:44:06,306 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 3.47ms
-2026-03-03 00:44:06,306 [websockets.py:open()] - Websocket Opened: ID: 4119992184, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 00:44:06,333 [websockets.py:_handle_identify()] - Websocket 4119992184 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 00:44:43,913 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000002.jpg) successfully finished
-2026-03-03 00:45:06,524 [websockets.py:write_to_socket()] - Websocket closed while writing: 4119992184
-2026-03-03 00:45:11,321 [websockets.py:on_close()] - Websocket Closed: ID: 4119992184 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.01
-2026-03-03 00:47:15,855 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000003.jpg) successfully finished
-2026-03-03 00:49:47,590 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000004.jpg) successfully finished
-2026-03-03 00:52:19,333 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000005.jpg) successfully finished
-2026-03-03 00:54:16,804 [websockets.py:write_to_socket()] - Websocket closed while writing: 4078630560
-2026-03-03 00:54:21,677 [websockets.py:on_close()] - Websocket Closed: ID: 4078630560 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.88
-2026-03-03 00:55:20,896 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000006.jpg) successfully finished
-2026-03-03 00:56:48,425 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000007.jpg) successfully finished
-2026-03-03 00:58:21,210 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000008.jpg) successfully finished
-2026-03-03 00:59:48,072 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000009.jpg) successfully finished
-2026-03-03 01:01:15,590 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000010.jpg) successfully finished
-2026-03-03 01:03:06,742 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000011.jpg) successfully finished
-2026-03-03 01:04:17,258 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000012.jpg) successfully finished
-2026-03-03 01:05:32,728 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000013.jpg) successfully finished
-2026-03-03 01:06:45,258 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000014.jpg) successfully finished
-2026-03-03 01:06:46,876 [update_manager.py:_handle_auto_refresh()] - Klippy is printing, auto refresh aborted
-2026-03-03 01:08:02,939 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000015.jpg) successfully finished
-2026-03-03 01:09:20,409 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000016.jpg) successfully finished
-2026-03-03 01:10:12,327 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000017.jpg) successfully finished
-2026-03-03 01:10:57,204 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000018.jpg) successfully finished
-2026-03-03 01:11:40,395 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000019.jpg) successfully finished
-2026-03-03 01:12:26,287 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000020.jpg) successfully finished
-2026-03-03 01:13:12,445 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000021.jpg) successfully finished
-2026-03-03 01:13:58,334 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000022.jpg) successfully finished
-2026-03-03 01:14:44,227 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000023.jpg) successfully finished
-2026-03-03 01:15:29,252 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000024.jpg) successfully finished
-2026-03-03 01:16:15,028 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000025.jpg) successfully finished
-2026-03-03 01:16:38,223 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.91ms
-2026-03-03 01:16:38,224 [websockets.py:open()] - Websocket Opened: ID: 4078511992, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 01:16:38,229 [websockets.py:_handle_identify()] - Websocket 4078511992 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 01:16:59,746 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000026.jpg) successfully finished
-2026-03-03 01:17:45,351 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000027.jpg) successfully finished
-2026-03-03 01:18:30,933 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000028.jpg) successfully finished
-2026-03-03 01:19:14,700 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000029.jpg) successfully finished
-2026-03-03 01:19:59,673 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000030.jpg) successfully finished
-2026-03-03 01:20:43,504 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000031.jpg) successfully finished
-2026-03-03 01:21:31,323 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000032.jpg) successfully finished
-2026-03-03 01:22:10,213 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000033.jpg) successfully finished
-2026-03-03 01:22:48,428 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000034.jpg) successfully finished
-2026-03-03 01:23:26,125 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000035.jpg) successfully finished
-2026-03-03 01:24:20,562 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000036.jpg) successfully finished
-2026-03-03 01:24:35,450 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000037.jpg) successfully finished
-2026-03-03 01:24:49,778 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000038.jpg) successfully finished
-2026-03-03 01:25:04,117 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000039.jpg) successfully finished
-2026-03-03 01:25:18,468 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000040.jpg) successfully finished
-2026-03-03 01:25:32,801 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000041.jpg) successfully finished
-2026-03-03 01:25:47,158 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000042.jpg) successfully finished
-2026-03-03 01:26:01,496 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000043.jpg) successfully finished
-2026-03-03 01:26:15,859 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000044.jpg) successfully finished
-2026-03-03 01:26:30,195 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000045.jpg) successfully finished
-2026-03-03 01:26:44,540 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000046.jpg) successfully finished
-2026-03-03 01:27:03,130 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000047.jpg) successfully finished
-2026-03-03 01:27:24,245 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000048.jpg) successfully finished
-2026-03-03 01:27:45,576 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000049.jpg) successfully finished
-2026-03-03 01:28:06,910 [shell_command.py:_check_proc_success()] - Command (wget http://localhost/webcam/?action=snapshot -O /tmp/timelapse/frame000050.jpg) successfully finished
-2026-03-03 01:28:41,618 [timelapse.py:render()] - start FFMPEG: /usr/bin/ffmpeg -r 30 -i '/tmp/timelapse/frame%6d.jpg' -threads 2 -g 5 -crf 23 -vcodec libx264 -pix_fmt yuv420p -an  '/tmp/timelapse/timelapse_95 Cartographer shield & silicon decontaminator-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (ASA - Fillamentum Extrafill).gcode_20260303_0128.mp4' -y
-2026-03-03 01:28:47,772 [timelapse.py:render()] - Rendering Video successful: timelapse_95 Cartographer shield & silicon decontaminator-PIF 45Deg Voron (0.4mm 11mm3)-PIF Standard 11mm3 (ASA - Fillamentum Extrafill).gcode_20260303_0128.mp4
-2026-03-03 01:35:38,577 [websockets.py:write_to_socket()] - Websocket closed while writing: 4078511992
-2026-03-03 01:35:43,435 [websockets.py:on_close()] - Websocket Closed: ID: 4078511992 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.91
-2026-03-03 01:46:47,353 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.208
-2026-03-03 02:00:54,110 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.208
-2026-03-03 02:00:54,114 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 8.27ms
-2026-03-03 02:00:54,115 [websockets.py:open()] - Websocket Opened: ID: 4087586456, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 02:00:54,122 [websockets.py:_handle_identify()] - Websocket 4087586456 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 02:01:54,349 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087586456
-2026-03-03 02:01:59,130 [websockets.py:on_close()] - Websocket Closed: ID: 4087586456 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 02:05:56,604 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.63ms
-2026-03-03 02:05:56,605 [websockets.py:open()] - Websocket Opened: ID: 4087586072, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 02:05:56,610 [websockets.py:_handle_identify()] - Websocket 4087586072 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 02:06:26,855 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087586072
-2026-03-03 02:06:31,613 [websockets.py:on_close()] - Websocket Closed: ID: 4087586072 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 02:22:04,572 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.48ms
-2026-03-03 02:22:04,573 [websockets.py:open()] - Websocket Opened: ID: 4087227656, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 02:22:04,581 [websockets.py:_handle_identify()] - Websocket 4087227656 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 02:22:34,681 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087227656
-2026-03-03 02:22:39,582 [websockets.py:on_close()] - Websocket Closed: ID: 4087227656 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 02:51:24,850 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.55ms
-2026-03-03 02:51:24,851 [websockets.py:open()] - Websocket Opened: ID: 4087586648, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 02:51:24,857 [websockets.py:_handle_identify()] - Websocket 4087586648 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 02:53:55,110 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087586648
-2026-03-03 02:53:59,885 [websockets.py:on_close()] - Websocket Closed: ID: 4087586648 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.72
-2026-03-03 03:01:47,370 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.208
-2026-03-03 03:51:47,382 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.192
-2026-03-03 03:53:30,273 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
-2026-03-03 03:53:30,277 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 7.33ms
-2026-03-03 03:53:30,278 [websockets.py:open()] - Websocket Opened: ID: 4078510432, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 03:53:30,304 [websockets.py:_handle_identify()] - Websocket 4078510432 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 03:54:20,475 [websockets.py:write_to_socket()] - Websocket closed while writing: 4078510432
-2026-03-03 03:54:25,291 [websockets.py:on_close()] - Websocket Closed: ID: 4078510432 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.95
-2026-03-03 04:01:41,621 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.208
-2026-03-03 04:01:41,624 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 6.21ms
-2026-03-03 04:01:41,625 [websockets.py:open()] - Websocket Opened: ID: 4087584320, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 04:01:41,630 [websockets.py:_handle_identify()] - Websocket 4087584320 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 04:02:41,717 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087584320
-2026-03-03 04:02:46,638 [websockets.py:on_close()] - Websocket Closed: ID: 4087584320 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 04:54:20,157 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 2.43ms
-2026-03-03 04:54:20,158 [websockets.py:open()] - Websocket Opened: ID: 4087156232, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 04:54:20,167 [websockets.py:_handle_identify()] - Websocket 4087156232 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 04:55:00,244 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087156232
-2026-03-03 04:55:05,168 [websockets.py:on_close()] - Websocket Closed: ID: 4087156232 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 05:00:03,366 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 5.09ms
-2026-03-03 05:00:03,367 [websockets.py:open()] - Websocket Opened: ID: 4087245792, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 05:00:03,371 [websockets.py:_handle_identify()] - Websocket 4087245792 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 05:00:43,488 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.55ms
-2026-03-03 05:00:43,488 [websockets.py:open()] - Websocket Opened: ID: 4119992568, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 05:00:43,494 [websockets.py:_handle_identify()] - Websocket 4119992568 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 05:01:03,617 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087245792
-2026-03-03 05:01:03,618 [websockets.py:write_to_socket()] - Websocket closed while writing: 4119992568
-2026-03-03 05:01:08,381 [websockets.py:on_close()] - Websocket Closed: ID: 4087245792 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 05:01:08,496 [websockets.py:on_close()] - Websocket Closed: ID: 4119992568 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.01
-2026-03-03 05:18:15,286 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 4.19ms
-2026-03-03 05:18:15,287 [websockets.py:open()] - Websocket Opened: ID: 4078632264, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 05:18:15,296 [websockets.py:_handle_identify()] - Websocket 4078632264 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 05:18:35,172 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.98ms
-2026-03-03 05:18:35,173 [websockets.py:open()] - Websocket Opened: ID: 4119991152, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 05:18:35,199 [websockets.py:_handle_identify()] - Websocket 4119991152 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 05:19:15,244 [websockets.py:write_to_socket()] - Websocket closed while writing: 4119991152
-2026-03-03 05:19:20,185 [websockets.py:on_close()] - Websocket Closed: ID: 4119991152 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 05:20:35,492 [websockets.py:write_to_socket()] - Websocket closed while writing: 4078632264
-2026-03-03 05:20:40,313 [websockets.py:on_close()] - Websocket Closed: ID: 4078632264 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.99
-2026-03-03 05:21:20,151 [application.py:log_request()] - 101 GET /websocket (192.168.11.208) [_TRUSTED_USER_] 3.90ms
-2026-03-03 05:21:20,152 [websockets.py:open()] - Websocket Opened: ID: 4087226456, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 05:21:20,160 [websockets.py:_handle_identify()] - Websocket 4087226456 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 05:22:20,338 [websockets.py:write_to_socket()] - Websocket closed while writing: 4087226456
-2026-03-03 05:22:22,277 [websockets.py:on_close()] - Websocket Closed: ID: 4087226456 Close Code: 1000, Close Reason: ping timed out, Pong Time Elapsed: 0.01
-2026-03-03 06:19:22,662 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.50ms
-2026-03-03 06:19:22,663 [websockets.py:open()] - Websocket Opened: ID: 4078638176, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 06:19:22,668 [websockets.py:_handle_identify()] - Websocket 4078638176 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 06:21:47,415 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.208
-2026-03-03 06:26:32,932 [websockets.py:write_to_socket()] - Websocket closed while writing: 4078638176
-2026-03-03 06:26:37,750 [websockets.py:on_close()] - Websocket Closed: ID: 4078638176 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 06:31:41,103 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.59ms
-2026-03-03 06:31:41,104 [websockets.py:open()] - Websocket Opened: ID: 4087228616, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 06:31:41,110 [websockets.py:_handle_identify()] - Websocket 4087228616 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 06:31:53,495 [websockets.py:on_close()] - Websocket Closed: ID: 4087228616 Close Code: None, Close Reason: None, Pong Time Elapsed: 2.38
-2026-03-03 07:31:47,433 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.11.192
-2026-03-03 21:00:55,615 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
-2026-03-03 21:00:55,619 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.93ms
-2026-03-03 21:00:55,619 [websockets.py:open()] - Websocket Opened: ID: 4119992376, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 21:00:55,700 [websockets.py:_handle_identify()] - Websocket 4119992376 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 21:00:56,422 [websockets.py:on_close()] - Websocket Closed: ID: 4119992376 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 0.81
-2026-03-03 21:00:56,428 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.47ms
-2026-03-03 21:00:56,428 [websockets.py:open()] - Websocket Opened: ID: 4057279336, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 21:00:56,434 [websockets.py:_handle_identify()] - Websocket 4057279336 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 21:23:16,815 [websockets.py:write_to_socket()] - Websocket closed while writing: 4057279336
-2026-03-03 21:23:21,694 [websockets.py:on_close()] - Websocket Closed: ID: 4057279336 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 21:31:12,754 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.88ms
-2026-03-03 21:31:12,755 [websockets.py:open()] - Websocket Opened: ID: 4057871096, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 21:31:12,763 [websockets.py:_handle_identify()] - Websocket 4057871096 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 21:32:02,851 [websockets.py:write_to_socket()] - Websocket closed while writing: 4057871096
-2026-03-03 21:32:07,772 [websockets.py:on_close()] - Websocket Closed: ID: 4057871096 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
-2026-03-03 21:53:13,565 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 4.53ms
-2026-03-03 21:53:13,566 [websockets.py:open()] - Websocket Opened: ID: 4057874144, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 21:53:13,574 [websockets.py:_handle_identify()] - Websocket 4057874144 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 21:59:00,142 [base_deploy.py:log_info()] - PackageKit: Detected 0 package updates:
-
-2026-03-03 21:59:00,164 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker status --porcelain -b) successfully finished
-2026-03-03 21:59:00,179 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker branch --list --no-color) successfully finished
-2026-03-03 21:59:00,204 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker remote get-url origin) successfully finished
-2026-03-03 21:59:00,832 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:00,847 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker merge-base --is-ancestor HEAD origin/master) successfully finished
-2026-03-03 21:59:00,861 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker rev-parse HEAD) successfully finished
-2026-03-03 21:59:00,881 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:00,895 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker rev-parse origin/master) successfully finished
-2026-03-03 21:59:00,913 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker describe origin/master --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:00,928 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker rev-list HEAD..3fbe6ee218d98c2d3f1ab9fe3f291ae47c543bb2 --count) successfully finished
-2026-03-03 21:59:00,929 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
-Owner: Arksine
-Repository Name: moonraker
-Path: /home/pi/moonraker
-Remote: origin
-Branch: master
-Remote URL: https://github.com/Arksine/moonraker.git
-Recovery URL: https://github.com/Arksine/moonraker.git
-Current Commit SHA: 3fbe6ee218d98c2d3f1ab9fe3f291ae47c543bb2
-Upstream Commit SHA: 3fbe6ee218d98c2d3f1ab9fe3f291ae47c543bb2
-Current Version: v0.10.0-9-g3fbe6ee2
-Upstream Version: v0.10.0-9-g3fbe6ee2
-Rollback Commit: 293a4cfc2112b950f7cd9abde68d65cd8074b0e4
-Rollback Branch: master
-Rollback Version: v0.10.0-8-g293a4cfc
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-Repo Warnings:
-  Repo has untracked source files: ['moonraker/components/timelapse.py']
-2026-03-03 21:59:00,929 [base_deploy.py:log_info()] - Git Repo moonraker: Channel: dev
-2026-03-03 21:59:00,929 [base_deploy.py:log_info()] - Git Repo moonraker: Validity check for git repo passed
-2026-03-03 21:59:00,976 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper status --porcelain -b) successfully finished
-2026-03-03 21:59:00,990 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper branch --list --no-color) successfully finished
-2026-03-03 21:59:01,016 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper remote get-url origin) successfully finished
-2026-03-03 21:59:01,791 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:01,807 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper merge-base --is-ancestor HEAD origin/master) successfully finished
-2026-03-03 21:59:01,821 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse HEAD) successfully finished
-2026-03-03 21:59:01,938 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:01,953 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-parse origin/master) successfully finished
-2026-03-03 21:59:02,065 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper describe origin/master --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:02,080 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper rev-list HEAD..f1fb57564fd89511bde3e17aa70af562b3da4f1a --count) successfully finished
-2026-03-03 21:59:02,096 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper log 54c7b65d5d5685c4f6e9649a3d3be9356a6125dc..origin/master --format="sha:%H%x1Dauthor:%an%x1Ddate:%ct%x1Dsubject:%s%x1Dmessage:%b%x1E" --max-count=100) successfully finished
-2026-03-03 21:59:02,237 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper for-each-ref --count=100 --sort='-creatordate' --contains=HEAD --merged=origin/master --format='%(if)%(*objecttype)%(then)%(*objecttype) %(*objectname)%(else)%(objecttype) %(objectname)%(end) %(refname)' 'refs/tags') successfully finished
-2026-03-03 21:59:02,237 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
-Owner: Klipper3d
-Repository Name: klipper
-Path: /home/pi/klipper
-Remote: origin
-Branch: master
-Remote URL: https://github.com/Klipper3d/klipper.git
-Recovery URL: https://github.com/Klipper3d/klipper.git
-Current Commit SHA: 54c7b65d5d5685c4f6e9649a3d3be9356a6125dc
-Upstream Commit SHA: f1fb57564fd89511bde3e17aa70af562b3da4f1a
-Current Version: v0.13.0-557-g54c7b65d
-Upstream Version: v0.13.0-563-gf1fb5756
-Rollback Commit: 187481e2514f30fbaa19241869f4485ab4289cea
-Rollback Branch: master
-Rollback Version: v0.13.0-541-g187481e2
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 6
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:02,238 [base_deploy.py:log_info()] - Git Repo klipper: Channel: dev
-2026-03-03 21:59:02,238 [base_deploy.py:log_info()] - Git Repo klipper: Validity check for git repo passed
-2026-03-03 21:59:02,437 [base_deploy.py:log_info()] - Web Client mainsail: Detected
-Repo: mainsail-crew/mainsail
-Channel: stable
-Path: /home/pi/mainsail
-Local Version: v2.17.0
-Remote Version: v2.17.0
-Valid: True
-Fallback Detected: False
-Pre-release: False
-Download Url: https://github.com/mainsail-crew/mainsail/releases/download/v2.17.0/mainsail.zip
-Download Size: 3001860
-Content Type: application/zip
-Rollback Version: v2.16.1
-Rollback Repo: mainsail-crew/mainsail
-2026-03-03 21:59:02,474 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config status --porcelain -b) successfully finished
-2026-03-03 21:59:02,489 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config branch --list --no-color) successfully finished
-2026-03-03 21:59:02,515 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config remote get-url origin) successfully finished
-2026-03-03 21:59:02,939 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:02,954 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config merge-base --is-ancestor HEAD origin/master) successfully finished
-2026-03-03 21:59:02,972 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config rev-parse HEAD) successfully finished
-2026-03-03 21:59:02,989 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:03,003 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config rev-parse origin/master) successfully finished
-2026-03-03 21:59:03,019 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config describe origin/master --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:03,034 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/mainsail-config rev-list HEAD..ff3869a621db17ce3ef660adbbd3fa321995ac42 --count) successfully finished
-2026-03-03 21:59:03,035 [git_deploy.py:log_repo_info()] - Git Repo mainsail-config Detected:
-Owner: mainsail-crew
-Repository Name: mainsail-config
-Path: /home/pi/mainsail-config
-Remote: origin
-Branch: master
-Remote URL: https://github.com/mainsail-crew/mainsail-config.git
-Recovery URL: https://github.com/mainsail-crew/mainsail-config.git
-Current Commit SHA: ff3869a621db17ce3ef660adbbd3fa321995ac42
-Upstream Commit SHA: ff3869a621db17ce3ef660adbbd3fa321995ac42
-Current Version: v1.2.1-1-gff3869a6
-Upstream Version: v1.2.1-1-gff3869a6
-Rollback Commit: e57810d51b5c634aadaca4db923bfcba269ae4b3
-Rollback Branch: master
-Rollback Version: v1.2.1-0-ge57810d5
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:03,035 [base_deploy.py:log_info()] - Git Repo mainsail-config: Channel: dev
-2026-03-03 21:59:03,035 [base_deploy.py:log_info()] - Git Repo mainsail-config: Validity check for git repo passed
-2026-03-03 21:59:03,056 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse status --porcelain -b) successfully finished
-2026-03-03 21:59:03,070 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse branch --list --no-color) successfully finished
-2026-03-03 21:59:03,097 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse remote get-url origin) successfully finished
-2026-03-03 21:59:03,552 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:03,566 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse merge-base --is-ancestor HEAD origin/main) successfully finished
-2026-03-03 21:59:03,580 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse rev-parse HEAD) successfully finished
-2026-03-03 21:59:03,598 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:03,613 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse rev-parse origin/main) successfully finished
-2026-03-03 21:59:03,632 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse describe origin/main --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:03,648 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/moonraker-timelapse rev-list HEAD..c7fff11e542b95e0e15b8bb1443cea8159ac0274 --count) successfully finished
-2026-03-03 21:59:03,649 [git_deploy.py:log_repo_info()] - Git Repo timelapse Detected:
-Owner: mainsail-crew
-Repository Name: moonraker-timelapse
-Path: /home/pi/moonraker-timelapse
-Remote: origin
-Branch: main
-Remote URL: https://github.com/mainsail-crew/moonraker-timelapse.git
-Recovery URL: https://github.com/mainsail-crew/moonraker-timelapse.git
-Current Commit SHA: c7fff11e542b95e0e15b8bb1443cea8159ac0274
-Upstream Commit SHA: c7fff11e542b95e0e15b8bb1443cea8159ac0274
-Current Version: v0.0.1-143-gc7fff11e
-Upstream Version: v0.0.1-143-gc7fff11e
-Rollback Commit: f9198e00c859ecb72e4dcc11451fd33cc98b7297
-Rollback Branch: main
-Rollback Version: v0.0.1-132-gf9198e00
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:03,649 [base_deploy.py:log_info()] - Git Repo timelapse: Channel: dev
-2026-03-03 21:59:03,649 [base_deploy.py:log_info()] - Git Repo timelapse: Validity check for git repo passed
-2026-03-03 21:59:03,671 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest status --porcelain -b) successfully finished
-2026-03-03 21:59:03,686 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest branch --list --no-color) successfully finished
-2026-03-03 21:59:03,713 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest remote get-url origin) successfully finished
-2026-03-03 21:59:04,173 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:04,187 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest merge-base --is-ancestor HEAD origin/master) successfully finished
-2026-03-03 21:59:04,201 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest rev-parse HEAD) successfully finished
-2026-03-03 21:59:04,222 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:04,235 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest rev-parse origin/master) successfully finished
-2026-03-03 21:59:04,254 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest describe origin/master --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:04,269 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/crowsnest rev-list HEAD..9cc3d4af94bcc67741ddf07ac301df5de8ba23a4 --count) successfully finished
-2026-03-03 21:59:04,271 [git_deploy.py:log_repo_info()] - Git Repo crowsnest Detected:
-Owner: mainsail-crew
-Repository Name: crowsnest
-Path: /home/pi/crowsnest
-Remote: origin
-Branch: master
-Remote URL: https://github.com/mainsail-crew/crowsnest.git
-Recovery URL: https://github.com/mainsail-crew/crowsnest.git
-Current Commit SHA: 9cc3d4af94bcc67741ddf07ac301df5de8ba23a4
-Upstream Commit SHA: 9cc3d4af94bcc67741ddf07ac301df5de8ba23a4
-Current Version: v4.1.17-1-g9cc3d4af
-Upstream Version: v4.1.17-1-g9cc3d4af
-Rollback Commit: d75a3aeb018384e59d03518754f6148c98894ed9
-Rollback Branch: master
-Rollback Version: v4.1.9-1-gd75a3aeb
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:04,271 [base_deploy.py:log_info()] - Git Repo crowsnest: Channel: dev
-2026-03-03 21:59:04,271 [base_deploy.py:log_info()] - Git Repo crowsnest: Validity check for git repo passed
-2026-03-03 21:59:04,292 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar status --porcelain -b) successfully finished
-2026-03-03 21:59:04,307 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar branch --list --no-color) successfully finished
-2026-03-03 21:59:04,333 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar remote get-url origin) successfully finished
-2026-03-03 21:59:04,900 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:04,915 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar merge-base --is-ancestor HEAD origin/main) successfully finished
-2026-03-03 21:59:04,929 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar rev-parse HEAD) successfully finished
-2026-03-03 21:59:04,946 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:04,961 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar rev-parse origin/main) successfully finished
-2026-03-03 21:59:04,980 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar describe origin/main --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:05,010 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/sonar rev-list HEAD..0d1d7c89bbb97fb5f54c80f7814ef322c24d6e45 --count) successfully finished
-2026-03-03 21:59:05,011 [git_deploy.py:log_repo_info()] - Git Repo sonar Detected:
-Owner: mainsail-crew
-Repository Name: sonar
-Path: /home/pi/sonar
-Remote: origin
-Branch: main
-Remote URL: https://github.com/mainsail-crew/sonar.git
-Recovery URL: https://github.com/mainsail-crew/sonar.git
-Current Commit SHA: 0d1d7c89bbb97fb5f54c80f7814ef322c24d6e45
-Upstream Commit SHA: 0d1d7c89bbb97fb5f54c80f7814ef322c24d6e45
-Current Version: v0.2.0-1-g0d1d7c89
-Upstream Version: v0.2.0-1-g0d1d7c89
-Rollback Commit: 3fe23fef07dbc19a9b66bdd111bbd1d574d19955
-Rollback Branch: main
-Rollback Version: v0.2.0-0-g3fe23fef
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:05,011 [base_deploy.py:log_info()] - Git Repo sonar: Channel: dev
-2026-03-03 21:59:05,011 [base_deploy.py:log_info()] - Git Repo sonar: Validity check for git repo passed
-2026-03-03 21:59:05,032 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging status --porcelain -b) successfully finished
-2026-03-03 21:59:05,048 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging branch --list --no-color) successfully finished
-2026-03-03 21:59:05,073 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging remote get-url origin) successfully finished
-2026-03-03 21:59:05,565 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:05,589 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging merge-base --is-ancestor HEAD origin/main) successfully finished
-2026-03-03 21:59:05,612 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging rev-parse HEAD) successfully finished
-2026-03-03 21:59:05,643 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:05,658 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging rev-parse origin/main) successfully finished
-2026-03-03 21:59:05,676 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging describe origin/main --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:05,691 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/Klipper-Adaptive-Meshing-Purging rev-list HEAD..b0dad8ec9ee31cb644b94e39d4b8a8fb9d6c9ba0 --count) successfully finished
-2026-03-03 21:59:05,692 [git_deploy.py:log_repo_info()] - Git Repo Klipper-Adaptive-Meshing-Purging Detected:
-Owner: kyleisah
-Repository Name: Klipper-Adaptive-Meshing-Purging
-Path: /home/pi/Klipper-Adaptive-Meshing-Purging
-Remote: origin
-Branch: main
-Remote URL: https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
-Recovery URL: https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging.git
-Current Commit SHA: b0dad8ec9ee31cb644b94e39d4b8a8fb9d6c9ba0
-Upstream Commit SHA: b0dad8ec9ee31cb644b94e39d4b8a8fb9d6c9ba0
-Current Version: v1.1.2-13-gb0dad8ec
-Upstream Version: v1.1.2-13-gb0dad8ec
-Rollback Commit: d657271f13fc429b5ca36a4f8956b67c9ddf0558
-Rollback Branch: main
-Rollback Version: v1.1.2-12-gd657271f
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:05,692 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Channel: dev
-2026-03-03 21:59:05,692 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Validity check for git repo passed
-2026-03-03 21:59:05,713 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune status --porcelain -b) successfully finished
-2026-03-03 21:59:05,729 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune branch --list --no-color) successfully finished
-2026-03-03 21:59:05,756 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune remote get-url origin) successfully finished
-2026-03-03 21:59:06,282 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:06,296 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune merge-base --is-ancestor HEAD origin/main) successfully finished
-2026-03-03 21:59:06,310 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune rev-parse HEAD) successfully finished
-2026-03-03 21:59:06,326 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:06,340 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune rev-parse origin/main) successfully finished
-2026-03-03 21:59:06,355 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune describe origin/main --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:06,370 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klippain_shaketune rev-list HEAD..354ee4be6db218715239f7b9411c2c37fdea23dd --count) successfully finished
-2026-03-03 21:59:06,371 [git_deploy.py:log_repo_info()] - Git Repo Klippain-ShakeTune Detected:
-Owner: Frix-x
-Repository Name: klippain-shaketune
-Path: /home/pi/klippain_shaketune
-Remote: origin
-Branch: main
-Remote URL: https://github.com/Frix-x/klippain-shaketune.git
-Recovery URL: https://github.com/Frix-x/klippain-shaketune.git
-Current Commit SHA: 354ee4be6db218715239f7b9411c2c37fdea23dd
-Upstream Commit SHA: 354ee4be6db218715239f7b9411c2c37fdea23dd
-Current Version: v6.0.0-0-g354ee4be
-Upstream Version: v6.0.0-0-g354ee4be
-Rollback Commit: 786abbbf0be575cfaa137614f618caadceff02f5
-Rollback Branch: main
-Rollback Version: v5.2.1-0-g786abbbf
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:06,371 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Channel: dev
-2026-03-03 21:59:06,371 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Validity check for git repo passed
-2026-03-03 21:59:06,392 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup status --porcelain -b) successfully finished
-2026-03-03 21:59:06,406 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup branch --list --no-color) successfully finished
-2026-03-03 21:59:06,432 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup remote get-url origin) successfully finished
-2026-03-03 21:59:06,890 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:06,906 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup merge-base --is-ancestor HEAD origin/main) successfully finished
-2026-03-03 21:59:06,920 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup rev-parse HEAD) successfully finished
-2026-03-03 21:59:06,938 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:06,953 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup rev-parse origin/main) successfully finished
-2026-03-03 21:59:06,971 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup describe origin/main --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:06,988 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/klipper-backup rev-list HEAD..70a77c64493a4a9183b2a27bade75b76e358eead --count) successfully finished
-2026-03-03 21:59:06,989 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
-Owner: Staubgeborener
-Repository Name: klipper-backup
-Path: /home/pi/klipper-backup
-Remote: origin
-Branch: main
-Remote URL: https://github.com/Staubgeborener/klipper-backup.git
-Recovery URL: https://github.com/Staubgeborener/klipper-backup.git
-Current Commit SHA: 70a77c64493a4a9183b2a27bade75b76e358eead
-Upstream Commit SHA: 70a77c64493a4a9183b2a27bade75b76e358eead
-Current Version: v1.3.5-5-g70a77c64
-Upstream Version: v1.3.5-5-g70a77c64
-Rollback Commit: 70a77c64493a4a9183b2a27bade75b76e358eead
-Rollback Branch: main
-Rollback Version: v1.3.5-5-g70a77c64
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:06,989 [base_deploy.py:log_info()] - Git Repo klipper-backup: Channel: dev
-2026-03-03 21:59:06,989 [base_deploy.py:log_info()] - Git Repo klipper-backup: Validity check for git repo passed
-2026-03-03 21:59:07,016 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult status --porcelain -b) successfully finished
-2026-03-03 21:59:07,030 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult branch --list --no-color) successfully finished
-2026-03-03 21:59:07,057 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult remote get-url origin) successfully finished
-2026-03-03 21:59:07,497 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult fetch origin --prune --progress) successfully finished
-2026-03-03 21:59:07,512 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult merge-base --is-ancestor HEAD origin/master) successfully finished
-2026-03-03 21:59:07,526 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult rev-parse HEAD) successfully finished
-2026-03-03 21:59:07,546 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult describe --always --tags --long --dirty --abbrev=8) successfully finished
-2026-03-03 21:59:07,560 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult rev-parse origin/master) successfully finished
-2026-03-03 21:59:07,577 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult describe origin/master --always --tags --long --abbrev=8) successfully finished
-2026-03-03 21:59:07,592 [shell_command.py:_check_proc_success()] - Command (git -C /home/pi/katapult rev-list HEAD..b0bf421069e2aab810db43d6e15f38817d981451 --count) successfully finished
-2026-03-03 21:59:07,593 [git_deploy.py:log_repo_info()] - Git Repo Katapult Detected:
-Owner: Arksine
-Repository Name: katapult
-Path: /home/pi/katapult
-Remote: origin
-Branch: master
-Remote URL: https://github.com/Arksine/katapult
-Recovery URL: https://github.com/Arksine/katapult
-Current Commit SHA: b0bf421069e2aab810db43d6e15f38817d981451
-Upstream Commit SHA: b0bf421069e2aab810db43d6e15f38817d981451
-Current Version: v0.0.1-110-gb0bf4210
-Upstream Version: v0.0.1-110-gb0bf4210
-Rollback Commit: b0bf421069e2aab810db43d6e15f38817d981451
-Rollback Branch: master
-Rollback Version: v0.0.1-110-gb0bf4210
-Is Dirty: False
-Is Detached: False
-Is Shallow: False
-Commits Behind Count: 0
-Diverged: False
-Pinned Commit: None
-2026-03-03 21:59:07,593 [base_deploy.py:log_info()] - Git Repo Katapult: Channel: dev
-2026-03-03 21:59:07,593 [base_deploy.py:log_info()] - Git Repo Katapult: Validity check for git repo passed
-2026-03-03 22:21:33,966 [websockets.py:write_to_socket()] - Websocket closed while writing: 4057874144
-2026-03-03 22:21:38,891 [websockets.py:on_close()] - Websocket Closed: ID: 4057874144 Close Code: None, Close Reason: None, Pong Time Elapsed: 24.73
-2026-03-03 22:25:02,009 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 5.76ms
-2026-03-03 22:25:02,010 [websockets.py:open()] - Websocket Opened: ID: 4057872056, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 22:25:02,020 [websockets.py:_handle_identify()] - Websocket 4057872056 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 22:28:07,608 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
-2026-03-03 22:28:07,612 [proc_stats.py:_handle_shutdown()] - 
-Moonraker System Usage Statistics:
-System Time: 1772576858.178084, Usage: 2.26%, Memory: 45304 kB
-System Time: 1772576859.179183, Usage: 1.16%, Memory: 45304 kB
-System Time: 1772576860.179743, Usage: 1.81%, Memory: 45304 kB
-System Time: 1772576861.183992, Usage: 1.76%, Memory: 45304 kB
-System Time: 1772576862.184742, Usage: 2.57%, Memory: 45304 kB
-System Time: 1772576863.186377, Usage: 2.03%, Memory: 45304 kB
-System Time: 1772576864.188021, Usage: 2.26%, Memory: 45304 kB
-System Time: 1772576865.189657, Usage: 3.3%, Memory: 45304 kB
-System Time: 1772576866.191107, Usage: 2.22%, Memory: 45304 kB
-System Time: 1772576867.192732, Usage: 2.16%, Memory: 45304 kB
-System Time: 1772576868.193394, Usage: 4.7%, Memory: 45304 kB
-System Time: 1772576869.193984, Usage: 2.24%, Memory: 45304 kB
-System Time: 1772576870.193742, Usage: 3.58%, Memory: 45304 kB
-System Time: 1772576871.196585, Usage: 2.08%, Memory: 45304 kB
-System Time: 1772576872.197758, Usage: 2.67%, Memory: 45304 kB
-System Time: 1772576873.198481, Usage: 2.13%, Memory: 45304 kB
-System Time: 1772576874.199567, Usage: 2.26%, Memory: 45304 kB
-System Time: 1772576875.201001, Usage: 2.15%, Memory: 45304 kB
-System Time: 1772576876.202184, Usage: 3.47%, Memory: 45304 kB
-System Time: 1772576877.202379, Usage: 2.25%, Memory: 45304 kB
-System Time: 1772576878.205789, Usage: 4.33%, Memory: 45304 kB
-System Time: 1772576879.205970, Usage: 2.48%, Memory: 45304 kB
-System Time: 1772576880.206827, Usage: 2.45%, Memory: 45304 kB
-System Time: 1772576881.208632, Usage: 3.83%, Memory: 45304 kB
-System Time: 1772576882.209075, Usage: 2.61%, Memory: 45304 kB
-System Time: 1772576883.210995, Usage: 2.16%, Memory: 45304 kB
-System Time: 1772576884.210887, Usage: 2.45%, Memory: 45304 kB
-System Time: 1772576885.209623, Usage: 1.61%, Memory: 45304 kB
-System Time: 1772576886.211059, Usage: 2.02%, Memory: 45304 kB
-System Time: 1772576887.211570, Usage: 1.17%, Memory: 45304 kB
-CPU Temperature: 27.258
-2026-03-03 22:28:07,613 [proc_stats.py:_handle_shutdown()] - Throttled Flags: 
-2026-03-03 22:29:24,407 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2026-03-03 22:29:25,670 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2026-03-03 22:29:28,361 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-03 22:29:28,362 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-03 22:29:28,365 [klippy_connection.py:_check_ready()] - 
-Failed automated reset of MCU 'mcu'
-Once the underlying issue is corrected, use the
-"FIRMWARE_RESTART" command to reset the firmware, reload the
-config, and restart the host software.
-Error configuring printer
-
-2026-03-03 22:30:16,156 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2026-03-03 22:30:17,420 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2026-03-03 22:30:20,101 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-03 22:30:20,103 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-03 22:30:20,105 [klippy_connection.py:_check_ready()] - 
-Failed automated reset of MCU 'mcu'
-Once the underlying issue is corrected, use the
-"FIRMWARE_RESTART" command to reset the firmware, reload the
-config, and restart the host software.
-Error configuring printer
-
-2026-03-03 22:30:37,998 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
-2026-03-03 22:30:38,114 [websockets.py:on_close()] - Websocket Closed: ID: 4057872056 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 5.98
-2026-03-03 22:30:38,120 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2026-03-03 22:30:38,174 [server.py:main()] - Server Shutdown
--------------------- Log Start | Tue Mar  3 22:30:58 2026 --------------------
+Klipper Version: v0.13.0-563-gf1fb5756
+2026-03-04 00:08:16,787 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2026-03-04 00:08:16,900 [websockets.py:on_close()] - Websocket Closed: ID: 4073638328 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 5.01
+2026-03-04 00:08:16,904 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-04 00:08:16,936 [server.py:main()] - Server Shutdown
+-------------------- Log Start | Wed Mar  4 00:08:40 2026 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/pi/printer_data
 is_default_data_path: False
@@ -871,8 +270,8 @@ python_version: 3.9.2 (default, Jan 24 2026, 09:41:14)  [GCC 10.2.1 20210110]
 launch_args: /home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/__main__.py -d /home/pi/printer_data
 msgspec_enabled: False
 uvloop_enabled: False
-2026-03-03 22:30:58,377 [confighelper.py:read_file()] - Configuration File '/home/pi/printer_data/config/moonraker.conf' parsed, total size: 3130 B
-2026-03-03 22:30:58,378 [server.py:add_log_rollover_item()] - 
+2026-03-04 00:08:40,890 [confighelper.py:read_file()] - Configuration File '/home/pi/printer_data/config/moonraker.conf' parsed, total size: 3130 B
+2026-03-04 00:08:40,890 [server.py:add_log_rollover_item()] - 
 #################### Moonraker Configuration ####################
 
 [server]
@@ -985,20 +384,20 @@ is_system_service = False
 All Configuration Files:
 /home/pi/printer_data/config/moonraker.conf
 #################################################################
-2026-03-03 22:30:58,558 [server.py:load_component()] - Component (secrets) loaded
-2026-03-03 22:30:58,567 [server.py:load_component()] - Component (template) loaded
-2026-03-03 22:30:58,577 [server.py:load_component()] - Component (klippy_connection) loaded
-2026-03-03 22:30:59,385 [application.py:__init__()] - Detected Tornado Version 6.5.4
-2026-03-03 22:30:59,387 [server.py:load_component()] - Component (application) loaded
-2026-03-03 22:30:59,421 [server.py:load_component()] - Component (websockets) loaded
-2026-03-03 22:30:59,488 [server.py:add_log_rollover_item()] - Loading Sqlite database provider. Sqlite Version: 3.34.1
-2026-03-03 22:30:59,507 [server.py:add_log_rollover_item()] - Unsafe Shutdown Count: 30
-2026-03-03 22:30:59,514 [server.py:load_component()] - Component (database) loaded
-2026-03-03 22:30:59,694 [server.py:load_component()] - Component (dbus_manager) loaded
-2026-03-03 22:30:59,790 [file_manager.py:__init__()] - Using File System Observer: inotify
-2026-03-03 22:30:59,893 [server.py:load_component()] - Component (file_manager) loaded
-2026-03-03 22:30:59,937 [database.py:register_table()] - Found registered table authorized_users
-2026-03-03 22:30:59,939 [authorization.py:__init__()] - Authorization Configuration Loaded
+2026-03-04 00:08:41,078 [server.py:load_component()] - Component (secrets) loaded
+2026-03-04 00:08:41,087 [server.py:load_component()] - Component (template) loaded
+2026-03-04 00:08:41,094 [server.py:load_component()] - Component (klippy_connection) loaded
+2026-03-04 00:08:41,921 [application.py:__init__()] - Detected Tornado Version 6.5.4
+2026-03-04 00:08:41,924 [server.py:load_component()] - Component (application) loaded
+2026-03-04 00:08:41,952 [server.py:load_component()] - Component (websockets) loaded
+2026-03-04 00:08:42,005 [server.py:add_log_rollover_item()] - Loading Sqlite database provider. Sqlite Version: 3.34.1
+2026-03-04 00:08:42,034 [server.py:add_log_rollover_item()] - Unsafe Shutdown Count: 30
+2026-03-04 00:08:42,042 [server.py:load_component()] - Component (database) loaded
+2026-03-04 00:08:42,193 [server.py:load_component()] - Component (dbus_manager) loaded
+2026-03-04 00:08:42,263 [file_manager.py:__init__()] - Using File System Observer: inotify
+2026-03-04 00:08:42,354 [server.py:load_component()] - Component (file_manager) loaded
+2026-03-04 00:08:42,406 [database.py:register_table()] - Found registered table authorized_users
+2026-03-04 00:08:42,410 [authorization.py:__init__()] - Authorization Configuration Loaded
 Trusted Clients:
 10.0.0.0/8
 127.0.0.0/8
@@ -1012,9 +411,9 @@ https://my\.mainsail\.xyz
 http://my\.mainsail\.xyz
 http://.*\.local
 http://.*\.lan
-2026-03-03 22:30:59,948 [server.py:load_component()] - Component (authorization) loaded
-2026-03-03 22:30:59,959 [server.py:load_component()] - Component (klippy_apis) loaded
-2026-03-03 22:31:00,255 [server.py:add_log_rollover_item()] - 
+2026-03-04 00:08:42,422 [server.py:load_component()] - Component (authorization) loaded
+2026-03-04 00:08:42,431 [server.py:load_component()] - Component (klippy_apis) loaded
+2026-03-04 00:08:42,754 [server.py:add_log_rollover_item()] - 
 System Info:
 
 ***python***
@@ -1072,45 +471,45 @@ System Info:
   crowsnest
   octoeverywhere
   ratos-configurator
-2026-03-03 22:31:00,259 [server.py:load_component()] - Component (shell_command) loaded
-2026-03-03 22:31:00,260 [machine.py:__init__()] - Using System Provider: systemd_dbus
-2026-03-03 22:31:00,376 [server.py:add_log_rollover_item()] - Found libcamera Python module, version: v0.0.5+83-bde9b04f
-2026-03-03 22:31:00,377 [server.py:load_component()] - Component (machine) loaded
-2026-03-03 22:31:00,381 [server.py:load_component()] - Component (data_store) loaded
-2026-03-03 22:31:00,384 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
-2026-03-03 22:31:00,386 [proc_stats.py:_get_cpu_thermal_file()] - Monitoring temperature for Raspberry Pi CPU
-2026-03-03 22:31:00,387 [server.py:load_component()] - Component (proc_stats) loaded
-2026-03-03 22:31:00,392 [server.py:load_component()] - Component (job_state) loaded
-2026-03-03 22:31:00,399 [server.py:load_component()] - Component (job_queue) loaded
-2026-03-03 22:31:00,404 [database.py:register_table()] - Found registered table job_history
-2026-03-03 22:31:00,406 [database.py:register_table()] - Found registered table job_totals
-2026-03-03 22:31:00,410 [server.py:load_component()] - Component (history) loaded
-2026-03-03 22:31:00,433 [server.py:load_component()] - Component (http_client) loaded
-2026-03-03 22:31:00,445 [server.py:load_component()] - Component (announcements) loaded
-2026-03-03 22:31:00,453 [server.py:load_component()] - Component (webcam) loaded
-2026-03-03 22:31:00,457 [server.py:load_component()] - Component (extensions) loaded
-2026-03-03 22:31:00,490 [server.py:load_component()] - Component (timelapse) loaded
-2026-03-03 22:31:00,498 [server.py:load_component()] - Component (octoprint_compat) loaded
-2026-03-03 22:31:00,578 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/pi/moonraker-env
-2026-03-03 22:31:00,582 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/pi/klippy-env
-2026-03-03 22:31:00,622 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Detected virtualenv: /home/pi/klippy-env
-2026-03-03 22:31:00,638 [server.py:load_component()] - Component (update_manager) loaded
-2026-03-03 22:31:00,639 [server.py:_initialize_component()] - Performing Component Post Init: [database]
-2026-03-03 22:31:00,670 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
-2026-03-03 22:31:00,689 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
-2026-03-03 22:31:00,692 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
-2026-03-03 22:31:00,695 [machine.py:validation_init()] - Installation version in database up to date
-2026-03-03 22:31:00,986 [machine.py:check_virt_status()] - No Virtualization Detected
-2026-03-03 22:31:01,003 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.11.54
-2026-03-03 22:31:01,005 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.54
-2026-03-03 22:31:01,060 [server.py:add_log_rollover_item()] - 
+2026-03-04 00:08:42,759 [server.py:load_component()] - Component (shell_command) loaded
+2026-03-04 00:08:42,759 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2026-03-04 00:08:42,872 [server.py:add_log_rollover_item()] - Found libcamera Python module, version: v0.0.5+83-bde9b04f
+2026-03-04 00:08:42,873 [server.py:load_component()] - Component (machine) loaded
+2026-03-04 00:08:42,879 [server.py:load_component()] - Component (data_store) loaded
+2026-03-04 00:08:42,882 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2026-03-04 00:08:42,884 [proc_stats.py:_get_cpu_thermal_file()] - Monitoring temperature for Raspberry Pi CPU
+2026-03-04 00:08:42,886 [server.py:load_component()] - Component (proc_stats) loaded
+2026-03-04 00:08:42,889 [server.py:load_component()] - Component (job_state) loaded
+2026-03-04 00:08:42,900 [server.py:load_component()] - Component (job_queue) loaded
+2026-03-04 00:08:42,906 [database.py:register_table()] - Found registered table job_history
+2026-03-04 00:08:42,907 [database.py:register_table()] - Found registered table job_totals
+2026-03-04 00:08:42,911 [server.py:load_component()] - Component (history) loaded
+2026-03-04 00:08:42,927 [server.py:load_component()] - Component (http_client) loaded
+2026-03-04 00:08:42,935 [server.py:load_component()] - Component (announcements) loaded
+2026-03-04 00:08:42,939 [server.py:load_component()] - Component (webcam) loaded
+2026-03-04 00:08:42,944 [server.py:load_component()] - Component (extensions) loaded
+2026-03-04 00:08:42,960 [server.py:load_component()] - Component (timelapse) loaded
+2026-03-04 00:08:43,040 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/pi/moonraker-env
+2026-03-04 00:08:43,044 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/pi/klippy-env
+2026-03-04 00:08:43,076 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Detected virtualenv: /home/pi/klippy-env
+2026-03-04 00:08:43,092 [server.py:load_component()] - Component (update_manager) loaded
+2026-03-04 00:08:43,105 [server.py:load_component()] - Component (octoprint_compat) loaded
+2026-03-04 00:08:43,109 [server.py:_initialize_component()] - Performing Component Post Init: [database]
+2026-03-04 00:08:43,129 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2026-03-04 00:08:43,157 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2026-03-04 00:08:43,161 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2026-03-04 00:08:43,164 [machine.py:validation_init()] - Installation version in database up to date
+2026-03-04 00:08:43,454 [machine.py:check_virt_status()] - No Virtualization Detected
+2026-03-04 00:08:43,479 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.11.54
+2026-03-04 00:08:43,481 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.54
+2026-03-04 00:08:43,535 [server.py:add_log_rollover_item()] - 
 Systemd unit moonraker.service:
 unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
 **Requires=['network-online.target', 'system.slice', 'sysinit.target']
-**After=['system.slice', 'systemd-journald.socket', 'network-online.target', 'basic.target', 'klipper.service', 'sysinit.target']
+**After=['basic.target', 'network-online.target', 'systemd-journald.socket', 'system.slice', 'klipper.service', 'sysinit.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
 **ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -1118,20 +517,20 @@ Properties:
 **FragmentPath=/etc/systemd/system/moonraker.service
 **Description=API Server for Klipper SV1
 **User=pi
-2026-03-03 22:31:01,060 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
-2026-03-03 22:31:01,060 [server.py:_initialize_component()] - Performing Component Post Init: [history]
-2026-03-03 22:31:01,120 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
-2026-03-03 22:31:01,126 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
-2026-03-03 22:31:01,126 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.54
-2026-03-03 22:31:01,133 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
-2026-03-03 22:31:01,134 [server.py:add_log_rollover_item()] - 
+2026-03-04 00:08:43,535 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2026-03-04 00:08:43,536 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2026-03-04 00:08:43,571 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2026-03-04 00:08:43,580 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2026-03-04 00:08:43,581 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.54
+2026-03-04 00:08:43,585 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2026-03-04 00:08:43,586 [server.py:add_log_rollover_item()] - 
 Systemd unit klipper.service:
 unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', '-.mount']
-**After=['basic.target', 'sysinit.target', 'systemd-journald.socket', 'system.slice', '-.mount', 'network-online.target']
+**Requires=['system.slice', '-.mount', 'sysinit.target']
+**After=['system.slice', 'systemd-journald.socket', 'network-online.target', '-.mount', 'basic.target', 'sysinit.target']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -1139,13 +538,13 @@ Properties:
 **FragmentPath=/etc/systemd/system/klipper.service
 **Description=Klipper 3D Printer Firmware SV1
 **User=pi
-2026-03-03 22:31:01,134 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
-2026-03-03 22:31:01,135 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/webcam/?action=snapshot, Flip V/H: False/False, rotation: 0
-2026-03-03 22:31:01,135 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
-2026-03-03 22:31:01,526 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
-2026-03-03 22:31:01,527 [base_deploy.py:log_info()] - Git Repo moonraker: Pip Version: 25.2, Python Version: 3.9
+2026-03-04 00:08:43,586 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+2026-03-04 00:08:43,586 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/webcam/?action=snapshot, Flip V/H: False/False, rotation: 0
+2026-03-04 00:08:43,586 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
+2026-03-04 00:08:43,954 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
+2026-03-04 00:08:43,956 [base_deploy.py:log_info()] - Git Repo moonraker: Pip Version: 25.2, Python Version: 3.9
 Last checked on 2026-01-19 01:27:05.374204+00:00
-2026-03-03 22:31:01,528 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
+2026-03-04 00:08:43,957 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
 Owner: Arksine
 Repository Name: moonraker
 Path: /home/pi/moonraker
@@ -1168,7 +567,7 @@ Diverged: False
 Pinned Commit: None
 Repo Warnings:
   Repo has untracked source files: ['moonraker/components/timelapse.py']
-2026-03-03 22:31:01,530 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+2026-03-04 00:08:43,959 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
 Owner: Klipper3d
 Repository Name: klipper
 Path: /home/pi/klipper
@@ -1176,20 +575,20 @@ Remote: origin
 Branch: master
 Remote URL: https://github.com/Klipper3d/klipper.git
 Recovery URL: https://github.com/Klipper3d/klipper.git
-Current Commit SHA: 54c7b65d5d5685c4f6e9649a3d3be9356a6125dc
+Current Commit SHA: f1fb57564fd89511bde3e17aa70af562b3da4f1a
 Upstream Commit SHA: f1fb57564fd89511bde3e17aa70af562b3da4f1a
-Current Version: v0.13.0-557-g54c7b65d
+Current Version: v0.13.0-563-gf1fb5756
 Upstream Version: v0.13.0-563-gf1fb5756
-Rollback Commit: 187481e2514f30fbaa19241869f4485ab4289cea
+Rollback Commit: 54c7b65d5d5685c4f6e9649a3d3be9356a6125dc
 Rollback Branch: master
-Rollback Version: v0.13.0-541-g187481e2
+Rollback Version: v0.13.0-557-g54c7b65d
 Is Dirty: False
 Is Detached: False
 Is Shallow: False
-Commits Behind Count: 6
+Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,544 [base_deploy.py:log_info()] - Web Client mainsail: Detected
+2026-03-04 00:08:43,971 [base_deploy.py:log_info()] - Web Client mainsail: Detected
 Repo: mainsail-crew/mainsail
 Channel: stable
 Path: /home/pi/mainsail
@@ -1203,7 +602,7 @@ Download Size: 3001860
 Content Type: application/zip
 Rollback Version: v2.16.1
 Rollback Repo: mainsail-crew/mainsail
-2026-03-03 22:31:01,546 [git_deploy.py:log_repo_info()] - Git Repo mainsail-config Detected:
+2026-03-04 00:08:43,979 [git_deploy.py:log_repo_info()] - Git Repo mainsail-config Detected:
 Owner: mainsail-crew
 Repository Name: mainsail-config
 Path: /home/pi/mainsail-config
@@ -1224,7 +623,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,549 [git_deploy.py:log_repo_info()] - Git Repo timelapse Detected:
+2026-03-04 00:08:43,985 [git_deploy.py:log_repo_info()] - Git Repo timelapse Detected:
 Owner: mainsail-crew
 Repository Name: moonraker-timelapse
 Path: /home/pi/moonraker-timelapse
@@ -1245,7 +644,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,551 [git_deploy.py:log_repo_info()] - Git Repo crowsnest Detected:
+2026-03-04 00:08:43,989 [git_deploy.py:log_repo_info()] - Git Repo crowsnest Detected:
 Owner: mainsail-crew
 Repository Name: crowsnest
 Path: /home/pi/crowsnest
@@ -1266,7 +665,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,554 [git_deploy.py:log_repo_info()] - Git Repo sonar Detected:
+2026-03-04 00:08:43,997 [git_deploy.py:log_repo_info()] - Git Repo sonar Detected:
 Owner: mainsail-crew
 Repository Name: sonar
 Path: /home/pi/sonar
@@ -1287,7 +686,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,557 [git_deploy.py:log_repo_info()] - Git Repo Klipper-Adaptive-Meshing-Purging Detected:
+2026-03-04 00:08:44,003 [git_deploy.py:log_repo_info()] - Git Repo Klipper-Adaptive-Meshing-Purging Detected:
 Owner: kyleisah
 Repository Name: Klipper-Adaptive-Meshing-Purging
 Path: /home/pi/Klipper-Adaptive-Meshing-Purging
@@ -1308,9 +707,9 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,558 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Pip Version: 25.3, Python Version: 3.9
+2026-03-04 00:08:44,006 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Pip Version: 25.3, Python Version: 3.9
 Last checked on 2026-01-19 01:27:49.826657+00:00
-2026-03-03 22:31:01,560 [git_deploy.py:log_repo_info()] - Git Repo Klippain-ShakeTune Detected:
+2026-03-04 00:08:44,008 [git_deploy.py:log_repo_info()] - Git Repo Klippain-ShakeTune Detected:
 Owner: Frix-x
 Repository Name: klippain-shaketune
 Path: /home/pi/klippain_shaketune
@@ -1331,7 +730,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,562 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
+2026-03-04 00:08:44,012 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
 Owner: Staubgeborener
 Repository Name: klipper-backup
 Path: /home/pi/klipper-backup
@@ -1352,7 +751,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:01,565 [git_deploy.py:log_repo_info()] - Git Repo Katapult Detected:
+2026-03-04 00:08:44,020 [git_deploy.py:log_repo_info()] - Git Repo Katapult Detected:
 Owner: Arksine
 Repository Name: katapult
 Path: /home/pi/katapult
@@ -1373,30 +772,30 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 6 Days, 23 Hours, 27 Minutes, 58 Seconds
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 6 Days, 23 Hours, 27 Minutes, 58 Seconds
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 6 Days, 23 Hours, 28 Minutes
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Web Client mainsail: Next refresh in: 6 Days, 23 Hours, 28 Minutes
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo mainsail-config: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 1 Second
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo timelapse: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 1 Second
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo crowsnest: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 2 Seconds
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo sonar: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 3 Seconds
-2026-03-03 22:31:02,472 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 3 Seconds
-2026-03-03 22:31:02,473 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 4 Seconds
-2026-03-03 22:31:02,473 [base_deploy.py:log_info()] - Git Repo klipper-backup: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 5 Seconds
-2026-03-03 22:31:02,473 [base_deploy.py:log_info()] - Git Repo Katapult: Next refresh in: 6 Days, 23 Hours, 28 Minutes, 5 Seconds
-2026-03-03 22:31:02,488 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/pi/printer_data/comms/moonraker.sock'
-2026-03-03 22:31:02,497 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: affogato
-2026-03-03 22:31:02,499 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
-2026-03-03 22:31:02,754 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2026-03-03 22:31:02,824 [server.py:add_log_rollover_item()] - 
+2026-03-04 00:08:44,871 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 15 Seconds
+2026-03-04 00:08:44,872 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 16 Seconds
+2026-03-04 00:08:44,872 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 6 Days, 22 Hours, 24 Minutes, 25 Seconds
+2026-03-04 00:08:44,872 [base_deploy.py:log_info()] - Web Client mainsail: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 18 Seconds
+2026-03-04 00:08:44,872 [base_deploy.py:log_info()] - Git Repo mainsail-config: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 18 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo timelapse: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 19 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo crowsnest: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 19 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo sonar: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 20 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 21 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 21 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo klipper-backup: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 22 Seconds
+2026-03-04 00:08:44,873 [base_deploy.py:log_info()] - Git Repo Katapult: Next refresh in: 6 Days, 21 Hours, 50 Minutes, 23 Seconds
+2026-03-04 00:08:44,898 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/pi/printer_data/comms/moonraker.sock'
+2026-03-04 00:08:44,905 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: affogato
+2026-03-04 00:08:44,907 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2026-03-04 00:08:45,171 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-04 00:08:45,221 [server.py:add_log_rollover_item()] - 
 Systemd unit klipper.service:
 unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
 **Requires=['system.slice', '-.mount', 'sysinit.target']
-**After=['system.slice', 'systemd-journald.socket', 'network-online.target', '-.mount', 'basic.target', 'sysinit.target']
+**After=['basic.target', 'network-online.target', 'systemd-journald.socket', 'system.slice', 'sysinit.target', '-.mount']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -1404,13 +803,9 @@ Properties:
 **FragmentPath=/etc/systemd/system/klipper.service
 **Description=Klipper 3D Printer Firmware SV1
 **User=pi
-2026-03-03 22:31:04,006 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
-2026-03-03 22:31:04,008 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 3.52ms
-2026-03-03 22:31:04,009 [websockets.py:open()] - Websocket Opened: ID: 4073558440, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-03 22:31:04,015 [websockets.py:_handle_identify()] - Websocket 4073558440 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-03 22:31:04,084 [server.py:add_log_rollover_item()] - Klipper Version: v0.13.0-557-g54c7b65d
-2026-03-03 22:31:06,928 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-03 22:31:06,930 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-03 22:31:07,178 [job_state.py:_handle_started()] - Job state initialized: standby
-2026-03-03 22:31:07,435 [klippy_connection.py:_check_ready()] - Klippy ready
-2026-03-03 22:31:07,931 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'extruder']
+2026-03-04 00:08:46,624 [server.py:add_log_rollover_item()] - Klipper Version: v0.13.0-563-gf1fb5756
+2026-03-04 00:08:49,117 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-04 00:08:49,119 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-04 00:08:49,367 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-04 00:08:49,632 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-04 00:08:50,120 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'extruder']
