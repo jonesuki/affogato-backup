@@ -1,4 +1,4 @@
--------------------- Log Start | Wed Mar 11 21:30:20 2026 --------------------
+-------------------- Log Start | Thu Mar 12 00:00:17 2026 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/pi/printer_data
 is_default_data_path: False
@@ -213,8 +213,8 @@ unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', 'network-online.target']
-**After=['network-online.target', 'system.slice', 'systemd-journald.socket', 'klipper.service', 'sysinit.target', 'basic.target']
+**Requires=['system.slice', 'sysinit.target', 'network-online.target']
+**After=['system.slice', 'sysinit.target', 'klipper.service', 'network-online.target', 'systemd-journald.socket', 'basic.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
 **ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -228,8 +228,8 @@ unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', '-.mount']
-**After=['network-online.target', 'system.slice', 'systemd-journald.socket', '-.mount', 'sysinit.target', 'basic.target']
+**Requires=['-.mount', 'sysinit.target', 'system.slice']
+**After=['system.slice', 'sysinit.target', 'systemd-journald.socket', 'network-online.target', 'basic.target', '-.mount']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -249,67 +249,59 @@ Git Repo Klippain-ShakeTune: No warnings detected
 Git Repo klipper-backup: No warnings detected
 Git Repo Katapult: No warnings detected
 Klipper Version: v0.13.0-573-g644cda5e-dirty
-2026-03-11 21:30:20,701 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-11 21:30:20,706 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-11 21:30:20,952 [job_state.py:_handle_started()] - Job state initialized: standby
-2026-03-11 21:30:21,222 [klippy_connection.py:_check_ready()] - Klippy ready
-2026-03-11 21:30:21,706 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
-2026-03-11 21:33:55,233 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
-2026-03-11 21:33:55,239 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 8.75ms
-2026-03-11 21:33:55,239 [websockets.py:open()] - Websocket Opened: ID: 4079624568, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
-2026-03-11 21:33:55,273 [websockets.py:_handle_identify()] - Websocket 4079624568 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
-2026-03-11 21:50:49,250 [application.py:prepare()] - Upload Request Received from 192.168.11.192
-Content-Type: multipart/form-data; boundary=----WebKitFormBoundary4s3LRbBXPAfYjeJA
-2026-03-11 21:50:49,275 [application.py:post()] - Processing Uploaded File: nozzle_scrub.cfg
-2026-03-11 21:50:49,289 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 42.06ms
-2026-03-11 22:11:13,234 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2026-03-11 22:11:14,493 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2026-03-11 22:11:18,536 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-11 22:11:18,538 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-11 22:11:18,786 [job_state.py:_handle_started()] - Job state initialized: standby
-2026-03-11 22:11:19,053 [klippy_connection.py:_check_ready()] - Klippy ready
-2026-03-11 22:11:19,549 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
-2026-03-11 22:12:13,755 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
-2026-03-11 22:12:13,759 [proc_stats.py:_handle_shutdown()] - 
-Moonraker System Usage Statistics:
-System Time: 1773267103.832421, Usage: 2.19%, Memory: 41840 kB
-System Time: 1773267104.834025, Usage: 2.3%, Memory: 41840 kB
-System Time: 1773267105.833730, Usage: 3.6%, Memory: 41840 kB
-System Time: 1773267106.838104, Usage: 2.68%, Memory: 41840 kB
-System Time: 1773267107.838873, Usage: 2.35%, Memory: 41840 kB
-System Time: 1773267108.839733, Usage: 2.51%, Memory: 41840 kB
-System Time: 1773267109.842628, Usage: 4.73%, Memory: 41840 kB
-System Time: 1773267110.841377, Usage: 3.98%, Memory: 41840 kB
-System Time: 1773267111.842507, Usage: 1.97%, Memory: 41840 kB
-System Time: 1773267112.842564, Usage: 2.15%, Memory: 41840 kB
-System Time: 1773267113.844609, Usage: 2.2%, Memory: 41840 kB
-System Time: 1773267114.844974, Usage: 2.07%, Memory: 41840 kB
-System Time: 1773267115.855120, Usage: 2.59%, Memory: 41840 kB
-System Time: 1773267116.849279, Usage: 3.29%, Memory: 41840 kB
-System Time: 1773267117.848634, Usage: 2.61%, Memory: 41840 kB
-System Time: 1773267118.850869, Usage: 2.26%, Memory: 41840 kB
-System Time: 1773267119.853386, Usage: 4.12%, Memory: 41840 kB
-System Time: 1773267120.852187, Usage: 2.77%, Memory: 41840 kB
-System Time: 1773267121.853360, Usage: 3.21%, Memory: 41840 kB
-System Time: 1773267122.854930, Usage: 2.25%, Memory: 41840 kB
-System Time: 1773267123.855989, Usage: 2.27%, Memory: 41840 kB
-System Time: 1773267124.858996, Usage: 3.38%, Memory: 41840 kB
-System Time: 1773267125.858297, Usage: 3.11%, Memory: 41840 kB
-System Time: 1773267126.858492, Usage: 3.46%, Memory: 41840 kB
-System Time: 1773267127.861145, Usage: 2.25%, Memory: 41840 kB
-System Time: 1773267128.861254, Usage: 2.68%, Memory: 41840 kB
-System Time: 1773267129.863137, Usage: 4.01%, Memory: 41840 kB
-System Time: 1773267130.864459, Usage: 2.48%, Memory: 41840 kB
-System Time: 1773267131.866666, Usage: 3.37%, Memory: 41840 kB
-System Time: 1773267132.866789, Usage: 2.47%, Memory: 41840 kB
-CPU Temperature: 26.771
-2026-03-11 22:12:13,760 [proc_stats.py:_handle_shutdown()] - Throttled Flags: 
-2026-03-11 22:12:13,979 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.gcode.script, Code: 400, Message: Probing failed due to printer shutdown
-2026-03-11 22:12:17,258 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
-2026-03-11 22:12:17,363 [websockets.py:on_close()] - Websocket Closed: ID: 4079624568 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 1.66
-2026-03-11 22:12:17,366 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
-2026-03-11 22:12:17,942 [server.py:main()] - Server Shutdown
--------------------- Log Start | Wed Mar 11 22:12:37 2026 --------------------
+2026-03-12 00:00:17,695 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryjXD68g9drlFvBg1A
+2026-03-12 00:00:17,719 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-12 00:00:17,731 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 38.35ms
+2026-03-12 00:00:18,843 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-12 00:00:20,104 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-12 00:00:24,173 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-12 00:00:24,176 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-12 00:00:24,424 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-12 00:00:24,691 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-12 00:00:25,187 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-12 00:06:23,848 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryLflq9NJRrBcusHo2
+2026-03-12 00:06:23,869 [application.py:post()] - Processing Uploaded File: lcd_tweaks.cfg
+2026-03-12 00:06:23,883 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 37.86ms
+2026-03-12 00:08:20,289 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryQMbCjBlknaQzFThK
+2026-03-12 00:08:20,315 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-12 00:08:20,331 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 44.88ms
+2026-03-12 00:08:21,201 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-12 00:08:22,459 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-12 00:08:26,632 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-12 00:08:26,633 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-12 00:08:26,883 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-12 00:08:27,148 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-12 00:08:27,896 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-12 00:10:14,967 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJo62IGQUV1WIzs1p
+2026-03-12 00:10:14,992 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-12 00:10:15,006 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 42.47ms
+2026-03-12 00:10:15,888 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-12 00:10:17,149 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-12 00:10:21,220 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-12 00:10:21,221 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-12 00:10:21,470 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-12 00:10:21,736 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-12 00:10:22,236 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-12 00:12:42,215 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryByCetSZZtvAkifJ1
+2026-03-12 00:12:42,235 [application.py:post()] - Processing Uploaded File: lcd_tweaks.cfg
+2026-03-12 00:12:42,250 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 37.66ms
+2026-03-12 00:12:43,132 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-12 00:12:44,394 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-12 00:12:48,484 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-12 00:12:48,485 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-12 00:12:48,734 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-12 00:12:49,000 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-12 00:12:49,749 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-12 00:17:36,010 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2026-03-12 00:17:36,117 [websockets.py:on_close()] - Websocket Closed: ID: 4079877544 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 5.25
+2026-03-12 00:17:36,120 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-12 00:17:36,155 [server.py:main()] - Server Shutdown
+-------------------- Log Start | Thu Mar 12 00:17:57 2026 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/pi/printer_data
 is_default_data_path: False
@@ -335,8 +327,8 @@ python_version: 3.9.2 (default, Jan 24 2026, 09:41:14)  [GCC 10.2.1 20210110]
 launch_args: /home/pi/moonraker-env/bin/python /home/pi/moonraker/moonraker/__main__.py -d /home/pi/printer_data
 msgspec_enabled: False
 uvloop_enabled: False
-2026-03-11 22:12:37,856 [confighelper.py:read_file()] - Configuration File '/home/pi/printer_data/config/moonraker.conf' parsed, total size: 3367 B
-2026-03-11 22:12:37,857 [server.py:add_log_rollover_item()] - 
+2026-03-12 00:17:57,803 [confighelper.py:read_file()] - Configuration File '/home/pi/printer_data/config/moonraker.conf' parsed, total size: 3367 B
+2026-03-12 00:17:57,804 [server.py:add_log_rollover_item()] - 
 #################### Moonraker Configuration ####################
 
 [server]
@@ -458,20 +450,20 @@ info_tags = desc=Cartographer Plugin
 All Configuration Files:
 /home/pi/printer_data/config/moonraker.conf
 #################################################################
-2026-03-11 22:12:38,155 [server.py:load_component()] - Component (secrets) loaded
-2026-03-11 22:12:38,170 [server.py:load_component()] - Component (template) loaded
-2026-03-11 22:12:38,177 [server.py:load_component()] - Component (klippy_connection) loaded
-2026-03-11 22:12:39,384 [application.py:__init__()] - Detected Tornado Version 6.5.4
-2026-03-11 22:12:39,387 [server.py:load_component()] - Component (application) loaded
-2026-03-11 22:12:39,452 [server.py:load_component()] - Component (websockets) loaded
-2026-03-11 22:12:39,611 [server.py:add_log_rollover_item()] - Loading Sqlite database provider. Sqlite Version: 3.34.1
-2026-03-11 22:12:39,665 [server.py:add_log_rollover_item()] - Unsafe Shutdown Count: 30
-2026-03-11 22:12:39,682 [server.py:load_component()] - Component (database) loaded
-2026-03-11 22:12:39,866 [server.py:load_component()] - Component (dbus_manager) loaded
-2026-03-11 22:12:39,973 [file_manager.py:__init__()] - Using File System Observer: inotify
-2026-03-11 22:12:40,097 [server.py:load_component()] - Component (file_manager) loaded
-2026-03-11 22:12:40,165 [database.py:register_table()] - Found registered table authorized_users
-2026-03-11 22:12:40,167 [authorization.py:__init__()] - Authorization Configuration Loaded
+2026-03-12 00:17:58,163 [server.py:load_component()] - Component (secrets) loaded
+2026-03-12 00:17:58,177 [server.py:load_component()] - Component (template) loaded
+2026-03-12 00:17:58,186 [server.py:load_component()] - Component (klippy_connection) loaded
+2026-03-12 00:17:59,463 [application.py:__init__()] - Detected Tornado Version 6.5.4
+2026-03-12 00:17:59,466 [server.py:load_component()] - Component (application) loaded
+2026-03-12 00:17:59,507 [server.py:load_component()] - Component (websockets) loaded
+2026-03-12 00:17:59,704 [server.py:add_log_rollover_item()] - Loading Sqlite database provider. Sqlite Version: 3.34.1
+2026-03-12 00:17:59,802 [server.py:add_log_rollover_item()] - Unsafe Shutdown Count: 30
+2026-03-12 00:17:59,815 [server.py:load_component()] - Component (database) loaded
+2026-03-12 00:17:59,975 [server.py:load_component()] - Component (dbus_manager) loaded
+2026-03-12 00:18:00,096 [file_manager.py:__init__()] - Using File System Observer: inotify
+2026-03-12 00:18:00,240 [server.py:load_component()] - Component (file_manager) loaded
+2026-03-12 00:18:00,294 [database.py:register_table()] - Found registered table authorized_users
+2026-03-12 00:18:00,298 [authorization.py:__init__()] - Authorization Configuration Loaded
 Trusted Clients:
 10.0.0.0/8
 127.0.0.0/8
@@ -485,9 +477,9 @@ https://my\.mainsail\.xyz
 http://my\.mainsail\.xyz
 http://.*\.local
 http://.*\.lan
-2026-03-11 22:12:40,175 [server.py:load_component()] - Component (authorization) loaded
-2026-03-11 22:12:40,191 [server.py:load_component()] - Component (klippy_apis) loaded
-2026-03-11 22:12:40,566 [server.py:add_log_rollover_item()] - 
+2026-03-12 00:18:00,302 [server.py:load_component()] - Component (authorization) loaded
+2026-03-12 00:18:00,313 [server.py:load_component()] - Component (klippy_apis) loaded
+2026-03-12 00:18:00,663 [server.py:add_log_rollover_item()] - 
 System Info:
 
 ***python***
@@ -545,49 +537,49 @@ System Info:
   crowsnest
   octoeverywhere
   ratos-configurator
-2026-03-11 22:12:40,577 [server.py:load_component()] - Component (shell_command) loaded
-2026-03-11 22:12:40,577 [machine.py:__init__()] - Using System Provider: systemd_dbus
-2026-03-11 22:12:40,723 [server.py:add_log_rollover_item()] - Found libcamera Python module, version: v0.0.5+83-bde9b04f
-2026-03-11 22:12:40,724 [server.py:load_component()] - Component (machine) loaded
-2026-03-11 22:12:40,730 [server.py:load_component()] - Component (data_store) loaded
-2026-03-11 22:12:40,734 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
-2026-03-11 22:12:40,735 [proc_stats.py:_get_cpu_thermal_file()] - Monitoring temperature for Raspberry Pi CPU
-2026-03-11 22:12:40,736 [server.py:load_component()] - Component (proc_stats) loaded
-2026-03-11 22:12:40,741 [server.py:load_component()] - Component (job_state) loaded
-2026-03-11 22:12:40,753 [server.py:load_component()] - Component (job_queue) loaded
-2026-03-11 22:12:40,760 [database.py:register_table()] - Found registered table job_history
-2026-03-11 22:12:40,761 [database.py:register_table()] - Found registered table job_totals
-2026-03-11 22:12:40,765 [server.py:load_component()] - Component (history) loaded
-2026-03-11 22:12:40,785 [server.py:load_component()] - Component (http_client) loaded
-2026-03-11 22:12:40,805 [server.py:load_component()] - Component (announcements) loaded
-2026-03-11 22:12:40,812 [server.py:load_component()] - Component (webcam) loaded
-2026-03-11 22:12:40,818 [server.py:load_component()] - Component (extensions) loaded
-2026-03-11 22:12:40,853 [server.py:load_component()] - Component (timelapse) loaded
-2026-03-11 22:12:40,864 [server.py:load_component()] - Component (octoprint_compat) loaded
-2026-03-11 22:12:40,987 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/pi/moonraker-env
-2026-03-11 22:12:40,992 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/pi/klippy-env
-2026-03-11 22:12:41,037 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Detected virtualenv: /home/pi/klippy-env
-2026-03-11 22:12:41,052 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Detected virtualenv: /home/pi/klippy-env
-2026-03-11 22:12:41,168 [source_info.py:_load_release_info_json()] - Package cartographer3d_plugin-1.5.0.dist-info: Detected release_info json file
-2026-03-11 22:12:41,215 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Unable to find changelog url in metadata
-2026-03-11 22:12:41,216 [sysdeps_parser.py:parse_dependencies()] - Dependency data has no package definition for linux distro 'raspbian'
-2026-03-11 22:12:41,221 [server.py:load_component()] - Component (update_manager) loaded
-2026-03-11 22:12:41,224 [server.py:_initialize_component()] - Performing Component Post Init: [database]
-2026-03-11 22:12:41,334 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
-2026-03-11 22:12:41,348 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
-2026-03-11 22:12:41,354 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
-2026-03-11 22:12:41,357 [machine.py:validation_init()] - Installation version in database up to date
-2026-03-11 22:12:41,678 [machine.py:check_virt_status()] - No Virtualization Detected
-2026-03-11 22:12:41,702 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.11.55
-2026-03-11 22:12:41,707 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.55
-2026-03-11 22:12:41,752 [server.py:add_log_rollover_item()] - 
+2026-03-12 00:18:00,676 [server.py:load_component()] - Component (shell_command) loaded
+2026-03-12 00:18:00,676 [machine.py:__init__()] - Using System Provider: systemd_dbus
+2026-03-12 00:18:00,823 [server.py:add_log_rollover_item()] - Found libcamera Python module, version: v0.0.5+83-bde9b04f
+2026-03-12 00:18:00,824 [server.py:load_component()] - Component (machine) loaded
+2026-03-12 00:18:00,832 [server.py:load_component()] - Component (data_store) loaded
+2026-03-12 00:18:00,835 [proc_stats.py:__init__()] - Detected 'vcgencmd', throttle checking enabled
+2026-03-12 00:18:00,837 [proc_stats.py:_get_cpu_thermal_file()] - Monitoring temperature for Raspberry Pi CPU
+2026-03-12 00:18:00,838 [server.py:load_component()] - Component (proc_stats) loaded
+2026-03-12 00:18:00,842 [server.py:load_component()] - Component (job_state) loaded
+2026-03-12 00:18:00,851 [server.py:load_component()] - Component (job_queue) loaded
+2026-03-12 00:18:00,858 [database.py:register_table()] - Found registered table job_history
+2026-03-12 00:18:00,858 [database.py:register_table()] - Found registered table job_totals
+2026-03-12 00:18:00,862 [server.py:load_component()] - Component (history) loaded
+2026-03-12 00:18:00,880 [server.py:load_component()] - Component (http_client) loaded
+2026-03-12 00:18:00,890 [server.py:load_component()] - Component (announcements) loaded
+2026-03-12 00:18:00,897 [server.py:load_component()] - Component (webcam) loaded
+2026-03-12 00:18:00,905 [server.py:load_component()] - Component (extensions) loaded
+2026-03-12 00:18:00,941 [server.py:load_component()] - Component (timelapse) loaded
+2026-03-12 00:18:00,955 [server.py:load_component()] - Component (octoprint_compat) loaded
+2026-03-12 00:18:01,051 [base_deploy.py:log_info()] - Git Repo moonraker: Detected virtualenv: /home/pi/moonraker-env
+2026-03-12 00:18:01,055 [base_deploy.py:log_info()] - Git Repo klipper: Detected virtualenv: /home/pi/klippy-env
+2026-03-12 00:18:01,100 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Detected virtualenv: /home/pi/klippy-env
+2026-03-12 00:18:01,112 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Detected virtualenv: /home/pi/klippy-env
+2026-03-12 00:18:01,236 [source_info.py:_load_release_info_json()] - Package cartographer3d_plugin-1.5.0.dist-info: Detected release_info json file
+2026-03-12 00:18:01,294 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Unable to find changelog url in metadata
+2026-03-12 00:18:01,295 [sysdeps_parser.py:parse_dependencies()] - Dependency data has no package definition for linux distro 'raspbian'
+2026-03-12 00:18:01,306 [server.py:load_component()] - Component (update_manager) loaded
+2026-03-12 00:18:01,307 [server.py:_initialize_component()] - Performing Component Post Init: [database]
+2026-03-12 00:18:01,332 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2026-03-12 00:18:01,345 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2026-03-12 00:18:01,360 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2026-03-12 00:18:01,365 [machine.py:validation_init()] - Installation version in database up to date
+2026-03-12 00:18:01,690 [machine.py:check_virt_status()] - No Virtualization Detected
+2026-03-12 00:18:01,719 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.11.55
+2026-03-12 00:18:01,722 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.55
+2026-03-12 00:18:01,772 [server.py:add_log_rollover_item()] - 
 Systemd unit moonraker.service:
 unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['system.slice', 'sysinit.target', 'network-online.target']
-**After=['system.slice', 'sysinit.target', 'klipper.service', 'network-online.target', 'systemd-journald.socket', 'basic.target']
+**Requires=['network-online.target', 'system.slice', 'sysinit.target']
+**After=['systemd-journald.socket', 'klipper.service', 'sysinit.target', 'system.slice', 'network-online.target', 'basic.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
 **ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -595,20 +587,20 @@ Properties:
 **FragmentPath=/etc/systemd/system/moonraker.service
 **Description=API Server for Klipper SV1
 **User=pi
-2026-03-11 22:12:41,753 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
-2026-03-11 22:12:41,753 [server.py:_initialize_component()] - Performing Component Post Init: [history]
-2026-03-11 22:12:41,847 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
-2026-03-11 22:12:41,856 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
-2026-03-11 22:12:41,856 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.55
-2026-03-11 22:12:41,862 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
-2026-03-11 22:12:41,862 [server.py:add_log_rollover_item()] - 
+2026-03-12 00:18:01,772 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2026-03-12 00:18:01,773 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2026-03-12 00:18:01,902 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2026-03-12 00:18:01,911 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2026-03-12 00:18:01,912 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.55
+2026-03-12 00:18:01,920 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2026-03-12 00:18:01,921 [server.py:add_log_rollover_item()] - 
 Systemd unit klipper.service:
 unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', '-.mount']
-**After=['network-online.target', 'system.slice', 'systemd-journald.socket', '-.mount', 'sysinit.target', 'basic.target']
+**Requires=['-.mount', 'sysinit.target', 'system.slice']
+**After=['system.slice', 'sysinit.target', 'systemd-journald.socket', 'network-online.target', 'basic.target', '-.mount']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -616,13 +608,13 @@ Properties:
 **FragmentPath=/etc/systemd/system/klipper.service
 **Description=Klipper 3D Printer Firmware SV1
 **User=pi
-2026-03-11 22:12:41,862 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
-2026-03-11 22:12:41,863 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/webcam/?action=snapshot, Flip V/H: False/False, rotation: 0
-2026-03-11 22:12:41,863 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
-2026-03-11 22:12:42,367 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
-2026-03-11 22:12:42,369 [base_deploy.py:log_info()] - Git Repo moonraker: Pip Version: 25.2, Python Version: 3.9
+2026-03-12 00:18:01,921 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+2026-03-12 00:18:01,921 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/webcam/?action=snapshot, Flip V/H: False/False, rotation: 0
+2026-03-12 00:18:01,922 [server.py:_initialize_component()] - Performing Component Post Init: [update_manager]
+2026-03-12 00:18:02,409 [base_deploy.py:log_info()] - PackageDeploy: PackageKit Provider Configured
+2026-03-12 00:18:02,417 [base_deploy.py:log_info()] - Git Repo moonraker: Pip Version: 25.2, Python Version: 3.9
 Last checked on 2026-01-19 01:27:05.374204+00:00
-2026-03-11 22:12:42,370 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
+2026-03-12 00:18:02,420 [git_deploy.py:log_repo_info()] - Git Repo moonraker Detected:
 Owner: Arksine
 Repository Name: moonraker
 Path: /home/pi/moonraker
@@ -645,7 +637,7 @@ Diverged: False
 Pinned Commit: None
 Repo Warnings:
   Repo has untracked source files: ['moonraker/components/timelapse.py']
-2026-03-11 22:12:42,373 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
+2026-03-12 00:18:02,423 [git_deploy.py:log_repo_info()] - Git Repo klipper Detected:
 Owner: Klipper3d
 Repository Name: klipper
 Path: /home/pi/klipper
@@ -666,7 +658,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,383 [base_deploy.py:log_info()] - Web Client mainsail: Detected
+2026-03-12 00:18:02,444 [base_deploy.py:log_info()] - Web Client mainsail: Detected
 Repo: mainsail-crew/mainsail
 Channel: stable
 Path: /home/pi/mainsail
@@ -680,7 +672,7 @@ Download Size: 3001860
 Content Type: application/zip
 Rollback Version: v2.16.1
 Rollback Repo: mainsail-crew/mainsail
-2026-03-11 22:12:42,390 [git_deploy.py:log_repo_info()] - Git Repo mainsail-config Detected:
+2026-03-12 00:18:02,451 [git_deploy.py:log_repo_info()] - Git Repo mainsail-config Detected:
 Owner: mainsail-crew
 Repository Name: mainsail-config
 Path: /home/pi/mainsail-config
@@ -701,7 +693,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,393 [git_deploy.py:log_repo_info()] - Git Repo timelapse Detected:
+2026-03-12 00:18:02,458 [git_deploy.py:log_repo_info()] - Git Repo timelapse Detected:
 Owner: mainsail-crew
 Repository Name: moonraker-timelapse
 Path: /home/pi/moonraker-timelapse
@@ -722,7 +714,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,396 [git_deploy.py:log_repo_info()] - Git Repo crowsnest Detected:
+2026-03-12 00:18:02,469 [git_deploy.py:log_repo_info()] - Git Repo crowsnest Detected:
 Owner: mainsail-crew
 Repository Name: crowsnest
 Path: /home/pi/crowsnest
@@ -743,7 +735,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,407 [git_deploy.py:log_repo_info()] - Git Repo sonar Detected:
+2026-03-12 00:18:02,476 [git_deploy.py:log_repo_info()] - Git Repo sonar Detected:
 Owner: mainsail-crew
 Repository Name: sonar
 Path: /home/pi/sonar
@@ -764,7 +756,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,415 [git_deploy.py:log_repo_info()] - Git Repo Klipper-Adaptive-Meshing-Purging Detected:
+2026-03-12 00:18:02,495 [git_deploy.py:log_repo_info()] - Git Repo Klipper-Adaptive-Meshing-Purging Detected:
 Owner: kyleisah
 Repository Name: Klipper-Adaptive-Meshing-Purging
 Path: /home/pi/Klipper-Adaptive-Meshing-Purging
@@ -785,9 +777,9 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,417 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Pip Version: 25.3, Python Version: 3.9
+2026-03-12 00:18:02,498 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Pip Version: 25.3, Python Version: 3.9
 Last checked on 2026-01-19 01:27:49.826657+00:00
-2026-03-11 22:12:42,432 [git_deploy.py:log_repo_info()] - Git Repo Klippain-ShakeTune Detected:
+2026-03-12 00:18:02,500 [git_deploy.py:log_repo_info()] - Git Repo Klippain-ShakeTune Detected:
 Owner: Frix-x
 Repository Name: klippain-shaketune
 Path: /home/pi/klippain_shaketune
@@ -808,7 +800,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,435 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
+2026-03-12 00:18:02,503 [git_deploy.py:log_repo_info()] - Git Repo klipper-backup Detected:
 Owner: Staubgeborener
 Repository Name: klipper-backup
 Path: /home/pi/klipper-backup
@@ -829,7 +821,7 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,439 [git_deploy.py:log_repo_info()] - Git Repo Katapult Detected:
+2026-03-12 00:18:02,506 [git_deploy.py:log_repo_info()] - Git Repo Katapult Detected:
 Owner: Arksine
 Repository Name: katapult
 Path: /home/pi/katapult
@@ -850,9 +842,9 @@ Is Shallow: False
 Commits Behind Count: 0
 Diverged: False
 Pinned Commit: None
-2026-03-11 22:12:42,442 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Pip Version: 26.0.1, Python Version: 3.9
+2026-03-12 00:18:02,508 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Pip Version: 26.0.1, Python Version: 3.9
 Last checked on 2026-03-09 03:50:21.135523+00:00
-2026-03-11 22:12:42,453 [python_deploy.py:_log_package_info()] - Python Package cartographer_plugin detected:
+2026-03-12 00:18:02,508 [python_deploy.py:_log_package_info()] - Python Package cartographer_plugin detected:
 Channel: stable
 Package Source: PIP
 Repo Owner: Cartographer3D
@@ -868,31 +860,31 @@ Converted Git Version: 1.5.0-0
 Rollback Version: ?
 Rollback Ref: ?
 
-2026-03-11 22:12:43,531 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 44 Seconds
-2026-03-11 22:12:43,531 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 5 Days, 22 Hours, 34 Minutes, 38 Seconds
-2026-03-11 22:12:43,531 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 5 Days, 22 Hours, 34 Minutes, 33 Seconds
-2026-03-11 22:12:43,531 [base_deploy.py:log_info()] - Web Client mainsail: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 46 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo mainsail-config: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 47 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo timelapse: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 47 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo crowsnest: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 48 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo sonar: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 49 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 50 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 50 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo klipper-backup: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 51 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Git Repo Katapult: Next refresh in: 5 Days, 22 Hours, 34 Minutes, 31 Seconds
-2026-03-11 22:12:43,532 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Next refresh in: 5 Days, 22 Hours, 31 Minutes, 54 Seconds
-2026-03-11 22:12:43,549 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/pi/printer_data/comms/moonraker.sock'
-2026-03-11 22:12:43,555 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: affogato
-2026-03-11 22:12:43,556 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
-2026-03-11 22:12:43,813 [klippy_connection.py:_do_connect()] - Klippy Connection Established
-2026-03-11 22:12:43,858 [server.py:add_log_rollover_item()] - 
+2026-03-12 00:18:03,488 [base_deploy.py:log_info()] - PackageKit: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 24 Seconds
+2026-03-12 00:18:03,488 [base_deploy.py:log_info()] - Git Repo moonraker: Next refresh in: 5 Days, 20 Hours, 29 Minutes, 18 Seconds
+2026-03-12 00:18:03,488 [base_deploy.py:log_info()] - Git Repo klipper: Next refresh in: 5 Days, 20 Hours, 29 Minutes, 13 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Web Client mainsail: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 26 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo mainsail-config: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 27 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo timelapse: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 27 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo crowsnest: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 28 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo sonar: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 29 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo Klipper-Adaptive-Meshing-Purging: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 30 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo Klippain-ShakeTune: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 30 Seconds
+2026-03-12 00:18:03,489 [base_deploy.py:log_info()] - Git Repo klipper-backup: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 31 Seconds
+2026-03-12 00:18:03,490 [base_deploy.py:log_info()] - Git Repo Katapult: Next refresh in: 5 Days, 20 Hours, 29 Minutes, 11 Seconds
+2026-03-12 00:18:03,490 [base_deploy.py:log_info()] - Python Package cartographer_plugin: Next refresh in: 5 Days, 20 Hours, 26 Minutes, 34 Seconds
+2026-03-12 00:18:03,513 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/pi/printer_data/comms/moonraker.sock'
+2026-03-12 00:18:03,519 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: affogato
+2026-03-12 00:18:03,521 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2026-03-12 00:18:03,776 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-12 00:18:03,825 [server.py:add_log_rollover_item()] - 
 Systemd unit klipper.service:
 unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['-.mount', 'sysinit.target', 'system.slice']
-**After=['system.slice', 'sysinit.target', 'systemd-journald.socket', 'network-online.target', 'basic.target', '-.mount']
+**Requires=['system.slice', 'sysinit.target', '-.mount']
+**After=['-.mount', 'systemd-journald.socket', 'sysinit.target', 'system.slice', 'network-online.target', 'basic.target']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -900,9 +892,9 @@ Properties:
 **FragmentPath=/etc/systemd/system/klipper.service
 **Description=Klipper 3D Printer Firmware SV1
 **User=pi
-2026-03-11 22:12:45,241 [server.py:add_log_rollover_item()] - Klipper Version: v0.13.0-573-g644cda5e-dirty
-2026-03-11 22:12:48,098 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-11 22:12:48,100 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-11 22:12:48,349 [job_state.py:_handle_started()] - Job state initialized: standby
-2026-03-11 22:12:48,614 [klippy_connection.py:_check_ready()] - Klippy ready
-2026-03-11 22:12:49,102 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-12 00:18:04,704 [server.py:add_log_rollover_item()] - Klipper Version: v0.13.0-573-g644cda5e-dirty
+2026-03-12 00:18:07,560 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-12 00:18:07,561 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-12 00:18:07,810 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-12 00:18:08,075 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-12 00:18:08,562 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor chamber', 'temperature_sensor Hotend_heatsink', 'temperature_sensor toolboard', 'temperature_sensor cartographer', 'extruder', 'tmc2240 extruder']
