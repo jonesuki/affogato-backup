@@ -3997,3 +3997,83 @@ Properties:
 2026-03-22 20:44:24,187 [job_state.py:_handle_started()] - Job state initialized: standby
 2026-03-22 20:44:24,449 [klippy_connection.py:_check_ready()] - Klippy ready
 2026-03-22 20:44:24,939 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-22 21:04:08,907 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2026-03-22 21:04:08,909 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2026-03-22 21:04:48,918 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.11.55
+2026-03-22 21:04:48,923 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.55
+2026-03-22 21:04:50,842 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.11.192
+2026-03-22 21:04:50,847 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 7.61ms
+2026-03-22 21:04:50,848 [websockets.py:open()] - Websocket Opened: ID: 4037556904, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-03-22 21:04:50,871 [websockets.py:_handle_identify()] - Websocket 4037556904 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-03-22 21:06:59,053 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2026-03-22 21:06:59,055 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2026-03-22 21:07:01,039 [websockets.py:write_to_socket()] - Websocket closed while writing: 4037556904
+2026-03-22 21:07:05,866 [websockets.py:on_close()] - Websocket Closed: ID: 4037556904 Close Code: None, Close Reason: None, Pong Time Elapsed: 25.00
+2026-03-22 21:07:41,363 [application.py:log_request()] - 101 GET /websocket (192.168.11.192) [_TRUSTED_USER_] 2.37ms
+2026-03-22 21:07:41,363 [websockets.py:open()] - Websocket Opened: ID: 4071523160, Proxied: True, User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15, Host Name: affogato.local
+2026-03-22 21:07:41,375 [websockets.py:_handle_identify()] - Websocket 4071523160 Client Identified - Name: mainsail, Version: 2.17.0, Type: web
+2026-03-22 21:07:49,212 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.11.55
+2026-03-22 21:07:49,216 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.11.55
+2026-03-22 21:22:24,058 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2026-03-22 21:23:24,060 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2026-03-22 21:24:24,061 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.00 seconds
+2026-03-22 21:25:44,965 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-22 21:25:46,221 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-22 21:25:50,496 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-22 21:25:50,498 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-22 21:25:50,747 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-22 21:25:51,012 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-22 21:25:51,510 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-22 21:30:22,655 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryqkhTUXZkEqGyue2B
+2026-03-22 21:30:22,684 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-22 21:30:22,698 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 45.53ms
+2026-03-22 21:48:16,474 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryJQJTiIw3BqanxuhV
+2026-03-22 21:48:16,511 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-22 21:48:16,521 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 49.50ms
+2026-03-22 21:48:17,639 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-22 21:48:18,896 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-22 21:48:23,130 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-22 21:48:23,131 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-22 21:48:23,381 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-22 21:48:23,644 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-22 21:48:24,133 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power_(W)', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-22 21:59:32,647 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryRWttV6NrYRp1EGqz
+2026-03-22 21:59:32,705 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-22 21:59:32,715 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 70.82ms
+2026-03-22 22:01:50,978 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2026-03-22 22:02:50,978 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2026-03-22 22:03:50,979 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.00 seconds
+2026-03-22 22:04:50,980 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.00 seconds
+2026-03-22 22:05:50,980 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.00 seconds
+2026-03-22 22:21:19,931 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2026-03-22 22:22:19,932 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2026-03-22 22:23:19,933 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.00 seconds
+2026-03-22 22:24:19,934 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.00 seconds
+2026-03-22 22:25:19,936 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.00 seconds
+2026-03-22 22:40:56,079 [application.py:prepare()] - Upload Request Received from 192.168.11.192
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary70YlvbX6Uc4pNmtW
+2026-03-22 22:40:56,143 [application.py:post()] - Processing Uploaded File: printer.cfg
+2026-03-22 22:40:56,157 [application.py:log_request()] - 201 POST /server/files/upload (192.168.11.192) [_TRUSTED_USER_] 80.95ms
+2026-03-22 22:56:52,467 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-22 22:56:53,723 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2026-03-22 22:56:57,948 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-22 22:56:57,949 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-22 22:56:58,198 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-22 22:56:58,462 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-22 22:56:59,002 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power_(W)', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-22 23:00:39,255 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2026-03-22 23:01:39,256 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 120.00 seconds
+2026-03-22 23:02:39,258 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 180.00 seconds
+2026-03-22 23:03:39,259 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 240.00 seconds
+2026-03-22 23:04:39,261 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 300.01 seconds
+2026-03-22 23:05:39,262 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 360.01 seconds
+2026-03-22 23:06:39,264 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 420.01 seconds
+2026-03-22 23:07:39,264 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 480.01 seconds
+2026-03-22 23:08:39,265 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 540.01 seconds
+2026-03-22 23:09:39,267 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 600.01 seconds
+2026-03-22 23:10:39,267 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 660.01 seconds
+2026-03-22 23:11:39,268 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 720.01 seconds
+2026-03-22 23:12:39,268 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 780.01 seconds
