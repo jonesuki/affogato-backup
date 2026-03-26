@@ -5,6 +5,8 @@ secrets.conf
 printer-[0-9]*_[0-9]*.cfg
 *.bak
 *.bkp
-*.csv
+cartographer_temp_calib_h1mm_20260324_175941.csv
+cartographer_temp_calib_h2mm_20260324_181456.csv
+cartographer_temp_calib_h3mm_20260324_184410.csv
 *.zip
 ShakeTune_results
