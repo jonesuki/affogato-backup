@@ -1,3 +1,6 @@
+Loaded MCU 'cartographer' 102 commands (CARTOGRAPHER V4 6.1.0 / )
+MCU 'cartographer' config: ADC_MAX=4095 BUS_PINS_spi1=PA6,PA7,PA5 BUS_PINS_spi1_PA6_PA7_PA5=PA6,PA7,PA5 BUS_PINS_spi1_PB4_PB5_PB3=PB4,PB5,PB3 BUS_PINS_spi1a=PB4,PB5,PB3 BUS_PINS_spi2=PB14,PB15,PB13 BUS_PINS_spi2_PA10_PA11_PF1=PA10,PA11,PF1 BUS_PINS_spi2_PB14_PB15_PB13=PB14,PB15,PB13 BUS_PINS_spi3=PB4,PB5,PB3 BUS_PINS_spi3_PB4_PB5_PB3=PB4,PB5,PB3 BUS_PINS_spi3_PC11_PC12_PC10=PC11,PC12,PC10 BUS_PINS_spi3a=PC11,PC12,PC10 CARTOGRAPHER_ADC_SMOOTH_COUNT=16 CLOCK_FREQ=170000000 MCU=stm32g431xx PWM_MAX=32768 RESERVE_PINS_USB=PA11,PA12 RESERVE_PINS_crystal=PF0,PF1 STATS_SUMSQ_BASE=256 STEPPER_OPTIMIZED_EDGE=22 STEPPER_STEP_BOTH_EDGE=1
+Configured MCU 'cartographer' (1024 moves)
 ===== Config file =====
 [virtual_sdcard]
 path = ~/printer_data/gcodes
@@ -1861,7 +1864,7 @@ travel_speed = 50
 lift_speed = 5
 verbose = yes
 macro_prefix = CARTO
-z_backlash = 0.0091
+z_backlash = 0.00746
 
 [cartographer scan]
 probe_speed = 5
@@ -1876,8 +1879,8 @@ unsafe_max_touch_temperature = 150
 zero_reference_position = 150, 150
 speed = 300
 horizontal_move_z = 3
-mesh_min = 30, 30
-mesh_max = 270, 270
+mesh_min = 40, 40
+mesh_max = 260,260
 probe_count = 20, 20
 adaptive_margin = 10
 mesh_pps = 0,0
@@ -1976,10 +1979,10 @@ gantry_corners =
 	-60,-10
 	360,370
 points = 
-	50,25
-	50,225
-	250,225
-	250,25
+	40,40
+	40,260
+	260,260
+	260,40
 speed = 150
 horizontal_move_z = 5
 retries = 5
@@ -2048,23 +2051,6 @@ damping_ratio_y = 0.056
 
 [axis_twist_compensation]
 
-[bed_mesh default]
-version = 1
-points = 
-	-0.032500, -0.023750, -0.040000
-	-0.026250, -0.013750, -0.027500
-	-0.006250, 0.003750, 0.001250
-x_count = 3
-y_count = 3
-mesh_x_pps = 2
-mesh_y_pps = 2
-algo = lagrange
-tension = 0.2
-min_x = 96.97999999999999
-max_x = 202.32
-min_y = 96.97
-max_y = 202.42999999999998
-
 [probe]
 z_offset = -0.930
 
@@ -2074,22 +2060,32 @@ xz_skew = 0.0002050607695965943
 yz_skew = -0.00013435074108080882
 
 [cartographer scan_model default]
-coefficients = 1.561776036080514,2.056299964104095,0.8352979309337715,0.2575254863191522,0.40633138291682874,0.8287516792903298,-0.262442893456459,-0.902440083659533,0.26002814408601815,0.462424265651368
-domain = 3.305216388092854e-07,3.4097995751282755e-07
+coefficients = 1.5785824173683254,2.075142041563485,0.8225187871306521,0.29983566532350303,0.44003964605203993,0.6077560178835545,-0.29033933089771347,-0.5906023827744302,0.25157742947075074,0.3118383643082876
+domain = 3.3157707558623827e-07,3.411309822984878e-07
 z_offset = 0
-reference_temperature = 14.51
+reference_temperature = 14.38
 software_version = 1.5.0
-mcu_version = CARTOGRAPHER V4 6.0.0
+mcu_version = CARTOGRAPHER V4 6.1.0
 
 [cartographer touch_model default]
 threshold = 500
 speed = 2
 z_offset = -0.05
 software_version = 1.5.0
-mcu_version = CARTOGRAPHER V4 6.0.0
+mcu_version = CARTOGRAPHER V4 6.1.0
 =======================
+Loaded MCU 'mcu' 147 commands (v0.13.0-557-g54c7b65d / gcc: (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027] binutils: (2.34-4+rpi1+14) 2.34)
+MCU 'mcu' config: ADC_MAX=4095 BUS_PINS_i2c1=PB6,PB7 BUS_PINS_i2c1a=PB8,PB9 BUS_PINS_i2c2=PB10,PB11 BUS_PINS_i2c2_PF1_PF0=PF1,PF0 BUS_PINS_i2c2a=PH4,PH5 BUS_PINS_i2c3=PA8,PC9 BUS_PINS_i2c3a=PH7,PH8 BUS_PINS_sdio=PC12,PD2,PC8,PC9,PC10,PC11 BUS_PINS_spi1=PA6,PA7,PA5 BUS_PINS_spi1_PA6_PA7_PA5=PA6,PA7,PA5 BUS_PINS_spi1_PB4_PB5_PB3=PB4,PB5,PB3 BUS_PINS_spi1a=PB4,PB5,PB3 BUS_PINS_spi2=PB14,PB15,PB13 BUS_PINS_spi2_PB14_PB15_PB13=PB14,PB15,PB13 BUS_PINS_spi2_PC2_PC3_PB10=PC2,PC3,PB10 BUS_PINS_spi2_PI2_PI3_PI1=PI2,PI3,PI1 BUS_PINS_spi2a=PC2,PC3,PB10 BUS_PINS_spi2b=PI2,PI3,PI1 BUS_PINS_spi3=PB4,PB5,PB3 BUS_PINS_spi3_PB4_PB5_PB3=PB4,PB5,PB3 BUS_PINS_spi3_PC11_PC12_PC10=PC11,PC12,PC10 BUS_PINS_spi3a=PC11,PC12,PC10 BUS_PINS_spi4=PE13,PE14,PE12 BUS_PINS_spi4_PE13_PE14_PE12=PE13,PE14,PE12 BUS_PINS_spi6_PG12_PG14_PG13=PG12,PG14,PG13 CLOCK_FREQ=168000000 MCU=stm32f429xx PWM_MAX=32768 RESERVE_PINS_USB=PA11,PA12 RESERVE_PINS_crystal=PH0,PH1 STATS_SUMSQ_BASE=256 STEPPER_STEP_BOTH_EDGE=1
+Configured MCU 'mcu' (1024 moves)
+Loaded MCU 'orbitoolO2S' 135 commands (v0.13.0-563-gf1fb5756 / gcc: (15:8-2019-q3-1+b1) 8.3.1 20190703 (release) [gcc-8-branch revision 273027] binutils: (2.34-4+rpi1+14) 2.34)
+MCU 'orbitoolO2S' config: ADC_MAX=4095 BUS_PINS_i2c1=PB6,PB7 BUS_PINS_i2c1_PB6_PB7=PB6,PB7 BUS_PINS_i2c1_PB8_PB7=PB8,PB7 BUS_PINS_i2c1_PB8_PB9=PB8,PB9 BUS_PINS_i2c1_PF1_PF0=PF1,PF0 BUS_PINS_i2c1a=PF1,PF0 BUS_PINS_spi1=PA6,PA7,PA5 BUS_PINS_spi1_PA6_PA7_PA5=PA6,PA7,PA5 BUS_PINS_spi1_PB4_PB5_PB3=PB4,PB5,PB3 BUS_PINS_spi1a=PB4,PB5,PB3 BUS_PINS_spi2=PB14,PB15,PB13 BUS_PINS_spi2_PB14_PB15_PB13=PB14,PB15,PB13 BUS_PINS_spi2_PC2_PC3_PB10=PC2,PC3,PB10 BUS_PINS_spi2a=PC2,PC3,PB10 CLOCK_FREQ=48000000 MCU=stm32f072xb PWM_MAX=32768 RESERVE_PINS_USB=PA11,PA12 RESERVE_PINS_crystal=PF0,PF1 STATS_SUMSQ_BASE=256 STEPPER_STEP_BOTH_EDGE=1
+Configured MCU 'orbitoolO2S' (878 moves)
+toolhead: max_velocity: 300.000000
+max_accel: 6500.000000
+minimum_cruise_ratio: 0.500000
+square_corner_velocity: 5.000000
 Args: ['/home/pi/klipper/klippy/klippy.py', '/home/pi/printer_data/config/printer.cfg', '-l', '/home/pi/printer_data/logs/klippy.log', '-I', '/home/pi/printer_data/comms/klippy.serial', '-a', '/home/pi/printer_data/comms/klippy.sock']
-Git version: 'v0.13.0-585-g9ebff0cc-dirty'
+Git version: 'v0.13.0-593-g2f05309d-dirty'
 Untracked files: klippy/extras/cartographer.py
 Branch: master
 Remote: origin
@@ -2098,96 +2094,6 @@ CPU: 4 core ?
 Device: Raspberry Pi 4 Model B Rev 1.5
 Linux: Linux version 6.1.21-v8+ (dom@buildbot) (aarch64-linux-gnu-gcc-8 (Ubuntu/Linaro 8.4.0-3ubuntu1) 8.4.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #1642 SMP PREEMPT Mon Apr  3 17:24:16 BST 2023
 Python: '3.9.2 (default, Jan 24 2026, 09:41:14) \n[GCC 10.2.1 20210110]'
-webhooks client 3968078800: {'program': 'Moonraker', 'version': 'v0.10.0-19-g1ed102e'}
-=============== Log rollover at Sun Mar 29 22:29:05 2026 ===============
-mcu 'cartographer': got {'clock': 4173737657, 'data': 28106356, 'temp': 59244, '#name': 'cartographer_data', '#sent_time': 43.132834104, '#receive_time': 43.162576789}
-mcu 'cartographer': got {'clock': 4193737657, 'data': 28106356, 'temp': 59243, '#name': 'cartographer_data', '#sent_time': 43.235593344, '#receive_time': 43.28023577}
-mcu 'cartographer': got {'count': 2930, 'sum': 4531116, 'sumsq': 503568218, '#name': 'stats', '#sent_time': 43.337830233, '#receive_time': 43.353559659}
-mcu 'cartographer': got {'clock': 4213737706, 'data': 28106577, 'temp': 59246, '#name': 'cartographer_data', '#sent_time': 43.388787326, '#receive_time': 43.3978634}
-Loaded MCU 'cartographer' 112 commands (CARTOGRAPHER V4 6.0.0 / )
-MCU 'cartographer' config: ADC_MAX=4095 BUS_PINS_i2c2_PA9_PA8=PA9,PA8 BUS_PINS_spi1=PA6,PA7,PA5 CARTOGRAPHER_ADC_SMOOTH_COUNT=16 CLOCK_FREQ=170000000 INITIAL_PINS=!PA3 MCU=stm32g431xx PWM_MAX=2 RESERVE_PINS_USB=PA11,PA12 RESERVE_PINS_crystal=PF0,PF1 STATS_SUMSQ_BASE=256 STEPPER_BOTH_EDGE=1
-mcu_temperature 'mcu' nominal base=-260.656371 slope=1264.864865
-mcu_temperature 'orbitoolO2S' nominal base=343.436807 slope=-726.385809
-mcu_temperature 'cartographer' nominal base=-277.374631 slope=1328.761062
-Sending MCU 'mcu' printer configuration...
-Configured MCU 'mcu' (1024 moves)
-Sending MCU 'orbitoolO2S' printer configuration...
-mcu 'cartographer': got {'clock': 4233737660, 'data': 28106356, 'temp': 59245, '#name': 'cartographer_data', '#sent_time': 43.4969544, '#receive_time': 43.515442788}
-Configured MCU 'orbitoolO2S' (878 moves)
-[cartographer] Initialized CARTOGRAPHER V4 6.0.0 MCU
-[cartographer] Received constants: {'ADC_MAX': 4095, 'BUS_PINS_i2c2_PA9_PA8': 'PA9,PA8', 'BUS_PINS_spi1': 'PA6,PA7,PA5', 'CARTOGRAPHER_ADC_SMOOTH_COUNT': 16, 'CLOCK_FREQ': 170000000, 'INITIAL_PINS': '!PA3', 'MCU': 'stm32g431xx', 'PWM_MAX': 2, 'RESERVE_PINS_USB': 'PA11,PA12', 'RESERVE_PINS_crystal': 'PF0,PF1', 'STATS_SUMSQ_BASE': 256, 'STEPPER_BOTH_EDGE': 1}
-Sending MCU 'cartographer' printer configuration...
-Configured MCU 'cartographer' (1024 moves)
-Starting heater checks for heater_bed
-[cartographer] Stopping stream
-bed_mesh: generated points
-Index |  Tool Adjusted  |   Probe
-  0   | (30.0, 3.0)     | (30.0, 30.0)
-  1   | (42.6, 3.0)     | (42.6, 30.0)
-  2   | (55.3, 3.0)     | (55.3, 30.0)
-  3   | (67.9, 3.0)     | (67.9, 30.0)
-  4   | (80.5, 3.0)     | (80.5, 30.0)
-  5   | (93.2, 3.0)     | (93.2, 30.0)
-  6   | (105.8, 3.0)    | (105.8, 30.0)
-  7   | (118.4, 3.0)    | (118.4, 30.0)
-  8   | (131.0, 3.0)    | (131.0, 30.0)
-  9   | (143.7, 3.0)    | (143.7, 30.0)
-  10  | (156.3, 3.0)    | (156.3, 30.0)
-  11  | (168.9, 3.0)    | (168.9, 30.0)
-  12  | (181.6, 3.0)    | (181.6, 30.0)
-  13  | (194.2, 3.0)    | (194.2, 30.0)
-  14  | (206.8, 3.0)    | (206.8, 30.0)
-  15  | (219.5, 3.0)    | (219.5, 30.0)
-  16  | (232.1, 3.0)    | (232.1, 30.0)
-  17  | (244.7, 3.0)    | (244.7, 30.0)
-  18  | (257.3, 3.0)    | (257.3, 30.0)
-  19  | (270.0, 3.0)    | (270.0, 30.0)
-  20  | (270.0, 15.6)   | (270.0, 42.6)
-  21  | (257.3, 15.6)   | (257.3, 42.6)
-  22  | (244.7, 15.6)   | (244.7, 42.6)
-  23  | (232.1, 15.6)   | (232.1, 42.6)
-  24  | (219.5, 15.6)   | (219.5, 42.6)
-  25  | (206.8, 15.6)   | (206.8, 42.6)
-  26  | (194.2, 15.6)   | (194.2, 42.6)
-  27  | (181.6, 15.6)   | (181.6, 42.6)
-  28  | (168.9, 15.6)   | (168.9, 42.6)
-  29  | (156.3, 15.6)   | (156.3, 42.6)
-  30  | (143.7, 15.6)   | (143.7, 42.6)
-  31  | (131.0, 15.6)   | (131.0, 42.6)
-  32  | (118.4, 15.6)   | (118.4, 42.6)
-  33  | (105.8, 15.6)   | (105.8, 42.6)
-  34  | (93.2, 15.6)    | (93.2, 42.6)
-  35  | (80.5, 15.6)    | (80.5, 42.6)
-  36  | (67.9, 15.6)    | (67.9, 42.6)
-  37  | (55.3, 15.6)    | (55.3, 42.6)
-  38  | (42.6, 15.6)    | (42.6, 42.6)
-  39  | (30.0, 15.6)    | (30.0, 42.6)
-  40  | (30.0, 28.3)    | (30.0, 55.3)
-  41  | (42.6, 28.3)    | (42.6, 55.3)
-  42  | (55.3, 28.3)    | (55.3, 55.3)
-  43  | (67.9, 28.3)    | (67.9, 55.3)
-  44  | (80.5, 28.3)    | (80.5, 55.3)
-  45  | (93.2, 28.3)    | (93.2, 55.3)
-  46  | (105.8, 28.3)   | (105.8, 55.3)
-  47  | (118.4, 28.3)   | (118.4, 55.3)
-  48  | (131.0, 28.3)   | (131.0, 55.3)
-  49  | (143.7, 28.3)   | (143.7, 55.3)
-...points 50 through 399 truncated
-bed_mesh: zero_reference_position is (150.00, 150.00)
-Starting heater checks for extruder
-Stats 44.4: gcodein=0 mcu: mcu_awake=0.009 mcu_task_avg=0.000009 mcu_task_stddev=0.000008 bytes_write=3940 bytes_read=8537 bytes_retransmit=9 bytes_invalid=0 send_seq=321 receive_seq=321 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=3044 freq=167999681 orbitoolO2S: mcu_awake=0.013 mcu_task_avg=0.000030 mcu_task_stddev=0.000029 bytes_write=2146 bytes_read=6232 bytes_retransmit=9 bytes_invalid=0 send_seq=207 receive_seq=207 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999383 adj=48003125 cartographer: mcu_awake=0.000 mcu_task_avg=0.000000 mcu_task_stddev=0.000000 bytes_write=853 bytes_read=4356 bytes_retransmit=9 bytes_invalid=0 send_seq=112 receive_seq=112 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=170007232 adj=170005686 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=0.0 pwm=0.000 cartographer_coil: temp=10.4 Raspberry_Pi: temp=11.7 Octopus_Pro: temp=0.0 Chamber: temp=0.0 Hotend_Heatsink: temp=0.0 Orbitool_O2S: temp=0.0 Cartographer: temp=10.4 print_time=0.000 buffer_time=0.000 print_stall=0 extruder: target=0 temp=0.0 pwm=0.000 sysload=1.53 cputime=5.846 memavail=1499132
-webhooks: registering remote method 'shutdown_machine' for connection id: 3968078800
-webhooks: registering remote method 'reboot_machine' for connection id: 3968078800
-webhooks: registering remote method 'pause_job_queue' for connection id: 3968078800
-webhooks: registering remote method 'start_job_queue' for connection id: 3968078800
-webhooks: registering remote method 'timelapse_newframe' for connection id: 3968078800
-webhooks: registering remote method 'timelapse_saveFrames' for connection id: 3968078800
-webhooks: registering remote method 'timelapse_render' for connection id: 3968078800
-Stats 45.4: gcodein=0 mcu: mcu_awake=0.009 mcu_task_avg=0.000009 mcu_task_stddev=0.000008 bytes_write=7458 bytes_read=9061 bytes_retransmit=9 bytes_invalid=0 send_seq=385 receive_seq=385 retransmit_seq=2 srtt=0.001 rttvar=0.001 rto=0.025 ready_bytes=0 upcoming_bytes=2 freq=168000120 orbitoolO2S: mcu_awake=0.013 mcu_task_avg=0.000030 mcu_task_stddev=0.000029 bytes_write=2152 bytes_read=6431 bytes_retransmit=9 bytes_invalid=0 send_seq=208 receive_seq=208 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999440 adj=47997751 cartographer: mcu_awake=0.000 mcu_task_avg=0.000000 mcu_task_stddev=0.000000 bytes_write=859 bytes_read=4550 bytes_retransmit=9 bytes_invalid=0 send_seq=113 receive_seq=113 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=170000809 adj=170008599 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.7 pwm=0.000 cartographer_coil: temp=10.4 Raspberry_Pi: temp=12.2 Octopus_Pro: temp=15.9 Chamber: temp=10.0 Hotend_Heatsink: temp=11.7 Orbitool_O2S: temp=22.1 Cartographer: temp=10.6 print_time=51.206 buffer_time=0.092 print_stall=0 extruder: target=0 temp=10.5 pwm=0.000 sysload=1.57 cputime=5.920 memavail=1493856
-Stats 46.4: gcodein=0 mcu: mcu_awake=0.009 mcu_task_avg=0.000009 mcu_task_stddev=0.000008 bytes_write=8005 bytes_read=9357 bytes_retransmit=9 bytes_invalid=0 send_seq=398 receive_seq=398 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=10 freq=168001908 orbitoolO2S: mcu_awake=0.013 mcu_task_avg=0.000030 mcu_task_stddev=0.000029 bytes_write=2158 bytes_read=6600 bytes_retransmit=9 bytes_invalid=0 send_seq=209 receive_seq=209 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999645 adj=47998046 cartographer: mcu_awake=0.000 mcu_task_avg=0.000000 mcu_task_stddev=0.000000 bytes_write=865 bytes_read=4770 bytes_retransmit=9 bytes_invalid=0 send_seq=114 receive_seq=114 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169999799 adj=169997493 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.8 pwm=0.000 cartographer_coil: temp=10.4 Raspberry_Pi: temp=11.2 Octopus_Pro: temp=16.1 Chamber: temp=10.0 Hotend_Heatsink: temp=11.7 Orbitool_O2S: temp=22.1 Cartographer: temp=10.8 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.5 pwm=0.000 sysload=1.57 cputime=5.955 memavail=1494320
-Stats 47.4: gcodein=0 mcu: mcu_awake=0.009 mcu_task_avg=0.000009 mcu_task_stddev=0.000008 bytes_write=8503 bytes_read=9657 bytes_retransmit=9 bytes_invalid=0 send_seq=411 receive_seq=411 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=168001221 orbitoolO2S: mcu_awake=0.013 mcu_task_avg=0.000030 mcu_task_stddev=0.000029 bytes_write=2164 bytes_read=6784 bytes_retransmit=9 bytes_invalid=0 send_seq=210 receive_seq=210 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999631 adj=47997708 cartographer: mcu_awake=0.000 mcu_task_avg=0.000000 mcu_task_stddev=0.000000 bytes_write=871 bytes_read=4986 bytes_retransmit=9 bytes_invalid=0 send_seq=115 receive_seq=115 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169999208 adj=169992649 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.8 pwm=0.000 cartographer_coil: temp=10.5 Raspberry_Pi: temp=12.2 Octopus_Pro: temp=16.2 Chamber: temp=10.0 Hotend_Heatsink: temp=11.7 Orbitool_O2S: temp=22.1 Cartographer: temp=10.9 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.4 pwm=0.000 sysload=1.57 cputime=5.989 memavail=1494100
-Stats 48.4: gcodein=0 mcu: mcu_awake=0.009 mcu_task_avg=0.000009 mcu_task_stddev=0.000008 bytes_write=8509 bytes_read=9865 bytes_retransmit=9 bytes_invalid=0 send_seq=412 receive_seq=412 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=168001578 orbitoolO2S: mcu_awake=0.015 mcu_task_avg=0.000025 mcu_task_stddev=0.000033 bytes_write=2170 bytes_read=6998 bytes_retransmit=9 bytes_invalid=0 send_seq=211 receive_seq=211 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999736 adj=47998486 cartographer: mcu_awake=0.025 mcu_task_avg=0.000009 mcu_task_stddev=0.000040 bytes_write=877 bytes_read=5223 bytes_retransmit=9 bytes_invalid=0 send_seq=116 receive_seq=116 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169999724 adj=169994403 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.8 pwm=0.000 cartographer_coil: temp=10.4 Raspberry_Pi: temp=11.2 Octopus_Pro: temp=16.1 Chamber: temp=10.0 Hotend_Heatsink: temp=11.7 Orbitool_O2S: temp=22.1 Cartographer: temp=11.1 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.5 pwm=0.000 sysload=1.57 cputime=6.052 memavail=1494604
-Stats 49.4: gcodein=0 mcu: mcu_awake=0.018 mcu_task_avg=0.000060 mcu_task_stddev=0.000095 bytes_write=8515 bytes_read=10138 bytes_retransmit=9 bytes_invalid=0 send_seq=413 receive_seq=413 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=168001954 orbitoolO2S: mcu_awake=0.015 mcu_task_avg=0.000025 mcu_task_stddev=0.000033 bytes_write=2176 bytes_read=7167 bytes_retransmit=9 bytes_invalid=0 send_seq=212 receive_seq=212 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999790 adj=47998679 cartographer: mcu_awake=0.025 mcu_task_avg=0.000009 mcu_task_stddev=0.000040 bytes_write=883 bytes_read=5425 bytes_retransmit=9 bytes_invalid=0 send_seq=117 receive_seq=117 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169999565 adj=169995541 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.8 pwm=0.000 cartographer_coil: temp=10.4 Raspberry_Pi: temp=12.6 Octopus_Pro: temp=16.2 Chamber: temp=10.0 Hotend_Heatsink: temp=11.7 Orbitool_O2S: temp=22.0 Cartographer: temp=11.0 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.4 pwm=0.000 sysload=1.57 cputime=6.097 memavail=1494128
-Stats 50.4: gcodein=0 mcu: mcu_awake=0.018 mcu_task_avg=0.000060 mcu_task_stddev=0.000095 bytes_write=8575 bytes_read=10372 bytes_retransmit=9 bytes_invalid=0 send_seq=416 receive_seq=416 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=168001703 orbitoolO2S: mcu_awake=0.015 mcu_task_avg=0.000025 mcu_task_stddev=0.000033 bytes_write=2182 bytes_read=7351 bytes_retransmit=9 bytes_invalid=0 send_seq=213 receive_seq=213 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999799 adj=47998672 cartographer: mcu_awake=0.025 mcu_task_avg=0.000009 mcu_task_stddev=0.000040 bytes_write=889 bytes_read=5659 bytes_retransmit=9 bytes_invalid=0 send_seq=118 receive_seq=118 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169999238 adj=169994717 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.7 pwm=0.000 cartographer_coil: temp=10.5 Raspberry_Pi: temp=11.2 Octopus_Pro: temp=16.1 Chamber: temp=10.0 Hotend_Heatsink: temp=11.7 Orbitool_O2S: temp=22.2 Cartographer: temp=11.0 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.5 pwm=0.000 sysload=1.68 cputime=6.141 memavail=1495764
-Stats 51.4: gcodein=0 mcu: mcu_awake=0.018 mcu_task_avg=0.000060 mcu_task_stddev=0.000095 bytes_write=8689 bytes_read=10600 bytes_retransmit=9 bytes_invalid=0 send_seq=421 receive_seq=421 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=168001468 orbitoolO2S: mcu_awake=0.015 mcu_task_avg=0.000025 mcu_task_stddev=0.000033 bytes_write=2188 bytes_read=7550 bytes_retransmit=9 bytes_invalid=0 send_seq=214 receive_seq=214 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999798 adj=47999055 cartographer: mcu_awake=0.025 mcu_task_avg=0.000009 mcu_task_stddev=0.000040 bytes_write=901 bytes_read=5877 bytes_retransmit=9 bytes_invalid=0 send_seq=120 receive_seq=120 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169999088 adj=169995309 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.6 pwm=0.000 cartographer_coil: temp=10.4 Raspberry_Pi: temp=12.2 Octopus_Pro: temp=15.9 Chamber: temp=9.9 Hotend_Heatsink: temp=11.8 Orbitool_O2S: temp=22.2 Cartographer: temp=11.2 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.5 pwm=0.000 sysload=1.68 cputime=6.205 memavail=1495348
-Stats 52.4: gcodein=0 mcu: mcu_awake=0.018 mcu_task_avg=0.000060 mcu_task_stddev=0.000095 bytes_write=8695 bytes_read=10856 bytes_retransmit=9 bytes_invalid=0 send_seq=422 receive_seq=422 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=168001250 orbitoolO2S: mcu_awake=0.015 mcu_task_avg=0.000025 mcu_task_stddev=0.000033 bytes_write=2194 bytes_read=7719 bytes_retransmit=9 bytes_invalid=0 send_seq=215 receive_seq=215 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=47999842 adj=47999335 cartographer: mcu_awake=0.025 mcu_task_avg=0.000009 mcu_task_stddev=0.000040 bytes_write=907 bytes_read=6097 bytes_retransmit=9 bytes_invalid=0 send_seq=121 receive_seq=121 retransmit_seq=2 srtt=0.000 rttvar=0.000 rto=0.025 ready_bytes=0 upcoming_bytes=0 freq=169998989 adj=169996189 Hotend_Power_(W): temp=0.2 heater_bed: target=0 temp=9.8 pwm=0.000 cartographer_coil: temp=10.5 Raspberry_Pi: temp=12.2 Octopus_Pro: temp=16.2 Chamber: temp=10.0 Hotend_Heatsink: temp=11.8 Orbitool_O2S: temp=22.2 Cartographer: temp=11.3 print_time=51.206 buffer_time=0.000 print_stall=0 extruder: target=0 temp=10.4 pwm=0.000 sysload=1.68 cputime=6.247 memavail=1498080
+=============== Log rollover at Mon Mar 30 00:08:27 2026 ===============
+webhooks: socket write error 3896888192
+webhooks client 3896888192: Disconnected

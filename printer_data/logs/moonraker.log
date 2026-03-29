@@ -1,4 +1,4 @@
--------------------- Log Start | Sun Mar 29 21:29:06 2026 --------------------
+-------------------- Log Start | Sun Mar 29 23:04:00 2026 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/pi/printer_data
 is_default_data_path: False
@@ -239,9 +239,9 @@ Git Repo sonar: No warnings detected
 Git Repo Klippain-ShakeTune: No warnings detected
 Git Repo klipper-backup: No warnings detected
 Git Repo Katapult: No warnings detected
-Klipper Version: v0.13.0-585-g9ebff0cc-dirty
-2026-03-29 22:29:06,512 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-29 22:29:06,514 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-29 22:29:06,762 [job_state.py:_handle_started()] - Job state initialized: standby
-2026-03-29 22:29:07,026 [klippy_connection.py:_check_ready()] - Klippy ready
-2026-03-29 22:29:07,515 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power_(W)', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
+Klipper Version: v0.13.0-593-g2f05309d-dirty
+2026-03-30 00:04:00,167 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2026-03-30 00:08:26,988 [server.py:_handle_term_signal()] - Exiting with signal SIGTERM
+2026-03-30 00:08:27,102 [websockets.py:on_close()] - Websocket Closed: ID: 4038827912 Close Code: 1001, Close Reason: Server Shutdown, Pong Time Elapsed: 3.01
+2026-03-30 00:08:27,106 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2026-03-30 00:08:27,149 [server.py:main()] - Server Shutdown
