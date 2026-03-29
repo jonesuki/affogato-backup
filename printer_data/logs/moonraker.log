@@ -1,4 +1,4 @@
--------------------- Log Start | Thu Mar 26 16:33:36 2026 --------------------
+-------------------- Log Start | Sun Mar 29 21:29:06 2026 --------------------
 platform: Linux-6.1.21-v8+-aarch64-with-glibc2.31
 data_path: /home/pi/printer_data
 is_default_data_path: False
@@ -139,7 +139,7 @@ All Configuration Files:
 /home/pi/printer_data/config/moonraker.conf
 #################################################################
 Loading Sqlite database provider. Sqlite Version: 3.34.1
-Unsafe Shutdown Count: 37
+Unsafe Shutdown Count: 38
 
 System Info:
 
@@ -205,8 +205,8 @@ unit_name: moonraker.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['sysinit.target', 'system.slice', 'network-online.target']
-**After=['systemd-journald.socket', 'sysinit.target', 'system.slice', 'basic.target', 'network-online.target', 'klipper.service']
+**Requires=['sysinit.target', 'network-online.target', 'system.slice']
+**After=['klipper.service', 'system.slice', 'basic.target', 'network-online.target', 'systemd-journald.socket', 'sysinit.target']
 **SupplementaryGroups=['moonraker-admin']
 **EnvironmentFiles=/home/pi/printer_data/systemd/moonraker.env
 **ExecStart=/home/pi/moonraker-env/bin/python $MOONRAKER_ARGS
@@ -220,8 +220,8 @@ unit_name: klipper.service
 is_default: True
 manager: systemd
 Properties:
-**Requires=['system.slice', '-.mount', 'sysinit.target']
-**After=['systemd-journald.socket', '-.mount', 'sysinit.target', 'system.slice', 'basic.target', 'network-online.target']
+**Requires=['sysinit.target', 'system.slice', '-.mount']
+**After=['system.slice', 'basic.target', 'network-online.target', '-.mount', 'systemd-journald.socket', 'sysinit.target']
 **SupplementaryGroups=[]
 **EnvironmentFiles=/home/pi/printer_data/systemd/klipper.env
 **ExecStart=/home/pi/klippy-env/bin/python $KLIPPER_ARGS
@@ -240,8 +240,8 @@ Git Repo Klippain-ShakeTune: No warnings detected
 Git Repo klipper-backup: No warnings detected
 Git Repo Katapult: No warnings detected
 Klipper Version: v0.13.0-585-g9ebff0cc-dirty
-2026-03-26 16:33:36,475 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
-2026-03-26 16:33:36,477 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
-2026-03-26 16:33:36,726 [job_state.py:_handle_started()] - Job state initialized: standby
-2026-03-26 16:33:36,996 [klippy_connection.py:_check_ready()] - Klippy ready
-2026-03-26 16:33:37,479 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power_(W)', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
+2026-03-29 22:29:06,512 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2026-03-29 22:29:06,514 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2026-03-29 22:29:06,762 [job_state.py:_handle_started()] - Job state initialized: standby
+2026-03-29 22:29:07,026 [klippy_connection.py:_check_ready()] - Klippy ready
+2026-03-29 22:29:07,515 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor Hotend_Power_(W)', 'heater_bed', 'temperature_sensor cartographer_coil', 'temperature_fan Host_MCU_Fan', 'temperature_sensor Raspberry_Pi', 'temperature_sensor Octopus_Pro', 'temperature_sensor Chamber', 'temperature_sensor Hotend_Heatsink', 'temperature_sensor Orbitool_O2S', 'temperature_sensor Cartographer', 'extruder', 'tmc2240 extruder']
