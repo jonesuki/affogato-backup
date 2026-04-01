@@ -66,3 +66,38 @@
 [03/31/26 23:09:33] crowsnest: /dev/v4l/by-id/usb-046d_C922_Pro_Stream_Webcam_62B5795F-video-index0 -> /dev/video0
 [03/31/26 23:09:33] crowsnest: Try to start configured Cams / Services...
 [03/31/26 23:09:36] crowsnest:  ... Done!
+[03/31/26 23:11:17] crowsnest: Shutdown or Killed by User!
+[03/31/26 23:11:17] crowsnest: Please come again :)
+[03/31/26 23:11:18] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[03/31/26 23:11:18] crowsnest: Version: v4.1.17-1-g9cc3d4a
+[03/31/26 23:11:18] crowsnest: Prepare Startup ...
+[03/31/26 23:11:18] crowsnest: INFO: Checking Dependencies
+[03/31/26 23:11:18] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[03/31/26 23:11:18] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[03/31/26 23:11:18] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[03/31/26 23:11:18] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[03/31/26 23:11:18] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[03/31/26 23:11:18] crowsnest: INFO: Detect available Devices
+[03/31/26 23:11:18] crowsnest: INFO: Found 1 total available Device(s)
+[03/31/26 23:11:18] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[03/31/26 23:11:18] crowsnest: /dev/v4l/by-id/usb-046d_C922_Pro_Stream_Webcam_62B5795F-video-index0 -> /dev/video0
+[03/31/26 23:11:18] crowsnest: Try to start configured Cams / Services...
+[03/31/26 23:11:20] crowsnest:  ... Done!
+[03/31/26 23:14:04] crowsnest: Shutdown or Killed by User!
+[03/31/26 23:14:04] crowsnest: Please come again :)
+[03/31/26 23:14:04] crowsnest: Goodbye...
+[03/31/26 23:14:04] crowsnest: crowsnest - A webcam Service for multiple Cams and Stream Services.
+[03/31/26 23:14:04] crowsnest: Version: v4.1.17-1-g9cc3d4a
+[03/31/26 23:14:04] crowsnest: Prepare Startup ...
+[03/31/26 23:14:04] crowsnest: INFO: Checking Dependencies
+[03/31/26 23:14:04] crowsnest: Dependency: 'crudini' found in /usr/bin/crudini.
+[03/31/26 23:14:04] crowsnest: Dependency: 'find' found in /usr/bin/find.
+[03/31/26 23:14:04] crowsnest: Dependency: 'xargs' found in /usr/bin/xargs.
+[03/31/26 23:14:04] crowsnest: Dependency: 'ustreamer' found in bin/ustreamer/src/ustreamer.bin.
+[03/31/26 23:14:04] crowsnest: Dependency: 'camera-streamer' found in bin/camera-streamer/camera-streamer.
+[03/31/26 23:14:04] crowsnest: INFO: Detect available Devices
+[03/31/26 23:14:05] crowsnest: INFO: Found 1 total available Device(s)
+[03/31/26 23:14:05] crowsnest: INFO: Found 1 available v4l2 (UVC) camera(s)
+[03/31/26 23:14:05] crowsnest: /dev/v4l/by-id/usb-046d_C922_Pro_Stream_Webcam_62B5795F-video-index0 -> /dev/video0
+[03/31/26 23:14:05] crowsnest: Try to start configured Cams / Services...
+[03/31/26 23:14:07] crowsnest:  ... Done!
